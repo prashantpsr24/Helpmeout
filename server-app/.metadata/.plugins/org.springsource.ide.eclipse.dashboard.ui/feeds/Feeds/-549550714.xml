@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Spring</title>
+  <link rel="alternate" href="https://spring.io/blog" />
+  <link rel="self" href="https://spring.io/blog.atom" />
+  <id>http://spring.io/blog.atom</id>
+  <icon>https://spring.io/favicon.ico</icon>
+  <updated>2015-04-16T14:12:57Z</updated>
+  <entry>
+    <title>Spring Session 1.0.1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/16/spring-session-1-0-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2015-04-15:2083</id>
+    <updated>2015-04-16T14:12:57Z</updated>
+    <content type="html">&lt;p&gt;I&amp;rsquo;m pleased to announce the release of &lt;a href="http://projects.spring.io/spring-session/"&gt;Spring Session&lt;/a&gt; 1.0.1.RELEASE. You can find the release in &lt;a href="http://repo1.maven.org/maven2/org/springframework/session/"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;&lt;p&gt;This release fixes &lt;a href="https://github.com/spring-projects/spring-session/issues?q=milestone%3A1.0.1"&gt;30+ tickets&lt;/a&gt;. You can find the highlights below:&lt;/p&gt;&lt;h2&gt;&lt;a href="#highlights" class="anchor" name="highlights"&gt;&lt;/a&gt;Highlights&lt;/h2&gt;&lt;p&gt;The highlights of Spring Session 1.0.1 are available below:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support for AWS ElastiCache &lt;a href="https://github.com/spring-projects/spring-session/issues/124"&gt;#124&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Servlet 3.1 fixes &lt;a href="https://github.com/spring-projects/spring-session/issues/152"&gt;#152&lt;/a&gt;. This resolves issues when running Spring Security and Spring Boot 1.2&lt;/li&gt;
+  &lt;li&gt;Servlet 2.5 fixes &lt;a href="https://github.com/spring-projects/spring-session/issues/111"&gt;#111&lt;/a&gt; &lt;a href="https://github.com/spring-projects/spring-session/issues/182"&gt;#182&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Added Servlet 2.5 &amp;amp; XML based configuration &lt;a href="http://docs.spring.io/spring-session/docs/1.0.1.RELEASE/reference/html5/guides/httpsession-xml.html"&gt;sample and guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Embedded Redis used in Samples now works on Windows 64 bit &lt;a href="https://github.com/spring-projects/spring-session/issues/174"&gt;#174&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;New Spring Session Logo &lt;a href="https://github.com/spring-projects/spring-session/issues/130"&gt;#130&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;a href="http://projects.spring.io/spring-session/"&gt;Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-session/docs/current/reference/html5/"&gt;Documentation&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-session/docs/current/api/"&gt;Javadoc&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-session"&gt;Help&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session"&gt;Source&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session/issues?q=milestone%3A1.0.1"&gt;Changelog&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Social Facebook 2.0.0.RELEASE Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/15/spring-social-facebook-2-0-0-release-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Craig Walls</name>
+    </author>
+    <id>tag:spring.io,2015-04-15:2082</id>
+    <updated>2015-04-15T15:22:58Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;&lt;p&gt;I&amp;rsquo;m happy to announce the release of &lt;a href="http://projects.spring.io/spring-social-facebook/"&gt;Spring Social Facebook&lt;/a&gt; 2.0.0.RELEASE. This release completes the overhaul of Spring Social Facebook to target version 2.3 of Facebook&amp;rsquo;s Graph API.Facebook will be turning off version 1.0 of their Graph API on April 30th, so it is highly recommended that you upgrade to Spring Social Facebook 2.0.0.RELEASE as soon as possible. &lt;/p&gt;&lt;p&gt;As has been mentioned in last week&amp;rsquo;s release candidate and in milestone releases prior to that, Facebook&amp;rsquo;s Graph API introduced several breaking changes which resulted in many breaking changes between Spring Social Facebook 1.1.x and Spring Social Facebook 2.0.0. Also, even some operations that still work do not work as they did previously. For example, it is no longer possible to fetch a list of &lt;em&gt;all&lt;/em&gt; of a users&amp;rsquo;s Facebook friends; you can only fetch a list of their friends who have also authorized your application with Facebook.&lt;/p&gt;&lt;p&gt;Moreover, although Spring Social Facebook covers much of what&amp;rsquo;s available in the Graph API, the use of many of Facebook&amp;rsquo;s endpoints will require review and approval from Facebook. See &lt;a href="https://developers.facebook.com/docs/apps/review/"&gt;Facebook&amp;rsquo;s Review Guidelines&lt;/a&gt; for details on what you must do to get approval from Facebook.&lt;/p&gt;&lt;p&gt;I&amp;rsquo;d like to thank the many members of the Spring Social community for helping test this release and for submitting bug reports and pull requests to keep it moving forward. As with any large development effort, it&amp;rsquo;s possible that something was overlooked. If you see anything out of sorts, please &lt;a href="https://jira.spring.io/browse/SOCIALFB"&gt;file an issue&lt;/a&gt; and let us know. And, as always, we welcome &lt;a href="https://github.com/spring-projects/spring-social-facebook/pulls"&gt;pull requests&lt;/a&gt;. If you see an opportunity to fix or improve Spring Social, please go for it and send us a pull request.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring integration Java DSL 1.1 M1 is available</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/15/spring-integration-java-dsl-1-1-m1-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2015-04-15:2081</id>
+    <updated>2015-04-15T12:04:00Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring community,&lt;/p&gt;&lt;p&gt;We are pleased to announce that the Spring Integration Java DSL 1.1 Milestone 1 is now available. Use the &lt;a href="https://repo.spring.io/milestone/"&gt;Milestone Repository&lt;/a&gt; with Maven or Gradle to try it in early access.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;compile &amp;quot;org.springframework.integration:spring-integration-java-dsl:1.1.0.M1&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To be honest, many of the planned features for &lt;code&gt;1.1&lt;/code&gt; are not implemented yet, but thanks to &lt;a href="https://spring.io/blog/2015/04/15/using-apache-kafka-for-integration-and-data-processing-pipelines-with-spring"&gt;encouragement&lt;/a&gt; from our pal &lt;a href="https://spring.io/team/jlong"&gt;Josh Long&lt;/a&gt; and the recent announcement about the Apache Kafka support (&lt;a href="https://spring.io/blog/2015/03/26/spring-integration-kafka-support-1-1-ga-is-available"&gt;Spring Integration Kafka Support 1.1 Release&lt;/a&gt;, &lt;a href="https://spring.io/blog/2015/03/26/spring-xd-1-1-1-released"&gt;Spring XD 1.1.1 Release&lt;/a&gt;), we&amp;rsquo;ve released this Milestone 1 mainly to showcase the Apache Kafka support in the Java Configuration DSL.&lt;/p&gt;&lt;p&gt;We&amp;rsquo;ll look at that, and other, features from this release in this post.&lt;/p&gt;&lt;h2&gt;&lt;a href="#apache-kafka-support" class="anchor" name="apache-kafka-support"&gt;&lt;/a&gt;Apache Kafka Support&lt;/h2&gt;&lt;p&gt;Let&amp;rsquo;s start with some &amp;ldquo;trivial&amp;rdquo; sample from the &lt;code&gt;KafkaTests&lt;/code&gt; class in the Spring Integration Java DSL :&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Bean&#xD;
+public ConnectionFactory connectionFactory(EmbeddedZookeeper zookeeper) {&#xD;
+        return new DefaultConnectionFactory(&#xD;
+                new ZookeeperConfiguration(zookeeper.connectString()));&#xD;
+}&#xD;
+&#xD;
+@Bean&#xD;
+public OffsetManager offsetManager(ConnectionFactory connectionFactory) {&#xD;
+        MetadataStoreOffsetManager offsetManager =&#xD;
+                           new MetadataStoreOffsetManager(connectionFactory);&#xD;
+        // start reading at the end of the&#xD;
+       offsetManager.setReferenceTimestamp(OffsetRequest.LatestTime());&#xD;
+       return offsetManager;&#xD;
+}&#xD;
+&#xD;
+@Bean&#xD;
+public IntegrationFlow listeningFromKafkaFlow(&#xD;
+                    ConnectionFactory connectionFactory,&#xD;
+                    OffsetManager offsetManager) {&#xD;
+     return IntegrationFlows&#xD;
+         .from(Kafka.messageDriverChannelAdapter(connectionFactory, TEST_TOPIC)&#xD;
+                  .autoCommitOffset(false)&#xD;
+		  .payloadDecoder(String::new)&#xD;
+		  .keyDecoder(b -&amp;gt; Integer.valueOf(new String(b)))&#xD;
+		  .configureListenerContainer(c -&amp;gt;&#xD;
+				c.offsetManager(offsetManager)&#xD;
+						.maxFetch(100)))&#xD;
+         .&amp;lt;String, String&amp;gt;transform(String::toUpperCase)&#xD;
+         .channel(c -&amp;gt; c.queue(&amp;quot;listeningFromKafkaResults&amp;quot;))&#xD;
+         .get();&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;The &lt;code&gt;EmbeddedZookeeper&lt;/code&gt; is a part of Apache Kafka &lt;code&gt;test&lt;/code&gt; artifact (&lt;code&gt;testCompile &amp;#39;org.apache.kafka:kafka_2.10:0.8.1.1:test&amp;#39;&lt;/code&gt; in our case) and, along with many other features like &lt;code&gt;kafka.utils.TestUtils&lt;/code&gt;, it is very useful for unit testing.&lt;/li&gt;
+  &lt;li&gt;Please refer to the &lt;a href="https://github.com/spring-projects/spring-integration-kafka"&gt;Spring Integration Kafka&lt;/a&gt; project for more information on &lt;code&gt;ConnectionFactory&lt;/code&gt; and &lt;code&gt;OffsetManager&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;The most important part in the config above is &lt;code&gt;IntegrationFlow&lt;/code&gt; bean definition. The Spring Integration Java DSL provides a namespace factory - &lt;code&gt;Kafka&lt;/code&gt; - which utilizes &lt;code&gt;IntegrationComponentSpec&lt;/code&gt; implementations for the Spring Integration Kafka adapters, like &lt;code&gt;KafkaMessageDrivenChannelAdapterSpec&lt;/code&gt; for the &lt;code&gt;KafkaMessageDrivenChannelAdapter&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;An example of the &lt;em&gt;builder pattern&lt;/em&gt;, the spec just delegates options from &lt;code&gt;method-chain&lt;/code&gt; to the underlying &lt;code&gt;KafkaMessageDrivenChannelAdapter&lt;/code&gt; instance.&lt;/li&gt;
+  &lt;li&gt;For those, like yours truly, who are not familiar with Scala (which is the language Apache Kafka is written in), pay attention to the &lt;code&gt;.payloadDecoder(String::new)&lt;/code&gt; line. The &lt;code&gt;kafka.serializer.Decoder&lt;/code&gt; is a Scala &lt;code&gt;trait&lt;/code&gt; that is compiled to a Java interface (not a class!) so we can represent it here as a Java 8 lambda method.&lt;/li&gt;
+  &lt;li&gt;the &lt;code&gt;.configureListenerContainer()&lt;/code&gt; is a lambda-aware method to separate concerns for the &lt;code&gt;KafkaMessageListenerContainer&lt;/code&gt;-specific options.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The other self-explained factory-methods from the &lt;code&gt;Kafka&lt;/code&gt; namespace factory are &lt;code&gt;.inboundChannelAdapter(...)&lt;/code&gt; for the &lt;code&gt;KafkaHighLevelConsumerMessageSource&lt;/code&gt; polling adapter and &lt;code&gt;.outboundChannelAdapter(...)&lt;/code&gt; for the &lt;code&gt;KafkaProducerMessageHandler&lt;/code&gt;. Please refer to their JavaDocs for more information.&lt;/p&gt;&lt;p&gt;For more information, check out Josh Long&amp;rsquo;s post on &lt;a href="https://spring.io/blog/2015/04/15/using-apache-kafka-for-integration-and-data-processing-pipelines-with-spring"&gt;Using Apache Kafka for Integration and Data Processing Pipelines with Spring&lt;/a&gt;!&lt;/p&gt;&lt;h2&gt;&lt;a href="#pojo-method-invocation" class="anchor" name="pojo-method-invocation"&gt;&lt;/a&gt;POJO Method invocation&lt;/h2&gt;&lt;p&gt;A lot of the great feedback from the community (&lt;a href="https://spring.io/blog/2015/02/10/webinar-replay-introducing-the-java-dsl-for-spring-integration"&gt;Webinar Replay: Introducing the Java DSL for Spring Integration&lt;/a&gt;) was around the bean method invocation components (services, transformers, routers, etc.) and we heard you loud-and-clear: component method selection has been improved. Here is a sample that is analogous to a &lt;code&gt;&amp;lt;int:service-activator input-channel=&amp;quot;greetingChannel&amp;quot; ref=&amp;quot;greetingService&amp;quot;/&amp;gt;&lt;/code&gt; in the XML configuration:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;&lt;br/&gt;@Configuration&#xD;
+@EnableIntegration&#xD;
+@ComponentScan&#xD;
+public class MyConfiguration {&#xD;
+&#xD;
+	@Autowired&#xD;
+	private GreetingService greetingService;&#xD;
+&#xD;
+	@Bean&#xD;
+	public IntegrationFlow greetingFlow() {&#xD;
+		return IntegrationFlows.from(&amp;quot;greetingChannel&amp;quot;)&#xD;
+				.handle(this.greetingService)&#xD;
+				.get();&#xD;
+	}&#xD;
+&#xD;
+}&#xD;
+&#xD;
+@Component&#xD;
+public class GreetingService {&#xD;
+&#xD;
+   public void greeting(String payload) {&#xD;
+        System.out.println(&amp;quot;Hello &amp;quot; + payload);&#xD;
+   }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here, the &lt;code&gt;greeting&lt;/code&gt; method will automatically be selected by the framework. There is an alternative that takes a &lt;code&gt;methodName&lt;/code&gt; argument to specify a method in the case of ambiguity. Similar POJO method invocation EIP-methods have been introduced for many other EIP implementations like &lt;code&gt;transform(Object service, String methodName)&lt;/code&gt;, &lt;code&gt;split(Object service)&lt;/code&gt;, etc.&lt;/p&gt;&lt;p&gt;The Spring Integration Java DSL also respects Spring Integration messaging annotations like &lt;code&gt;@ServiceActivator&lt;/code&gt;, &lt;code&gt;@Router&lt;/code&gt;, &lt;code&gt;@Filter&lt;/code&gt;, etc., and even &lt;code&gt;@Payload&lt;/code&gt;, &lt;code&gt;@Header&lt;/code&gt;. Please, refer to &lt;code&gt;IntegrationFlowDefinition&lt;/code&gt; JavaDocs for more information.&lt;/p&gt;&lt;h2&gt;&lt;a href="#integrationflowadapter" class="anchor" name="integrationflowadapter"&gt;&lt;/a&gt;IntegrationFlowAdapter&lt;/h2&gt;&lt;p&gt;It shouldn&amp;rsquo;t be a surprise that as &lt;code&gt;IntegrationFlow&lt;/code&gt; is an interface, we can just provide its direct implementation as a custom component and it works as-is in the Spring Integration Java DSL environment:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Component&#xD;
+public class MyFlow implements IntegrationFlow {&#xD;
+&#xD;
+	@Override&#xD;
+	public void configure(IntegrationFlowDefinition&amp;lt;?&amp;gt; f) {&#xD;
+		f.&amp;lt;String, String&amp;gt;transform(String::toUpperCase);&#xD;
+	}&#xD;
+&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is similar to the &lt;code&gt;@Bean&lt;/code&gt; definitions, but this approach helps our components stay more loosely coupled.&lt;/p&gt;&lt;p&gt;But, wait, there&amp;rsquo;s more! &lt;code&gt;IntegrationFlow&lt;/code&gt; implementations (like lambdas in the &lt;code&gt;@Bean&lt;/code&gt; definition case) are limited to &lt;code&gt;DirectChannel&lt;/code&gt; input channels. We went further here and introduced the &lt;code&gt;IntegrationFlowAdapter&lt;/code&gt;. Here&amp;rsquo;s my favorite sample to demonstrate how it can be used:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Component&#xD;
+public class MyFlowAdapter extends IntegrationFlowAdapter {&#xD;
+&#xD;
+        private final AtomicBoolean invoked = new tomicBoolean();&#xD;
+&#xD;
+        public Date nextExecutionTime(TriggerContext triggerContext) {&#xD;
+              return this.invoked.getAndSet(true) ? null : new Date();&#xD;
+       }&#xD;
+&#xD;
+       @Override&#xD;
+       protected IntegrationFlowDefinition&amp;lt;?&amp;gt; buildFlow() {&#xD;
+          return from(this, &amp;quot;messageSource&amp;quot;,&#xD;
+                        e -&amp;gt; e.poller(p -&amp;gt; p.trigger(this::nextExecutionTime)))&#xD;
+                   .split(this)&#xD;
+		   .transform(this)&#xD;
+		   .aggregate(a -&amp;gt; a.processor(this, null), null)&#xD;
+		   .enrichHeaders(Collections.singletonMap(&amp;quot;foo&amp;quot;, &amp;quot;FOO&amp;quot;))&#xD;
+		   .filter(this)&#xD;
+		   .handle(this)&#xD;
+		   .channel(c -&amp;gt; c.queue(&amp;quot;myFlowAdapterOutput&amp;quot;));&#xD;
+      }&#xD;
+&#xD;
+      public String messageSource() {&#xD;
+	       return &amp;quot;B,A,R&amp;quot;;&#xD;
+      }&#xD;
+&#xD;
+      @Splitter&#xD;
+      public String[] split(String payload) {&#xD;
+           return StringUtils.commaDelimitedListToStringArray(payload);&#xD;
+      }&#xD;
+&#xD;
+      @Transformer&#xD;
+      public String transform(String payload) {&#xD;
+           return payload.toLowerCase();&#xD;
+      }&#xD;
+&#xD;
+      @Aggregator&#xD;
+      public String aggregate(List&amp;lt;String&amp;gt; payloads) {&#xD;
+             return payloads.stream().collect(Collectors.joining());&#xD;
+      }&#xD;
+&#xD;
+      @Filter&#xD;
+      public boolean filter(@Header Optional&amp;lt;String&amp;gt; foo) {&#xD;
+              return foo.isPresent();&#xD;
+      }&#xD;
+&#xD;
+      @ServiceActivator&#xD;
+      public String handle(String payload, @Header String foo) {&#xD;
+             return payload + &amp;quot;:&amp;quot; + foo;&#xD;
+      }&#xD;
+&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Of course, with the POJO method invocation support (see above) it won&amp;rsquo;t be possible to build the flow so easily.&lt;/p&gt;&lt;h2&gt;&lt;a href="#dynamic-languages-scripting-support" class="anchor" name="dynamic-languages-scripting-support"&gt;&lt;/a&gt;Dynamic Languages (Scripting) Support&lt;/h2&gt;&lt;p&gt;The &lt;a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/dynamic-language.html"&gt;Spring Framework&lt;/a&gt; and &lt;a href="http://docs.spring.io/spring-integration/docs/latest-ga/reference/html/messaging-endpoints-chapter.html#scripting"&gt;Spring Integration&lt;/a&gt; have supported Dynamic Languages for a long time now and it is, mostly, linked with XML Spring configuration. It may look strange to deal with scripts (like Groovy, Ruby, JavaScript, etc.) from Java code, but we find it a useful tool for reloading functionality at runtime, and when Java lambas aren&amp;rsquo;t dynamic enough. Let&amp;rsquo;s look at the &lt;code&gt;Scripts&lt;/code&gt; namespace factory in the Spring Integration Java DSL:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Configuration&#xD;
+@EnableIntegration&#xD;
+public class ScriptsConfiguration {&#xD;
+&#xD;
+	@Value(&amp;quot;com/my/project/integration/scripts/splitterScript.groovy&amp;quot;)&#xD;
+	private Resource splitterScript;&#xD;
+&#xD;
+	@Bean&#xD;
+	public PollableChannel results() {&#xD;
+		return new QueueChannel();&#xD;
+	}&#xD;
+&#xD;
+	@Bean&#xD;
+	public IntegrationFlow scriptSplitter() {&#xD;
+		return f -&amp;gt; f&#xD;
+        	             .split(Scripts.script(this.splitterScript)&#xD;
+                                              .refreshCheckDelay(10000)&#xD;
+                                              .variable(&amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot;))&#xD;
+                             .channel(results());&#xD;
+	}&#xD;
+&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This Scripting support allows us to deal only with external resources, which can be changed and reloaded at runtime. The &lt;code&gt;inline&lt;/code&gt; scripts, which are supported by the Spring Integration Scripting module, don&amp;rsquo;t make sense because we have Java 8 lambdas for those cases.&lt;/p&gt;&lt;h2&gt;&lt;a href="#inline-wiretap" class="anchor" name="inline-wiretap"&gt;&lt;/a&gt;Inline WireTap&lt;/h2&gt;&lt;p&gt;The &lt;a href="http://www.enterpriseintegrationpatterns.com/WireTap.html"&gt;Wire Tap EI Pattern&lt;/a&gt; is implemented as a &lt;code&gt;ChannelInterceptor&lt;/code&gt; in &lt;a href="http://docs.spring.io/spring-integration/docs/latest-ga/reference/html/messaging-channels-section.html#channel-wiretap"&gt;Spring Integration&lt;/a&gt; and can be injected into any &lt;code&gt;MessageChannel&lt;/code&gt; as an interceptor like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Bean&#xD;
+public MessageChannel myChannel() {&#xD;
+     return MessageChannels.direct()&#xD;
+                .interceptor(new WireTap(loggerChannel()))&#xD;
+                .get();&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;IntegrationFlow&lt;/code&gt; definition allows us to omit &lt;code&gt;MessageChannel&lt;/code&gt; declarations between EIP components, so we&amp;rsquo;ve introduced an inline &lt;code&gt;.wireTap()&lt;/code&gt; EIP-method to allow a &lt;code&gt;WireTap&lt;/code&gt; injection for those anonymous channels. Here are some samples:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Bean&#xD;
+public IntegrationFlow wireTapFlow1() {&#xD;
+	return IntegrationFlows.from(&amp;quot;tappedChannel1&amp;quot;)&#xD;
+		.wireTap(&amp;quot;tapChannel&amp;quot;,&#xD;
+                         wt -&amp;gt; wt.selector(m -&amp;gt; m.getPayload().equals(&amp;quot;foo&amp;quot;)))&#xD;
+		.channel(&amp;quot;nullChannel&amp;quot;)&#xD;
+		.get();&#xD;
+}&#xD;
+&#xD;
+@Bean&#xD;
+public IntegrationFlow wireTapFlow2() {&#xD;
+	return f -&amp;gt; f&#xD;
+		.wireTap(sf -&amp;gt; sf&#xD;
+			.&amp;lt;String, String&amp;gt;transform(String::toUpperCase)&#xD;
+			.channel(c -&amp;gt; c.queue(&amp;quot;wireTapSubflowResult&amp;quot;)))&#xD;
+		.channel(&amp;quot;nullChannel&amp;quot;);&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Please see the &lt;code&gt;IntegrationFlowDefinition.wireTap()&lt;/code&gt; methods JavaDocs for more information and don&amp;rsquo;t miss our test-cases from project page on GitHub.&lt;/p&gt;&lt;h2&gt;&lt;a href="#wrap-up" class="anchor" name="wrap-up"&gt;&lt;/a&gt;Wrap up&lt;/h2&gt;&lt;p&gt;There&amp;rsquo;s much to do for the 1.1 release, like further simplification of &lt;code&gt;.aggregate()&lt;/code&gt;, etc. configuration, an ability to inject external sub-flows, the ability to configure &lt;code&gt;IntegrationComponentSpec&lt;/code&gt; implementations as a separate &lt;code&gt;@Bean&lt;/code&gt; to simplify the target flow definitions, more protocol-specific Namespace Factories and more. Don&amp;rsquo;t hesitate to reach us via StackOverflow, JIRA and GitHub issues to share your thoughts and ideas!&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-java-dsl"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INTEXT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-java-dsl/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.md"&gt;Contributions&lt;/a&gt; | &lt;a href="http://stackoverflow.com"&gt;StackOverflow&lt;/a&gt; (&lt;code&gt;spring-integration&lt;/code&gt; tag)&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Using Apache Kafka for Integration and Data Processing Pipelines with Spring</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/15/using-apache-kafka-for-integration-and-data-processing-pipelines-with-spring" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2015-04-15:2080</id>
+    <updated>2015-04-15T00:46:00Z</updated>
+    <content type="html">&lt;p&gt;Applications generated more and more data than ever before and a huge part of the challenge - before it can even be analyzed - is accommodating the load in the first place. &lt;a href="http://kafka.apache.org"&gt;Apache&amp;rsquo;s Kafka&lt;/a&gt; meets this challenge. It was originally designed by LinkedIn and subsequently open-sourced in 2011. The project aims to provide a unified, high-throughput, low-latency platform for handling real-time data feeds. The design is heavily influenced by transaction logs. It is a messaging system, similar to traditional messaging systems like RabbitMQ, ActiveMQ, MQSeries, but it&amp;rsquo;s ideal for log aggregation, persistent messaging, fast (_hundreds_ of megabytes per second!) reads and writes, and can accommodate numerous clients. Naturally, this makes it &lt;em&gt;perfect&lt;/em&gt; for cloud-scale architectures!&lt;/p&gt;&lt;p&gt;Kafka &lt;a href="https://cwiki.apache.org/confluence/display/KAFKA/Powered+By"&gt;powers many large production systems&lt;/a&gt;. LinkedIn uses it for activity data and operational metrics to power the LinkedIn news feed, and LinkedIn Today, as well as offline analytics going into Hadoop. Twitter uses it as part of their stream-processing infrastructure. Kafka powers online-to-online and online-to-offline messaging at Foursquare. It is used to integrate Foursquare monitoring and production systems with Hadoop-based offline infrastructures. Square uses Kafka as a bus to move all system events through Square&amp;rsquo;s various data centers. This includes metrics, logs, custom events, and so on. On the consumer side, it outputs into Splunk, Graphite, or Esper-like real-time alerting. Netflix uses it for 300-600BN messages per day. It&amp;rsquo;s also used by Airbnb, Mozilla, Goldman Sachs, Tumblr, Yahoo, PayPal, Coursera, Urban Airship, Hotels.com, and a seemingly endless list of other big-web stars. Clearly, it&amp;rsquo;s earning its keep in some powerful systems!&lt;/p&gt;&lt;h2&gt;&lt;a href="#installing-apache-kafka" class="anchor" name="installing-apache-kafka"&gt;&lt;/a&gt;Installing Apache Kafka&lt;/h2&gt;&lt;p&gt;There are many different ways to get Apache Kafka installed. If you&amp;rsquo;re on OSX, and you&amp;rsquo;re using Homebrew, it can be as simple as &lt;code&gt;brew install kafka&lt;/code&gt;. You can also &lt;a href="http://kafka.apache.org/downloads.html"&gt;download the latest distribution from Apache&lt;/a&gt;. I downloaded &lt;code&gt;kafka_2.10-0.8.2.1.tgz&lt;/code&gt;, unzipped it, and then within you&amp;rsquo;ll find there&amp;rsquo;s a distribution of &lt;a href="https://zookeeper.apache.org/"&gt;Apache Zookeeper&lt;/a&gt; as well as Kafka, so nothing else is required. I installed Apache Kafka in my &lt;code&gt;$HOME&lt;/code&gt; directory, under another directory, &lt;code&gt;bin&lt;/code&gt;, then I created an environment variable, &lt;code&gt;KAFKA_HOME&lt;/code&gt;, that points to &lt;code&gt;$HOME/bin/kafka&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;Start Apache Zookeeper first, specifying where the configuration properties file it requires is:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;$KAFKA_HOME/bin/zookeeper-server-start.sh  $KAFKA_HOME/config/zookeeper.properties&#xD;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Apache Kafka distribution comes with default configuration files for both Zookeeper and Kafka, which makes getting started easy. You will in more advanced use cases need to customize these files.&lt;/p&gt;&lt;p&gt;Then start Apache Kafka. It too requires a configuration file, like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;$KAFKA_HOME/bin/kafka-server-start.sh  $KAFKA_HOME/config/server.properties
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;server.properties&lt;/code&gt; file contains, among other things, default values for where to connect to Apache Zookeeper (&lt;code&gt;zookeeper.connect&lt;/code&gt;), how much data should be sent across sockets, how many partitions there are by default, and the broker ID (&lt;code&gt;broker.id&lt;/code&gt; - which must be unique across a cluster).&lt;/p&gt;&lt;p&gt;There are other scripts in the same directory that can be used to send and receive dummy data, very handy in establishing that everything&amp;rsquo;s up and running!&lt;/p&gt;&lt;p&gt;Now that Apache Kafka is up and running, let&amp;rsquo;s look at working with Apache Kafka from our application.&lt;/p&gt;&lt;h2&gt;&lt;a href="#some-high-level-concepts" class="anchor" name="some-high-level-concepts"&gt;&lt;/a&gt;Some High Level Concepts..&lt;/h2&gt;&lt;p&gt;A Kafka &lt;em&gt;broker&lt;/em&gt; cluster consists of one or more servers where each may have one or more broker processes running. Apache Kafka is designed to be highly available; there are no &lt;em&gt;master&lt;/em&gt; nodes. All nodes are interchangeable. Data is replicated from one node to another to ensure that it is still available in the event of a failure.&lt;/p&gt;&lt;p&gt;In Kafka, a &lt;em&gt;topic&lt;/em&gt; is a category, similar to a JMS destination or both an AMQP exchange and queue. Topics are partitioned, and the choice of which of a topic&amp;rsquo;s partition a message should be sent to is made by the message producer. Each message in the partition is assigned a unique sequenced ID, its &lt;em&gt;offset&lt;/em&gt;. More partitions allow greater parallelism for consumption, but this will also result in more files across the brokers.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Producers&lt;/em&gt; send messages to Apache Kafka broker topics and specify the partition to use for every message they produce. Message production may be synchronous or asynchronous. Producers also specify what sort of replication guarantees they want.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Consumers&lt;/em&gt; listen for messages on topics and process the feed of published messages. As you&amp;rsquo;d expect if you&amp;rsquo;ve used other messaging systems, this is usually (and usefully!) asynchronous.&lt;/p&gt;&lt;p&gt;Like &lt;a href="http://spring.io/projects/spring-xd"&gt;Spring XD&lt;/a&gt; and numerous other distributed system, Apache Kafka uses Apache Zookeeper to coordinate cluster information. Apache Zookeeper provides a shared hierarchical namespace (called &lt;em&gt;znodes&lt;/em&gt;) that nodes can share to understand cluster topology and availability (yet another reason that &lt;a href="https://github.com/spring-cloud/spring-cloud-zookeeper"&gt;Spring Cloud&lt;/a&gt; has forthcoming support for it..).&lt;/p&gt;&lt;p&gt;Zookeeper is very present in your interactions with Apache Kafka. Apache Kafka has, for example, two different APIs for acting as a consumer. The higher level API is simpler to get started with and it handles all the nuances of handling partitioning and so on. It will need a reference to a Zookeeper instance to keep the coordination state. &lt;/p&gt;&lt;p&gt;Let&amp;rsquo;s turn now turn to using Apache Kafka with Spring.&lt;/p&gt;&lt;h2&gt;&lt;a href="#using-apache-kafka-with-spring-integration" class="anchor" name="using-apache-kafka-with-spring-integration"&gt;&lt;/a&gt;Using Apache Kafka with Spring Integration&lt;/h2&gt;&lt;p&gt;The recently released &lt;a href=""&gt;Apache Kafka 1.1 Spring Integration adapter&lt;/a&gt; is very powerful, and provides inbound adapters for working with both the lower level Apache Kafka API as well as the higher level API.&lt;/p&gt;&lt;p&gt;The adapter, currently, is XML-configuration first, though work is already underway on a Spring Integration Java configuration DSL for the adapter and milestones are available. We&amp;rsquo;ll look at both here, now.&lt;/p&gt;&lt;p&gt;To make all these examples work, I added the &lt;a href="http://repo.spring.io/simple/libs-milestone-local"&gt;libs-milestone-local Maven repository&lt;/a&gt; and used the following dependencies:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;org.apache.kafka:kafka_2.10:0.8.1.1&lt;/li&gt;
+  &lt;li&gt;org.springframework.boot:spring-boot-starter-integration:1.2.3.RELEASE&lt;/li&gt;
+  &lt;li&gt;org.springframework.boot:spring-boot-starter:1.2.3.RELEASE&lt;/li&gt;
+  &lt;li&gt;org.springframework.integration:spring-integration-kafka:1.1.1.RELEASE&lt;/li&gt;
+  &lt;li&gt;org.springframework.integration:spring-integration-java-dsl:1.1.0.M1&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#using-the-spring-integration-apache-kafka-with-the-spring-integration-xml-dsl" class="anchor" name="using-the-spring-integration-apache-kafka-with-the-spring-integration-xml-dsl"&gt;&lt;/a&gt;Using the Spring Integration Apache Kafka with the Spring Integration XML DSL&lt;/h3&gt;&lt;p&gt;First, let&amp;rsquo;s look at how to use the Spring Integration outbound adapter to send &lt;code&gt;Message&amp;lt;T&amp;gt;&lt;/code&gt; instances from a Spring Integration flow to an external Apache Kafka instance. The example is fairly straightforward: a Spring Integration &lt;code&gt;channel&lt;/code&gt; named &lt;code&gt;inputToKafka&lt;/code&gt; acts as a conduit that forwards &lt;code&gt;Message&amp;lt;T&amp;gt;&lt;/code&gt; messages to the outbound adapter, &lt;code&gt;kafkaOutboundChannelAdapter&lt;/code&gt;. The adapter itself can take its configuration from the defaults specified in the &lt;code&gt;kafka:producer-context&lt;/code&gt; element or it from the adapter-local configuration overrides. There may be one or many configurations in a given &lt;code&gt;kafka:producer-context&lt;/code&gt; element.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&#xD;
+&amp;lt;beans xmlns=&amp;quot;http://www.springframework.org/schema/beans&amp;quot;&#xD;
+       xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&#xD;
+       xmlns:int=&amp;quot;http://www.springframework.org/schema/integration&amp;quot;&#xD;
+       xmlns:int-kafka=&amp;quot;http://www.springframework.org/schema/integration/kafka&amp;quot;&#xD;
+       xmlns:task=&amp;quot;http://www.springframework.org/schema/task&amp;quot;&#xD;
+       xsi:schemaLocation=&amp;quot;http://www.springframework.org/schema/integration/kafka http://www.springframework.org/schema/integration/kafka/spring-integration-kafka.xsd&#xD;
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd&#xD;
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&#xD;
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd&amp;quot;&amp;gt;&#xD;
+&#xD;
+    &amp;lt;int:channel id=&amp;quot;inputToKafka&amp;quot;&amp;gt;&#xD;
+        &amp;lt;int:queue/&amp;gt;&#xD;
+    &amp;lt;/int:channel&amp;gt;&#xD;
+&#xD;
+    &amp;lt;int-kafka:outbound-channel-adapter&#xD;
+            id=&amp;quot;kafkaOutboundChannelAdapter&amp;quot;&#xD;
+            kafka-producer-context-ref=&amp;quot;kafkaProducerContext&amp;quot;&#xD;
+            channel=&amp;quot;inputToKafka&amp;quot;&amp;gt;&#xD;
+        &amp;lt;int:poller fixed-delay=&amp;quot;1000&amp;quot; time-unit=&amp;quot;MILLISECONDS&amp;quot; receive-timeout=&amp;quot;0&amp;quot; task-executor=&amp;quot;taskExecutor&amp;quot;/&amp;gt;&#xD;
+    &amp;lt;/int-kafka:outbound-channel-adapter&amp;gt;&#xD;
+&#xD;
+    &amp;lt;task:executor id=&amp;quot;taskExecutor&amp;quot; pool-size=&amp;quot;5&amp;quot; keep-alive=&amp;quot;120&amp;quot; queue-capacity=&amp;quot;500&amp;quot;/&amp;gt;&#xD;
+&#xD;
+    &amp;lt;int-kafka:producer-context id=&amp;quot;kafkaProducerContext&amp;quot;&amp;gt;&#xD;
+        &amp;lt;int-kafka:producer-configurations&amp;gt;&#xD;
+            &amp;lt;int-kafka:producer-configuration broker-list=&amp;quot;localhost:9092&amp;quot;&#xD;
+                                              topic=&amp;quot;event-stream&amp;quot;&#xD;
+                                              compression-codec=&amp;quot;default&amp;quot;/&amp;gt;&#xD;
+        &amp;lt;/int-kafka:producer-configurations&amp;gt;&#xD;
+    &amp;lt;/int-kafka:producer-context&amp;gt;&#xD;
+&#xD;
+&amp;lt;/beans&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here&amp;rsquo;s the Java code from a Spring Boot application to trigger message sends using the outbound adapter by sending messages into the incoming &lt;code&gt;inputToKafka&lt;/code&gt; &lt;code&gt;MessageChannel&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;package xml;&#xD;
+&#xD;
+import org.apache.commons.logging.Log;&#xD;
+import org.apache.commons.logging.LogFactory;&#xD;
+import org.springframework.beans.factory.annotation.Qualifier;&#xD;
+import org.springframework.boot.CommandLineRunner;&#xD;
+import org.springframework.boot.SpringApplication;&#xD;
+import org.springframework.boot.autoconfigure.SpringBootApplication;&#xD;
+import org.springframework.context.annotation.Bean;&#xD;
+import org.springframework.context.annotation.DependsOn;&#xD;
+import org.springframework.context.annotation.ImportResource;&#xD;
+import org.springframework.integration.config.EnableIntegration;&#xD;
+import org.springframework.messaging.MessageChannel;&#xD;
+import org.springframework.messaging.support.GenericMessage;&#xD;
+&#xD;
+@SpringBootApplication&#xD;
+@EnableIntegration&#xD;
+@ImportResource(&amp;quot;/xml/outbound-kafka-integration.xml&amp;quot;)&#xD;
+public class DemoApplication {&#xD;
+&#xD;
+    private Log log = LogFactory.getLog(getClass());&#xD;
+&#xD;
+    @Bean&#xD;
+    @DependsOn(&amp;quot;kafkaOutboundChannelAdapter&amp;quot;)&#xD;
+    CommandLineRunner kickOff(@Qualifier(&amp;quot;inputToKafka&amp;quot;) MessageChannel in) {&#xD;
+        return args -&amp;gt; {&#xD;
+            for (int i = 0; i &amp;lt; 1000; i++) {&#xD;
+                in.send(new GenericMessage&amp;lt;&amp;gt;(&amp;quot;#&amp;quot; + i));&#xD;
+                log.info(&amp;quot;sending message #&amp;quot; + i);&#xD;
+            }&#xD;
+        };&#xD;
+    }&#xD;
+&#xD;
+    public static void main(String args[]) {&#xD;
+        SpringApplication.run(DemoApplication.class, args);&#xD;
+    }&#xD;
+}&#xD;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a href="#using-the-new-apache-kafka-spring-integration-java-configuration-dsl" class="anchor" name="using-the-new-apache-kafka-spring-integration-java-configuration-dsl"&gt;&lt;/a&gt;Using the New Apache Kafka Spring Integration Java Configuration DSL&lt;/h3&gt;&lt;p&gt;Shortly after the Spring Integration 1.1 release, Spring Integration rockstar &lt;a href="https://spring.io/team/artembilan"&gt;Artem Bilan&lt;/a&gt; got to work &lt;a href="http://repo.spring.io/simple/libs-milestone-local/org/springframework/integration/spring-integration-java-dsl/1.1.0.M1/"&gt;on adding a Spring Integration Java Configuration DSL analog&lt;/a&gt; and the result is a thing of beauty! It&amp;rsquo;s not yet GA (you need to add the &lt;code&gt;libs-milestone&lt;/code&gt; repository for now), but I encourage you to try it out and kick the tires. It&amp;rsquo;s working well for me and the Spring Integration team are always keen on getting early feedback whenever possible! Here&amp;rsquo;s an example that demonstrates both sending messages and consuming them from two different &lt;code&gt;IntegrationFlow&lt;/code&gt;s. The producer is similar to the example XML above.&lt;/p&gt;&lt;p&gt;New in this example is the polling consumer. It is batch-centric, and will pull down all the messages it sees at a fixed interval. In our code, the message received will be a map that contains as its keys the topic and as its value another map with the partition ID and the batch (in this case, of 10 records), of records read. There is a &lt;code&gt;MessageListenerContainer&lt;/code&gt;-based alternative that processes messages as they come. &lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;package jc;&#xD;
+&#xD;
+import org.apache.commons.logging.Log;&#xD;
+import org.apache.commons.logging.LogFactory;&#xD;
+import org.springframework.beans.factory.annotation.Autowired;&#xD;
+import org.springframework.beans.factory.annotation.Qualifier;&#xD;
+import org.springframework.beans.factory.annotation.Value;&#xD;
+import org.springframework.boot.CommandLineRunner;&#xD;
+import org.springframework.boot.SpringApplication;&#xD;
+import org.springframework.boot.autoconfigure.SpringBootApplication;&#xD;
+import org.springframework.context.annotation.Bean;&#xD;
+import org.springframework.context.annotation.Configuration;&#xD;
+import org.springframework.context.annotation.DependsOn;&#xD;
+import org.springframework.integration.IntegrationMessageHeaderAccessor;&#xD;
+import org.springframework.integration.config.EnableIntegration;&#xD;
+import org.springframework.integration.dsl.IntegrationFlow;&#xD;
+import org.springframework.integration.dsl.IntegrationFlows;&#xD;
+import org.springframework.integration.dsl.SourcePollingChannelAdapterSpec;&#xD;
+import org.springframework.integration.dsl.kafka.Kafka;&#xD;
+import org.springframework.integration.dsl.kafka.KafkaHighLevelConsumerMessageSourceSpec;&#xD;
+import org.springframework.integration.dsl.kafka.KafkaProducerMessageHandlerSpec;&#xD;
+import org.springframework.integration.dsl.support.Consumer;&#xD;
+import org.springframework.integration.kafka.support.ZookeeperConnect;&#xD;
+import org.springframework.messaging.MessageChannel;&#xD;
+import org.springframework.messaging.support.GenericMessage;&#xD;
+import org.springframework.stereotype.Component;&#xD;
+&#xD;
+import java.util.List;&#xD;
+import java.util.Map;&#xD;
+&#xD;
+/**&#xD;
+ * Demonstrates using the Spring Integration Apache Kafka Java Configuration DSL.&#xD;
+ * Thanks to Spring Integration ninja &amp;lt;a href=&amp;quot;http://spring.io/team/artembilan&amp;quot;&amp;gt;Artem Bilan&amp;lt;/a&amp;gt;&#xD;
+ * for getting the Java Configuration DSL working so quickly!&#xD;
+ *&#xD;
+ * @author Josh Long&#xD;
+ */&#xD;
+@EnableIntegration&#xD;
+@SpringBootApplication&#xD;
+public class DemoApplication {&#xD;
+&#xD;
+  public static final String TEST_TOPIC_ID = &amp;quot;event-stream&amp;quot;;&#xD;
+&#xD;
+  @Component&#xD;
+  public static class KafkaConfig {&#xD;
+&#xD;
+    @Value(&amp;quot;${kafka.topic:&amp;quot; + TEST_TOPIC_ID + &amp;quot;}&amp;quot;)&#xD;
+    private String topic;&#xD;
+&#xD;
+    @Value(&amp;quot;${kafka.address:localhost:9092}&amp;quot;)&#xD;
+    private String brokerAddress;&#xD;
+&#xD;
+    @Value(&amp;quot;${zookeeper.address:localhost:2181}&amp;quot;)&#xD;
+    private String zookeeperAddress;&#xD;
+&#xD;
+    KafkaConfig() {&#xD;
+    }&#xD;
+&#xD;
+    public KafkaConfig(String t, String b, String zk) {&#xD;
+        this.topic = t;&#xD;
+        this.brokerAddress = b;&#xD;
+        this.zookeeperAddress = zk;&#xD;
+    }&#xD;
+&#xD;
+    public String getTopic() {&#xD;
+        return topic;&#xD;
+    }&#xD;
+&#xD;
+    public String getBrokerAddress() {&#xD;
+        return brokerAddress;&#xD;
+    }&#xD;
+&#xD;
+    public String getZookeeperAddress() {&#xD;
+        return zookeeperAddress;&#xD;
+    }&#xD;
+  }&#xD;
+&#xD;
+  @Configuration&#xD;
+  public static class ProducerConfiguration {&#xD;
+&#xD;
+    @Autowired&#xD;
+    private KafkaConfig kafkaConfig;&#xD;
+&#xD;
+    private static final String OUTBOUND_ID = &amp;quot;outbound&amp;quot;;&#xD;
+&#xD;
+    private Log log = LogFactory.getLog(getClass());&#xD;
+&#xD;
+    @Bean&#xD;
+    @DependsOn(OUTBOUND_ID)&#xD;
+    CommandLineRunner kickOff( &#xD;
+           @Qualifier(OUTBOUND_ID + &amp;quot;.input&amp;quot;) MessageChannel in) {&#xD;
+        return args -&amp;gt; {&#xD;
+            for (int i = 0; i &amp;lt; 1000; i++) {&#xD;
+                in.send(new GenericMessage&amp;lt;&amp;gt;(&amp;quot;#&amp;quot; + i));&#xD;
+                log.info(&amp;quot;sending message #&amp;quot; + i);&#xD;
+            }&#xD;
+        };&#xD;
+    }&#xD;
+&#xD;
+    @Bean(name = OUTBOUND_ID)&#xD;
+    IntegrationFlow producer() {&#xD;
+&#xD;
+      log.info(&amp;quot;starting producer flow..&amp;quot;);&#xD;
+      return flowDefinition -&amp;gt; {&#xD;
+&#xD;
+        Consumer&amp;lt;KafkaProducerMessageHandlerSpec.ProducerMetadataSpec&amp;gt; spec =&#xD;
+          (KafkaProducerMessageHandlerSpec.ProducerMetadataSpec metadata)-&amp;gt;&#xD;
+            metadata.async(true)&#xD;
+              .batchNumMessages(10)&#xD;
+              .valueClassType(String.class)&#xD;
+              .&amp;lt;String&amp;gt;valueEncoder(String::getBytes);&#xD;
+&#xD;
+        KafkaProducerMessageHandlerSpec messageHandlerSpec =&#xD;
+          Kafka.outboundChannelAdapter(&#xD;
+               props -&amp;gt; props.put(&amp;quot;queue.buffering.max.ms&amp;quot;, &amp;quot;15000&amp;quot;))&#xD;
+            .messageKey(m -&amp;gt; m.getHeaders().get(IntegrationMessageHeaderAccessor.SEQUENCE_NUMBER))&#xD;
+            .addProducer(this.kafkaConfig.getTopic(), &#xD;
+                this.kafkaConfig.getBrokerAddress(), spec);&#xD;
+        flowDefinition&#xD;
+            .handle(messageHandlerSpec);&#xD;
+      };&#xD;
+    }&#xD;
+  }&#xD;
+&#xD;
+  @Configuration&#xD;
+  public static class ConsumerConfiguration {&#xD;
+&#xD;
+    @Autowired&#xD;
+    private KafkaConfig kafkaConfig;&#xD;
+&#xD;
+    private Log log = LogFactory.getLog(getClass());&#xD;
+&#xD;
+    @Bean&#xD;
+    IntegrationFlow consumer() {&#xD;
+&#xD;
+      log.info(&amp;quot;starting consumer..&amp;quot;);&#xD;
+&#xD;
+      KafkaHighLevelConsumerMessageSourceSpec messageSourceSpec = Kafka.inboundChannelAdapter(&#xD;
+          new ZookeeperConnect(this.kafkaConfig.getZookeeperAddress()))&#xD;
+            .consumerProperties(props -&amp;gt;&#xD;
+                props.put(&amp;quot;auto.offset.reset&amp;quot;, &amp;quot;smallest&amp;quot;)&#xD;
+                     .put(&amp;quot;auto.commit.interval.ms&amp;quot;, &amp;quot;100&amp;quot;))&#xD;
+            .addConsumer(&amp;quot;myGroup&amp;quot;, metadata -&amp;gt; metadata.consumerTimeout(100)&#xD;
+              .topicStreamMap(m -&amp;gt; m.put(this.kafkaConfig.getTopic(), 1))&#xD;
+              .maxMessages(10)&#xD;
+              .valueDecoder(String::new));&#xD;
+&#xD;
+      Consumer&amp;lt;SourcePollingChannelAdapterSpec&amp;gt; endpointConfigurer = e -&amp;gt; e.poller(p -&amp;gt; p.fixedDelay(100));&#xD;
+&#xD;
+      return IntegrationFlows&#xD;
+        .from(messageSourceSpec, endpointConfigurer)&#xD;
+        .&amp;lt;Map&amp;lt;String, List&amp;lt;String&amp;gt;&amp;gt;&amp;gt;handle((payload, headers) -&amp;gt; {&#xD;
+            payload.entrySet().forEach(e -&amp;gt; log.info(e.getKey() + &amp;#39;=&amp;#39; + e.getValue()));&#xD;
+            return null;&#xD;
+        })&#xD;
+        .get();&#xD;
+    }&#xD;
+  }&#xD;
+&#xD;
+  public static void main(String[] args) {&#xD;
+      SpringApplication.run(DemoApplication.class, args);&#xD;
+  }&#xD;
+}&#xD;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The example makes heavy use of Java 8 lambdas. &lt;/p&gt;&lt;p&gt;The producer spends a bit of time establishing how many messages will be sent in a single send operation, how keys and values are encoded (Kafka only knows about &lt;code&gt;byte[]&lt;/code&gt; arrays, after all) and whether messages should be sent synchronously or asynchronously. In the next line, we configure the outbound adapter itself and then define an &lt;code&gt;IntegrationFlow&lt;/code&gt; such that all messages get sent out via the Kafka outbound adapter. &lt;/p&gt;&lt;p&gt;The consumer spends a bit of time establishing which Zookeeper instance to connect to, how many messages to receive (10) in a batch, etc. Once the message batches are recieved, they&amp;rsquo;re handed to the &lt;code&gt;handle&lt;/code&gt; method where I&amp;rsquo;ve passed in a lambda that&amp;rsquo;ll enumerate the payload&amp;rsquo;s body and print it out. Nothing fancy. &lt;/p&gt;&lt;h2&gt;&lt;a href="#using-apache-kafka-with-spring-xd" class="anchor" name="using-apache-kafka-with-spring-xd"&gt;&lt;/a&gt;Using Apache Kafka with Spring XD&lt;/h2&gt;&lt;p&gt;Apache Kafka is a message bus and it can be very powerful when used as an integration bus. However, it really comes into its own because it&amp;rsquo;s fast enough and scalable enough that it can be used to route big-data through processing pipelines. And if you&amp;rsquo;re doing data processing, you really want &lt;a href="http://projects.spring.io/spring-xd/"&gt;Spring XD&lt;/a&gt;! Spring XD makes it dead simple to use Apache Kafka (as the support is built on the Apache Kafka Spring Integration adapter!) in complex stream-processing pipelines. Apache Kafka is exposed as a Spring XD &lt;em&gt;source&lt;/em&gt; - where data comes from - and a sink - where data goes to.&lt;/p&gt;&lt;p&gt;&lt;img src ="http://projects.spring.io/spring-xd/img/spring-xd-unified-platform-for-big-data.png" /&gt;&lt;/p&gt;&lt;p&gt;Spring XD exposes a super convenient DSL for creating &lt;code&gt;bash&lt;/code&gt;-like pipes-and-filter flows. Spring XD is a centralized runtime that manages, scales, and monitors data processing jobs. It builds on top of Spring Integration, Spring Batch, Spring Data and Spring for Hadoop to be a one-stop data-processing shop. Spring XD Jobs read data from &lt;em&gt;sources&lt;/em&gt;, run them through processing components that may count, filter, enrich or transform the data, and then write them to sinks.&lt;/p&gt;&lt;p&gt;Spring Integration and Spring XD ninja &lt;a href="https://twitter.com/mariusbogoevici"&gt;Marius Bogoevici&lt;/a&gt;, who did a lot of the recent work in the Spring Integration and Spring XD implementation of Apache Kafka, put together a really nice example demonstrating &lt;a href="https://github.com/spring-projects/spring-xd-samples/tree/master/kafka-source"&gt;how to get a full working Spring XD and Kafka flow working&lt;/a&gt;. The &lt;code&gt;README&lt;/code&gt; walks you through getting Apache Kafka, Spring XD and the requisite topics all setup. The essence, however, is when you use the Spring XD shell and the shell DSL to compose a stream. Spring XD components are named components that are pre-configured but have lots of parameters that you can override with &lt;code&gt;--..&lt;/code&gt; arguments via the XD shell and DSL. (That DSL, by the way, is written by the amazing &lt;a href="https://spring.io/team/aclement"&gt;Andy Clement&lt;/a&gt; of Spring Expression language fame!) Here&amp;rsquo;s an example that configures a stream to read data from an Apache Kafka source and then write the message a component called &lt;code&gt;log&lt;/code&gt;, which is a sink. &lt;code&gt;log&lt;/code&gt;, in this case, could be syslogd, Splunk, HDFS, etc.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint bash"&gt;xd&amp;gt; stream create kafka-source-test --definition &amp;quot;kafka --zkconnect=localhost:2181 --topic=event-stream | log&amp;quot; --deploy&#xD;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And that&amp;rsquo;s it! Naturally, this is just a tase of Spring XD, but hopefully you&amp;rsquo;ll agree the possibilities are tantalizing.&lt;/p&gt;&lt;h2&gt;&lt;a href="#deploying-a-kafka-server-with-lattice-and-docker" class="anchor" name="deploying-a-kafka-server-with-lattice-and-docker"&gt;&lt;/a&gt;Deploying a Kafka Server with Lattice and Docker&lt;/h2&gt;&lt;p&gt;It&amp;rsquo;s easy to get an example Kafka installation all setup using &lt;a href="http://lattice.cf"&gt;Lattice&lt;/a&gt;, a distributed runtime that supports, among other container formats, the very popular Docker image format. &lt;a href="https://github.com/spotify/docker-kafka"&gt;There&amp;rsquo;s a Docker image provided by Spotify that sets up a collocated Zookeeper and Kafka image&lt;/a&gt;. You can easily deploy this to a Lattice cluster, as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint bash"&gt;ltc create --run-as-root m-kafka spotify/kafka
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;From there, you can easily scale the Apache Kafka instances and even more easily still consume Apache Kafka from your cloud-based services. &lt;/p&gt;&lt;h2&gt;&lt;a href="#next-steps" class="anchor" name="next-steps"&gt;&lt;/a&gt;Next Steps&lt;/h2&gt;&lt;p&gt;You can find the code &lt;a href="https://github.com/joshlong/spring-and-kafka"&gt;for this blog on my GitHub account&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;We&amp;rsquo;ve only scratched the surface! &lt;/p&gt;&lt;p&gt;If you want to learn more (and why wouldn&amp;rsquo;t you?), then be sure to check out Marius Bogoevici and Dr. Mark Pollack&amp;rsquo;s upcoming &lt;a href="https://spring.io/blog/2015/03/17/webinar-reactive-data-pipelines-with-spring-xd-and-kafka"&gt;webinar on Reactive data-pipelines using Spring XD and Apache Kafka&lt;/a&gt; where they&amp;rsquo;ll demonstrate how easy it can be to use RxJava, Spring XD and Apache Kafka!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - April 15th, 2015!</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/14/this-week-in-spring-april-15th-2015" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2015-04-14:2079</id>
+    <updated>2015-04-14T22:52:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! As usual, we&amp;rsquo;ve got a lot to discuss so let&amp;rsquo;s get to it!&lt;/p&gt;&lt;p&gt;Last week I was in Paris, France, for Devoxx, FR, and this week I&amp;rsquo;m in India for the &lt;a href="http://www.developermarch.com/developersummit/"&gt;Great Indian Developer Summit&lt;/a&gt; and for some meetings ahead of the conference in Bangalore and Hyderabad. If you&amp;rsquo;re in Bombay, Hyderabad, or Bangalore, &lt;a href="http://twitter.com/starbuxman"&gt;and want to talk Spring, Cloud Foundry, and big-data, let me know&lt;/a&gt;! &lt;/p&gt;&lt;p&gt;In a week and some change, I&amp;rsquo;ll be &lt;a href="http://www.springio.net/"&gt;in Barcelona, Spain, for Spring I/O&lt;/a&gt;. If you&amp;rsquo;re in Spain, be sure not to miss this amazing event! I, along with many other members of the Spring team, will be there and looking forward to seeing you!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Want to learn more about the cloud, microservices, and building cloud-native applications? Be sure to check &lt;a href="http://spring.io/blog/2015/04/14/spring-at-cloud-foundry-summit-may-11-12-2015"&gt;out the action-packed CF Summit schedule&lt;/a&gt;, complete with a keynote by Cory Doctorow!&lt;/li&gt;
+  &lt;li&gt;Spring Data ninja Janne Valkealahti just announced the release of &lt;a href="http://spring.io/blog/2015/04/14/spring-statemachine-1-0-0-m1-released"&gt;Spring Statemachine&lt;/a&gt;, a generic API for building, you guessed it, state machines. This is extracted from Spring for Hadoop, and can underpin lots of other projects where the correct movement from one state to another is particularly important, like in distributed, asynchronous scenarios.&lt;/li&gt;
+  &lt;li&gt;Done with the microservices hype? Then let&amp;rsquo;s get practical &lt;a href="https://spring.io/blog/2015/03/17/webinar-smarter-service-to-service-invocations-with-spring-cloud"&gt;on April 21st&lt;/a&gt;. I&amp;rsquo;ll be talking about how Spring Cloud integrates service registration (e.g.: Eureka, Consul, or Zookeeper), declarative REST clients (with Netflix&amp;rsquo;s Feign), reactive programming and the circuit breaker pattern with Hystrix to support easy, robust service-to-service invocations.&lt;/li&gt;
+  &lt;li&gt;Marius Bogoevici and Mark Pollack are teaming up for a webinar on Tues April 28th about &lt;a href="https://spring.io/blog/2015/03/17/webinar-reactive-data-pipelines-with-spring-xd-and-kafka"&gt;Reactive data-pipelines with Spring XD and Kafka&lt;/a&gt;, a must for any big / fast data enthusiasts.&lt;/li&gt;
+  &lt;li&gt;last week I had the pleasure of speaking on the &lt;a href="http://www.meetup.com/virtualjug/"&gt;Virtual JUG&lt;/a&gt; again. This was my second time speaking there. Last year I gave my talk, &lt;a href="https://www.youtube.com/watch?v=eCos5VTtZoI"&gt;&lt;em&gt;Building Bootiful Applications with Spring Boot&lt;/em&gt;&lt;/a&gt; and had a lot of fun. This year, almost a year later, I was elated to be invited back to give another talk, this time on &lt;a href="https://www.youtube.com/watch?v=pMPsf9LI8kk"&gt;&lt;em&gt;Building Bootiful Microservices with Spring Cloud&lt;/em&gt;&lt;/a&gt;. The fine folks at ZeroTurnaround who sponsor the vJUG even did &lt;a href="https://www.youtube.com/watch?v=yuPyr9FD3As"&gt;a followup interview with me&lt;/a&gt; and a &lt;a href="http://zeroturnaround.com/rebellabs/building-bootiful%C2%AD-microservices-with-spring-cloud-by-josh-long/"&gt;writeup of the post&lt;/a&gt;. It was an honor and a pleasure to have been able to present, so thanks for having me vJUG!&lt;/li&gt;
+  &lt;li&gt;There are some great Groovy and Grails-related SpringOne2GX replays available! Check out Lori Hotari&amp;rsquo;s talk, &lt;a href="http://spring.io/blog/2015/04/08/springone2gx-2014-replay-performance-tuning-grails-applications"&gt;&lt;em&gt;Performance Tuning Grails Applications&lt;/em&gt;&lt;/a&gt; to get a deep dive into Grails performance bottlenecks. Check out Grails ninja Jeff Scott Brown&amp;rsquo;s talk, &lt;a href="http://spring.io/blog/2015/04/08/springone2gx-2014-replay-runtime-metaprogramming-with-groovy"&gt;Runtime Metaprogramming with Groovy&lt;/a&gt;, to learn how Groovy enables more dynamic APIs than Java through advanced features like metaprogramming. Bobby Warner&amp;rsquo;s talk, &lt;a href="http://spring.io/blog/2015/04/08/springone2gx-2014-replay-groovy-mobile-automation"&gt;Groovy Mobile Automation&lt;/a&gt;, to dive into the iOS and Android functional testing world using Groovy, Spock and Gradle. Want to learn more about Grails&amp;rsquo; GORM? &lt;a href="http://spring.io/blog/2015/04/08/springone2gx-2014-replay-advanced-gorm-beyond-relational"&gt;Check out Grails project-lead Graeme Rocher&amp;rsquo;s GORM deep-dive and go beyond relational data&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Earlier this year, we at Pivotal announced that we&amp;rsquo;d open-source the entirety of our big-data stack. We&amp;rsquo;re moving forward at a nice clip. A part of that comittment is donating Gemfire to the Apache Foundation where it&amp;rsquo;s been renamed &lt;a href="http://projectgeode.org/"&gt;Project Geode&lt;/a&gt;. We&amp;rsquo;ve got the project page and a source download available already so check it out! A proposal has been submitted to The Apache Software Foundation to incubate Project Geode. Until such time as ASF agrees to incubate Project Geode, source code is available via an evaluation-only EULA.&lt;/li&gt;
+  &lt;li&gt;Sergei Egorov&amp;rsquo;s post, &lt;a href="http://bsideup.blogspot.in/2015/04/spring-boots-fat-jars-vs-docker.html"&gt;&lt;em&gt;Spring Boot&amp;rsquo;s fat .jars vs. Docker&lt;/em&gt;&lt;/a&gt;, is full of win! It is a look at how to cache shared artifacts commont to different microservices so that Docker images can benefit from a shared base Docker image. Nice post and definitely worth a read!&lt;/li&gt;
+  &lt;li&gt;Our pal Matt Raible &lt;a href="http://raibledesigns.com/rd/entry/getting_hip_with_jhipster_at"&gt;wrote up a nice post about his recent Denver JUG presentation on JHipster&lt;/a&gt;, a Yeoman code-generator that generates a Spring Boot-based backend and a JavaScript-based frontend. The slides, his attire, and everything else make this a must-read post! :D&lt;/li&gt;
+  &lt;li&gt;Speaking of JHipster, check out this post from Driss Amri, which looks &lt;a href="http://www.drissamri.be/blog/technology/starting-modern-java-project-with-jhipster/"&gt;at how to start a modern Java project using JHipster&lt;/a&gt;. This post looks at generating the Angular.js and Spring Boot-based application and then taking advantage of some of the Boot-powered integrations for metrics, security, and deployment. Nice!&lt;/li&gt;
+  &lt;li&gt;I&amp;rsquo;m not sure I&amp;rsquo;d recommend this, but it &lt;em&gt;is&lt;/em&gt; an interesting read: &lt;a href="http://davidtanzer.net/running_multiple_spring_boot_apps_in_the_same_jvm"&gt;How to Run Multiple Spring Boot applications in the same JVM&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;This &lt;a href="http://jaxenter.com/top-3-jpa-productivity-boosters-for-java-ee-developers-spring-data-116126.html"&gt;post - JPA productivity boosters for Java EE&lt;/a&gt; made me giggle, but it&amp;rsquo;s pretty darned awesome. It&amp;rsquo;s a look at how to make data-access with stock Java EE (but &lt;em&gt;without&lt;/em&gt; using Spring, which seems to miss the point!). The first installment highlights the Spring Data CDI integration.&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring at Cloud Foundry Summit May 11-12 2015</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/14/spring-at-cloud-foundry-summit-may-11-12-2015" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-04-12:2074</id>
+    <updated>2015-04-14T13:05:00Z</updated>
+    <content type="html">&lt;p&gt;&lt;a href="http://www.cfsummit.com/"&gt;&lt;img src="https://raw.githubusercontent.com/pieterhumphrey/springio_website_images/master/Spring-CFSummit-540x200.png" width="996" height="220"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ok, so this is not just a list of cool Spring Cloud, Spring Boot, Devops, and Buildpack related sessions at Cloud Foundry Summit, it includes aspirational talks/keynotes from speakers, authors, leaders, and just plain old old-of-the-box thinkers that we believe you'll want to hear from and appreciate.  If you or your team is curious about &lt;a href="https://spring.io/blog/2015/01/13/configuring-it-all-out-or-12-factor-app-style-configuration-with-spring"&gt;12-factor applications&lt;/a&gt;, &lt;a href="http://speakerdeck.com/joshlong/building-bootiful-microservices-with-spring-boot"&gt;microservices&lt;/a&gt;, and &lt;a href="https://spring.io/blog/2015/02/11/java-doesn-t-suck-rockin-the-jvm"&gt;want the benefits of the JVM&lt;/a&gt;, then check out the show and &lt;a href="http://www.cfsummit.com/"&gt;register now&lt;/a&gt;!  Spring users can save 25% off registration using promo code: CFSPRING&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monday, May 11 • 9:00am - 9:20am&lt;/strong&gt; - &lt;a href="http://cfsummit2015.sched.org/event/88c605b672874a901f827dc7e6ebf471?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#.VSn9CfnF-bN"&gt;Keynote: Steampunk Meets Cyberpunk: The Makings of a Cloud Native Application Platform&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: &lt;a href="http://cfsummit2015.sched.org/speaker/samramji"&gt;Sam Ramji&lt;/a&gt;, CEO, Cloud Foundry Foundation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monday, May 11 • 9:35am - 9:55am&lt;/strong&gt; &lt;a href="http://cfsummit2015.sched.org/event/4cd1a887f7ad5508b742a8878bd97c7d?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#.VSn9D_nF-bN"&gt;Keynote: The Oath of the Innovator &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: &lt;a href="http://cfsummit2015.sched.org/speaker/christinemckinley"&gt;Christine McKinley&lt;/a&gt;, Mechanical Engineer, Musician, and Author &lt;/p&gt;
+&lt;p&gt;Society expects that engineers, programmers, and other technologically and scientifically gifted people are unbiased and unselfish. I'm going to make a pitch that although this trust can be uncomfortable (and sometimes misplaced, like when I'm asked to fix someone's toaster because I'm a mechanical engineer) we must do all we can to live up to the expectation that we are fact-based and uncorruptible. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monday, May 11 • 10:45am - 11:15am&lt;/strong&gt; - &lt;a href="http://cfsummit2015.sched.org/event/b9a2c4ad617e38167044bb9c42801438?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#.VSn9BvnF-bN"&gt;A Developer’s Perspective on Cloud Foundry Operations: One Month in the Trenches&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker:  &lt;a href="http://cfsummit2015.sched.org/speaker/cornelia_davis.6k0rpmi"&gt;Cornelia Davis&lt;/a&gt;, Pivotal&lt;/p&gt;
+&lt;p&gt;In this session Cornelia will share lessons learned from a month spent on a team that operates a production instance of Cloud Foundry. From her first morning addressing a prod incident, through building ops dashboards, documenting how a crashed micro-bosh is recovered, and prod deploys, she will share lessons on the value of declarative, immutable infrastructure, cloud-native application design and proper abstractions. Tried and true practices such as checklists and jumpboxes remain, while new ones such as primetime deploys and even live experimentation in prod emerge. The punchline? Even as an ops novice, she was immediately productive. In this session Cornelia will present specific techniques for using BOSH, system metrics and logging, dashboards, alerting systems and more to manage your CF deployment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monday, May 11 • 10:45am - 11:15am&lt;/strong&gt; - &lt;a href="http://cfsummit2015.sched.org/event/20ddfb64c8241be322e5fbf2fd774be9?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#.VSn9FPnF-bN"&gt;Cloud Foundry Architecture &amp;quot;Diego&amp;quot; Update&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker:  &lt;a href="http://cfsummit2015.sched.org/speaker/onsi_fakhouri.1tk7p47e"&gt;Onsi Fakhouri&lt;/a&gt;, Pivotal&lt;/p&gt;
+&lt;p&gt;The Diego runtime has made lots of progress in the last year. We're very nearly at full feature parity with the DEAs and will be replacing them soon. This talk presents an update on the state of Diego: improvements we've made, features we're working on today, and future features we plan on starting very soon. We'll also talk about Lattice: a lightweight distribution of Diego that allows you to explore and experiment with Diego's APIs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monday, May 11 • 2:50pm - 3:20pm&lt;/strong&gt; -&lt;a href="http://cfsummit2015.sched.org/event/764722c82a1681ed8644b4c59f1bee6c?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#.VSn9CPnF-bN"&gt;Devops, microservices and platforms, oh my!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker:   &lt;a href="http://cfsummit2015.sched.org/speaker/andrewclayshafer"&gt;Andrew Clay Schafer&lt;/a&gt;, Pivotal&lt;/p&gt;
+&lt;p&gt;What does it all mean? This talk will reference Cloud Foundry in relation to all the industry trends. We'll talk about 'what', but also 'why'. We'll cover the history of Agile, devops, microservices, continuous delivery in the context of intentions and capabilities to arrive at what Cloud Foundry brings to the table and what you have to bring yourself. We cover everything from Moore's Law to Conway's Law. We'll compare and contrast the difference between ad hoc automation with the cost and benefit of a structured platform. We'll look at the risk analysis to show that as the fix cost of deployment goes to zero, that continuous delivery of small changes is both faster and safer. We'll frame this with an informal model of the spectrum of effectiveness for delivering software services covering development, operations and business considerations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monday, May 11 • 6:00pm - 6:20pm&lt;/strong&gt; - &lt;a href="http://cfsummit2015.sched.org/event/4f10246fc982c5dbb8586c98f2c98d86?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#.VSn9DPnF-bN"&gt;Keynote: How I Accidentally Used Open Source Ideology to Make a Bestselling Novel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: &lt;a href="http://cfsummit2015.sched.org/speaker/andyweir"&gt;Andy Weir&lt;/a&gt; Novelist, Programmer and Space Nerd &lt;/p&gt;
+&lt;p&gt;***** TUESDAY *****&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tuesday, May 12 • 12:00pm - 12:30pm&lt;/strong&gt; - &lt;a href="http://cfsummit2015.sched.org/event/d9b0dad922f2fba0ea8726155419e076?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#.VSn9E_nF-bN"&gt;CF &amp;amp; The 12-factor App 101: The Secret Decoder Ring for Operations&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speakers:  &lt;a href="http://cfsummit2015.sched.org/speaker/ragsns"&gt;Rags&lt;/a&gt; Architect Developer Advocate, EMC, &lt;a href="http://cfsummit2015.sched.org/speaker/mattcowger"&gt;Matt Cowger&lt;/a&gt; Global Architect, EMC&lt;/p&gt;
+&lt;p&gt;Although the value of Cloud Foundry for developers is increasingly clear, much of the value for perations is wrapped around the 12-factor app as well. Contrary to popular belief both developers and operations stand to gain from these principles.  This session will be focused on technical operations folks who are not coders by trade. The session will walk through a real production application that follows the principles outlined by 12-factor while demonstrating how these choices improve the lives of not just coders, but operations people too. We'll discuss techniques like service binding, logs-as-event-streams, disposability, NoSQL, etc and how to start using them in your environments today to simplify operations in the context of production environments. After attending this session, you'll be able to interact close with your developer community and speak the same language.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tuesday, May 12 • 1:30pm - 2:00pm&lt;/strong&gt; &lt;a href="http://cfsummit2015.sched.org/event/ad30b1a167202142867663a12a0a289b?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#.VSn9BfnF-bO"&gt;Panel Discussion: Buildpacks and Containers for Cloud Foundry&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speakers: &lt;a href="http://cfsummit2015.sched.org/moderator/drnic1"&gt;Dr. Nic Williams, Stark &amp;amp; Wayne&lt;/a&gt;, &lt;a href="http://cfsummit2015.sched.org/speaker/julianfriedman"&gt;JF Julian Friedman IBM&lt;/a&gt;, &lt;a href="http://cfsummit2015.sched.org/speaker/colin_humphreys.1tk7p480"&gt;Colin Humphreys CloudCredo&lt;/a&gt;, &lt;a href="http://cfsummit2015.sched.org/speaker/andrewclayshafer"&gt;Andrew Clay Shafer, Pivotal&lt;/a&gt;, &lt;a href="http://cfsummit2015.sched.org/speaker/philwhln"&gt;Phil Whelan Software Architect, ActiveState&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Buildpacks, or their equivalent, are at the core most modern PaaS solutions. They are the recipe that build the application stack and leave the application developer to only have to care about their code. Buildpacks are open-source and each define a tried-and-tested way to deploy a specific programming language runtime or framework, and configure or compile the application. With the advent of portable containerization solutions like Docker we're seeing a shift in what PaaS users are expecting the developer's interface to the PaaS to be. They want to bring their pre-built applications and have the option to deploy those same pre-built applications anywhere. Join us for a panel discussion covering the history of Cloud Foundry's support for buildpacks, it's internal use of container technologies, the future of container format support in the runtime, and a healthy debate about the merits of each approach.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tuesday, May 12 • 1:30pm - 2:00pm&lt;/strong&gt; - &lt;a href="http://cfsummit2015.sched.org/event/f34e80f19283458d7fc7c9b080060602?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#.VSn9A_nF-bN"&gt;Deploying Microservice Architectures with Cloud Foundry&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: &lt;a href="http://cfsummit2015.sched.org/speaker/mattstine"&gt;Matt Stine&lt;/a&gt;, Pivotal &lt;/p&gt;
+&lt;p&gt;Now that you have Cloud Foundry, what are you going to do with it? This presentation will show using Spring Cloud on Cloud Foundry to quickly leverage common microservice patterns, including distributed configuration management, service discovery, intelligent routing, load balancing, and fault tolerance. Using Spring Cloud on Cloud Foundry, developers can take advantage of the cloud native microservice architectures pioneered by those building the web at places like Twitter, LinkedIn, and Netflix. In many cases they can do so running the same code with Spring Cloud wrapping the same battle-tested open source components those companies are running in production.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tuesday, May 12 • 5:20pm - 5:40pm&lt;/strong&gt; - &lt;a href="http://cfsummit2015.sched.org/event/39f994e50d5cf33c79fe2e3260125d85?iframe=no&amp;w=&amp;sidebar=yes&amp;bg=no#"&gt;Keynote: I CAN'T LET YOU DO THAT DAVE: why the opposite of &amp;quot;free&amp;quot; is &amp;quot;slave&lt;/a&gt;&amp;quot;&lt;/p&gt;
+&lt;p&gt; Speaker:&lt;a href="http://cfsummit2015.sched.org/speaker/corydoctorow2"&gt; Cory Doctorow&lt;/a&gt;, Science Fiction Author, Activist, Journalist and Blogger &lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Statemachine 1.0.0.M1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/14/spring-statemachine-1-0-0-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Janne Valkealahti</name>
+    </author>
+    <id>tag:spring.io,2015-04-11:2073</id>
+    <updated>2015-04-14T13:03:00Z</updated>
+    <content type="html">&lt;p&gt;We&amp;rsquo;re pleased to announce a first milestone release of &lt;strong&gt;Spring Statemachine 1.0.0.M1&lt;/strong&gt;. This blog also acts as introductory for this new project.&lt;/p&gt;&lt;p&gt;While it&amp;rsquo;d be nice to write a blog post introducing new cutting edge technology hot from a press, finite statemachines has been around longer than readers of this post(grandpa you can now lower your hand). There are technologies which come and go and then there are these fundamental technologies which stick around simply because they are proven to work.&lt;/p&gt;&lt;p&gt;Every programmer is most likely already using concepts of states of some sort in their applications. Having a simple boolean flag is already a simple statemachine on its own when application is making a decision based on that flag. Programmer then throws in more flags, enums and a bunch of if/else/break structures which is perfectly all right with simple use cases.&lt;/p&gt;&lt;p&gt;Problem with baking state and application logic together is that over time when application gets more complex code is usually starting to look like a plate full of spaghetti and every time programmer changes one part, some other parts gets broken.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Spring Statemachine&lt;/strong&gt; is a framework for application developers to use &lt;a href="http://en.wikipedia.org/wiki/UML_state_machine"&gt;Statemachine&lt;/a&gt; concepts with Spring applications and aims to provide features like:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Easy to use flat one level state machine for simple use cases.&lt;/li&gt;
+  &lt;li&gt;Hierarchical state machine structure to ease complex state configuration.&lt;/li&gt;
+  &lt;li&gt;State machine regions to provide even more complex state configurations.&lt;/li&gt;
+  &lt;li&gt;Usage of triggers, transitions, guards and actions.&lt;/li&gt;
+  &lt;li&gt;Type safe configuration adapter.&lt;/li&gt;
+  &lt;li&gt;State machine event listeners.&lt;/li&gt;
+  &lt;li&gt;Spring IOC integration to associate beans with a statemachine.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Proper state handling is very important in applications where something can happen asynchronously. This is especially important concept in cloud environments where it is easy to get into trouble with concurrency. &lt;strong&gt;Spring Statemachine&lt;/strong&gt; is another flavour of state handling what i.e. &lt;strong&gt;Spring Cloud Cluster&lt;/strong&gt; projects aims to provide with its features like &lt;em&gt;distributed locks&lt;/em&gt; and &lt;em&gt;leader election&lt;/em&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href="http://projects.spring.io/spring-statemachine/"&gt;Project Page&lt;/a&gt; contains a simple example to get an idea how Spring Statemachine works. We&amp;rsquo;ve also made few &lt;a href="https://github.com/spring-projects/spring-statemachine/tree/master/spring-statemachine-samples"&gt;Samples&lt;/a&gt; which are explained more detailed in our reference documentation. These samples are packaged with &lt;strong&gt;Spring Boot&lt;/strong&gt; and uses &lt;strong&gt;Spring Shell&lt;/strong&gt; to fire up interactive shell you use to interact with a statemachine. Great way to play with things without a need to recompile to see different behaviour.&lt;/p&gt;&lt;p&gt;We&amp;rsquo;d love to hear back what people think by participating in a &lt;a href="http://projects.spring.io/spring-statemachine/"&gt;Spring Statemachine Project&lt;/a&gt; or simply creating issues or feature requests at &lt;a href="https://github.com/spring-projects/spring-statemachine"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Performance Tuning Grails Applications</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/08/springone2gx-2014-replay-performance-tuning-grails-applications" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-04-09:2072</id>
+    <updated>2015-04-08T18:52:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
+&lt;p&gt;Speaker: Lari Hotari &lt;/p&gt;
+&lt;p&gt;Essential Grails Track &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/grails-performanceoptimization-s2gx-2014-41177969"&gt;http://www.slideshare.net/SpringCentral/grails-performanceoptimization-s2gx-2014-41177969 &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Grails has great performance characteristics but as with all full stack frameworks, attention must be paid to optimize performance.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/thdFMj9PRl4" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Runtime Metaprogramming With Groovy</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/08/springone2gx-2014-replay-runtime-metaprogramming-with-groovy" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-04-09:2071</id>
+    <updated>2015-04-08T18:51:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
+&lt;p&gt;Speaker: Jeff Scott Brown &lt;/p&gt;
+&lt;p&gt;More Groovy Track &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/runtime-metaprogrammingwithgroovy"&gt;http://www.slideshare.net/SpringCentral/runtime-metaprogrammingwithgroovy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The dynamic runtime nature of Groovy is one of the things that sets it apart from standard Java and makes it a fantastic language for building dynamic applications for the Java Platform. The metaprogramming capabilities offered by the language provide everything that an application development team needs to build systems that are far more capable than their all Java counterparts. &lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/0uxQAYvPax8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Groovy Mobile Automation</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/08/springone2gx-2014-replay-groovy-mobile-automation" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-04-09:2070</id>
+    <updated>2015-04-08T18:47:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
+&lt;p&gt;Speaker: Bobby Warner &lt;/p&gt;
+&lt;p&gt;More Groovy Track &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/groovy-mobileautomation"&gt;http://www.slideshare.net/SpringCentral/groovy-mobileautomation &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this talk, we will discuss mobile automation and dive into the iOS and Android functional testing world using Groovy, Spock and Gradle.&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/IjPox3Nfoeo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Advanced GORM: Beyond Relational</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/08/springone2gx-2014-replay-advanced-gorm-beyond-relational" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-04-09:2069</id>
+    <updated>2015-04-08T18:45:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
+&lt;p&gt;Speaker: Graeme Rocher &lt;/p&gt;
+&lt;p&gt;More Groovy Track &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/2-gx-2014-advanced-gorm"&gt;http://www.slideshare.net/SpringCentral/2-gx-2014-advanced-gorm&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;In this talk, Grails project lead Graeme Rocher will demonstrate some less known, advanced features of GORM and explore the possibilities offered going beyond the relational database.&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/liVcKFhW91I" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - April 7th, 2015</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/07/this-week-in-spring-april-7th-2015" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2015-04-07:2068</id>
+    <updated>2015-04-07T17:55:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week, I&amp;rsquo;m off to Paris, France for Devoxx France. Many of us on the Spring and Cloud Foundry teams will be there, so don&amp;rsquo;t hesitate &lt;a href="http://twitter.com/starbuxman"&gt;to reach out&lt;/a&gt; if you&amp;rsquo;re about, we&amp;rsquo;d love to hear from you! Also, even if you&amp;rsquo;re not at the show, come &lt;a href="https://www.eventbrite.com/e/venez-decouvrir-devoxx-france-le-temps-dune-soiree-tickets-16446026508"&gt;meet many of us on the Spring team (including Juergen Hoeller himself, Stéphane Nicoll, Brian Clozel, Sébastien Deleuze and of course yours truly) at this free Devoxx France event&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Also, this Thursday I&amp;rsquo;ll be speaking at the vJUG again, &lt;a href="http://www.meetup.com/virtualJUG/events/221218834/"&gt;this time on building microservices with Spring Cloud&lt;/a&gt;. Don&amp;rsquo;t miss it!&lt;/p&gt;&lt;p&gt;Erratum: @springjuergen, @snicoll, @sdeleuze, @brianclozel mais aussi très probablement @starbuxman. Pas d&amp;rsquo;excuses : eventbrite.com/e/venez-decouv…&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Boot co-lead Phil Webb just announced that &lt;a href="https://spring.io/blog/2015/03/31/spring-boot-1-1-12-released"&gt;Spring Boot 1.1.12&lt;/a&gt; and &lt;a href="https://spring.io/blog/2015/03/31/spring-boot-1-2-3-released"&gt;Spring Boot 1.2.3 are now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Big-data ninja Thomas Risberg just released &lt;a href="https://spring.io/blog/2015/04/03/spring-for-apache-hadoop-2-1-2-released"&gt;Spring for Apache Hadoop 2.1.2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Social lead Craig Walls just announced &lt;a href="https://spring.io/blog/2015/04/07/spring-social-facebook-2-0-0-rc1-released"&gt;Spring Social Facebook 2.0.0.RC1&lt;/a&gt;. The new release brings Spring Social Facebook up to version 2.3 of the Facebook API and includes backwards incompatible changes.&lt;/li&gt;
+  &lt;li&gt;Spring ninja Andy Wilkinson just announced the latest cut &lt;a href="https://spring.io/blog/2015/04/01/spring-io-platform-1-1-2-released"&gt;of the Spring IO Platform BOM, 1.1.2&lt;/a&gt; and &lt;a href="https://spring.io/blog/2015/04/01/spring-io-platform-1-0-5-released"&gt;Spring IO Platform 1.0.5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Matt Stine just announced the availability of two new guides and related Spring Cloud support for &lt;a href="https://spring.io/blog/2015/04/06/lattice-and-spring-cloud-resilient-sub-structure-for-your-cloud-native-spring-applications"&gt;building Spring applications with Docker and running them on the Lattice distributed runtime&lt;/a&gt;. What is Lattice? It&amp;rsquo;s a much smaller subset of Cloud Foundry, that you can run on your local desktop, somewhat comparable to things like Kubernetes and Mesos + Marathon.&lt;/li&gt;
+  &lt;li&gt;Done with the microservices hype? Then let&amp;rsquo;s get practical &lt;a href="https://spring.io/blog/2015/03/17/webinar-smarter-service-to-service-invocations-with-spring-cloud"&gt;on April 21st&lt;/a&gt;. I&amp;rsquo;ll be talking about how Spring Cloud integrates service registration (e.g.: Eureka, Consul, or Zookeeper), declarative REST clients (with Netflix&amp;rsquo;s Feign), reactive programming and the circuit breaker pattern with Hystrix to support easy, robust service-to-service invocations.&lt;/li&gt;
+  &lt;li&gt;Marius Bogoevici and Mark Pollack are teaming up for a webinar on Tues April 28th about &lt;a href="https://spring.io/blog/2015/03/17/webinar-reactive-data-pipelines-with-spring-xd-and-kafka"&gt;Reactive data-pipelines with Spring XD and Kafka&lt;/a&gt;, a must for any big / fast data enthusiasts.&lt;/li&gt;
+  &lt;li&gt;Spring framework lead Juergen Hoeller put together a nice post &lt;a href="https://spring.io/blog/2015/04/01/ongoing-support-for-java-7-and-even-java-6"&gt;highlighting the continued, ongoing support for Java 6, 7, and 8 in Spring framework&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;and then Spring framework ninja Stéphane Nicoll followed up with a look at how, exactly, Spring maintains its precarious &lt;a href="https://spring.io/blog/2015/04/03/how-spring-achieves-compatibility-with-java-6-7-and-8"&gt;backwards compatibility across Java 6, 7, and 8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Integration ninja Artem Bilan just announced &lt;a href="https://spring.io/blog/2015/04/07/spring-amqp-1-4-4-and-spring-integration-3-0-7-4-0-7-and-4-1-3-are-available"&gt;Spring AMQP 1.4.4 and Spring Integration 3.0.7, 4.0.7, and 4.1.3 are now available&lt;/a&gt;. These are mostly maintenance releases.&lt;/li&gt;
+  &lt;li&gt;Spring ninja Greg Turnquist has converted the good Dr. Dave Syer&amp;rsquo;s epic &lt;a href="https://spring.io/blog/2015/04/02/check-out-dave-syer-s-spring-security-and-angularjs-blog-series-converted-to-tutorial"&gt;blog series on single page application security with Spring Security OAuth, Spring Cloud and Angular.js into a tutorial&lt;/a&gt;! Hurray!&lt;/li&gt;
+  &lt;li&gt;Spring Security lead Rob Winch has just &lt;a href="https://spring.io/blog/2015/04/02/spring-security-kerberos-1-0-0-rc2-released"&gt;announced Spring Security Kerbreros 1.0.0.RC2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Not strictly Spring-related, but I enjoyed this post, &lt;a href="http://product.hubspot.com/blog/upgrading-to-java-8-at-scale"&gt;&lt;em&gt;Upgrading Java 8 at scale&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out this post (that follows &lt;a href="http://java.dzone.com/articles/building-microservices-spring"&gt;this first installment from 2014&lt;/a&gt; ) by Sergei Egorov on building &lt;a href="http://bsideup.blogspot.de/2015/04/spring-boot-thrift-part2.html"&gt;microservices with Spring Boot, Apache Thrift and Facebook&amp;rsquo;s Swift (which removes Swift IDL files for server code)&lt;/a&gt;. You might &lt;em&gt;also&lt;/em&gt; revisit my post from a few weeks ago on using &lt;a href="https://spring.io/blog/2015/03/22/using-google-protocol-buffers-with-spring-mvc-based-rest-services"&gt;Spring framework&amp;rsquo;s Google Protocol Buffers support&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Our friend is back, this time with a post on cleanly &lt;a href="http://www.petrikainulainen.net/programming/spring-framework/spring-from-the-trenches-injecting-property-values-into-configuration-beans/"&gt;injecting configuration properties into Spring beans&lt;/a&gt;. Ultimately, this looks very similar to Spring Boot&amp;rsquo;s &lt;code&gt;@ConfigurationProperties&lt;/code&gt; mechanism, so check that out if you&amp;rsquo;re using Spring Boot!&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://learningspringapplicationdevelopment.com/"&gt;Packt has just published a new book on Spring framework &lt;/a&gt; by a Ravi Kant Soni.&lt;/li&gt;
+  &lt;li&gt;You know what made my day? Seeing the third party Vaadin support for Spring Boot enumerated among the checkboxes &lt;a href="http://start.spring.io"&gt;on the Spring Initialzr&lt;/a&gt;. That&amp;rsquo;s awesome!&lt;/li&gt;
+  &lt;li&gt;MOAR Groovy and Grails replays from SpringOne2GX are released (in celebration of Grails 3.0 release), Lari Hotari&amp;rsquo;s &lt;a href="https://spring.io/blog/2015/04/08/springone2gx-2014-replay-performance-tuning-grails-applications"&gt;Performance Tuning Grails Applications&lt;/a&gt;, Jeff Scott Brown&amp;rsquo;s &lt;a href="https://spring.io/blog/2015/04/08/springone2gx-2014-replay-runtime-metaprogramming-with-groovy"&gt;Runtime Metaprogramming With Groovy&lt;/a&gt;, Bobby Warner&amp;rsquo;s &lt;a href="https://spring.io/blog/2015/04/08/springone2gx-2014-replay-groovy-mobile-automation"&gt;Groovy Mobile Automation&lt;/a&gt; and Gareme Rocher&amp;rsquo;s &lt;a href="https://spring.io/blog/2015/04/08/springone2gx-2014-replay-advanced-gorm-beyond-relational"&gt;Advanced GORM: Beyond Relational&lt;/a&gt;. Enjoy!&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Social Facebook 2.0.0.RC1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/07/spring-social-facebook-2-0-0-rc1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Craig Walls</name>
+    </author>
+    <id>tag:spring.io,2015-04-07:2067</id>
+    <updated>2015-04-07T15:00:00Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;&lt;p&gt;I&amp;rsquo;m pleased to announce the release of &lt;a href="http://projects.spring.io/spring-social-facebook/"&gt;Spring Social Facebook&lt;/a&gt; 2.0.0.RC1. This release candidate brings Spring Social Facebook&amp;rsquo;s API binding to target version 2.3 of Facebook&amp;rsquo;s Graph API.&lt;/p&gt;&lt;p&gt;View the release notes &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10607&amp;version=14864"&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Be aware that due to many breaking changes in Facebook&amp;rsquo;s Graph API between v1.0 and v2.0, plus additional changes up through v2.3, there are some necessary breaking changes in this version of Spring Social Facebook. Also, because of the large number of breaking changes already imposed upon Spring Social Facebook by changes in the Graph API, we decided to take this opportunity to rename a few types to be more consistent with Facebook&amp;rsquo;s terminology. (For example, the FacebookProfile class is now named User to be consistent with Facebook&amp;rsquo;s documentation.)&lt;/p&gt;&lt;p&gt;Facebook will be dropping support for Graph API v1.0 on April 30th. It is advised that you start using Spring Social Facebook 2.0.0.RC1 immediately in anticipation of Spring Social Facebook 2.0.0.RELEASE, planned for next week. &lt;/p&gt;&lt;p&gt;Although this release went through a very thorough testing process, including both automated and manual tests against the actual Facebook Graph API, it&amp;rsquo;s very possible that something was missed. If you run into any problems, please &lt;a href="http://jira.spring.io/browse/SOCIALFB"&gt;file a bug&lt;/a&gt; to let us know so that it can be fixed before 2.0.0.RELEASE.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring AMQP 1.4.4 and Spring Integration 3.0.7, 4.0.7 and 4.1.3 are available</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/07/spring-amqp-1-4-4-and-spring-integration-3-0-7-4-0-7-and-4-1-3-are-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2015-04-03:2064</id>
+    <updated>2015-04-07T00:00:00Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring community,&lt;/p&gt;&lt;p&gt;On behalf of the Spring Integration/AMQP team I&amp;rsquo;m pleased to announce that we have released a number of maintenance releases (click the links in the following bullets to see the corresponding release notes):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring AMQP &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10450&amp;version=14927"&gt;1.4.4&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Spring Integration &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10121&amp;version=14823"&gt;3.0.7&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Spring Integration &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10121&amp;version=14860"&gt;4.0.7&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Spring Integration &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10121&amp;version=14897"&gt;4.1.3&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;All of these releases are available from the &lt;a href="http://repo.springsource.org/release"&gt;Release Repository&lt;/a&gt;, as well as from Maven Central.&lt;/p&gt;&lt;p&gt;Thank you very much for everyone involved!&lt;/p&gt;&lt;p&gt;We are working on the first milestone for the Spring AMQP &lt;code&gt;1.5&lt;/code&gt; release in the next several weeks, which will have some new features such as support for the RabbitMQ Management HTTP API, RabbitMQ &lt;code&gt;3.5&lt;/code&gt; compatibility and other improvements. &lt;/p&gt;&lt;p&gt;Spring Integration &lt;code&gt;4.2&lt;/code&gt; Milestone 1 is planned to be released in a month or so with full support for Spring Framework &lt;code&gt;4.2&lt;/code&gt;, with feature candidates such as STOMP and Zookeeper adapters, as well as JMX metrics improvements and many others.&lt;/p&gt;&lt;p&gt;Stay in touch and don&amp;rsquo;t hesitate to share any ideas or issues with us! &lt;/p&gt;&lt;p&gt;&lt;a href="http://projects.spring.io/spring-amqp/"&gt;Spring AMQP Home Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/AMQP"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-amqp/wiki"&gt;Contributions&lt;/a&gt; | &lt;a href="http://stackoverflow.com"&gt;StackOverflow&lt;/a&gt; (&lt;code&gt;spring-amqp&lt;/code&gt;)&lt;/p&gt;&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Spring Integration Home Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.md"&gt;Contributions&lt;/a&gt; | &lt;a href="http://stackoverflow.com"&gt;StackOverflow&lt;/a&gt; (&lt;code&gt;spring-integration&lt;/code&gt;)&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Lattice and Spring Cloud: Resilient Sub-structure for Your Cloud-Native Spring Applications</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/06/lattice-and-spring-cloud-resilient-sub-structure-for-your-cloud-native-spring-applications" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Matt Stine</name>
+    </author>
+    <id>tag:spring.io,2015-04-06:2066</id>
+    <updated>2015-04-06T20:39:57Z</updated>
+    <content type="html">&lt;p&gt;We believe that the development of &lt;a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook"&gt;cloud-native application architectures&lt;/a&gt; is the next great evolutionary phase of enterprise application development. These architectures combine elements like &lt;a href="http://12factor.net"&gt;twelve-factor applications&lt;/a&gt;, &lt;a href="http://martinfowler.com/articles/microservices.html"&gt;microservices&lt;/a&gt;, &lt;a href="http://pivotal.io/platform-as-a-service/pivotal-cloud-foundry"&gt;self-service agile infrastructure&lt;/a&gt;, &lt;a href="http://www.mattstine.com/2014/06/30/microservices-are-solid"&gt;API-based collaboration&lt;/a&gt;, and &lt;a href="http://www.infoq.com/articles/russ-miles-antifragility-microservices"&gt;antifragility&lt;/a&gt;. All of these elements enable us to simultaneously move quickly and safely as we continuously deliver business value to our customers.&lt;/p&gt;&lt;p&gt;The Spring team&amp;rsquo;s goal has always been to &lt;a href="https://twitter.com/mstine/status/559141270715924481"&gt;win the war on Java complexity&lt;/a&gt;, and now we&amp;rsquo;re teaming up with our colleagues on the &lt;a href="http://cloudfoundry.org"&gt;Cloud Foundry&lt;/a&gt; team to eliminate complexity from the development and operation of cloud-native applications. &lt;/p&gt;&lt;p&gt;We began this effort with &lt;a href="http://cloud.spring.io"&gt;Spring Cloud&lt;/a&gt;, an umbrella project that brings to the composition of cloud-native application architectures the same simplicity and productivity you&amp;rsquo;ve come to depend on in &lt;a href="http://projects.spring.io/spring-boot"&gt;Spring Boot&lt;/a&gt;. Coordination of distributed systems can be accomplished by applying many well-characterized boiler plate patterns. Using Spring Cloud, developers can quickly stand up services and applications that implement those patterns. Many of these patterns are provided via wrapping the battle-tested components found at &lt;a href="http://netflix.github.io/"&gt;NetflixOSS&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;You can develop and run Spring Cloud applications anywhere, including your laptop, bare-metal data center infrastructure, or cloud infrastructure like AWS or Google Cloud. But for maximum effectiveness, cloud-native applications need a cloud-native application platform. We believe that Cloud Foundry is the platform that, combined with Spring Cloud, provides the optimal necessary sub-structure for building and operating cloud-native applications.&lt;/p&gt;&lt;p&gt;Historically it&amp;rsquo;s been challenging to run Cloud Foundry on your laptop. That&amp;rsquo;s why we&amp;rsquo;re excited to tell you about &lt;a href="http://lattice.cf"&gt;Lattice&lt;/a&gt;. Lattice is a cloud-native application platform that enables you to run your applications in containers using solutions like &lt;a href="http://docker.com"&gt;Docker&lt;/a&gt;. Lattice includes features like:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cluster scheduling&lt;/li&gt;
+  &lt;li&gt;HTTP load balancing&lt;/li&gt;
+  &lt;li&gt;Log aggregation&lt;/li&gt;
+  &lt;li&gt;Health management&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Lattice does this by packaging a subset of the components found in the Cloud Foundry elastic runtime. The result is an open, single-tenant environment suitable for rapid application development. Applications developed using Lattice should migrate unchanged to full Cloud Foundry deployments.&lt;/p&gt;&lt;p&gt;To help you get started with Lattice, we&amp;rsquo;ve published two getting started guides:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/guides/gs/spring-boot-docker"&gt;Spring Boot with Docker&lt;/a&gt;: Lattice currently supports running applications packaged as Docker images, so this guide helps you to build Docker images from your Spring Boot application using either Maven or Gradle.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/guides/gs/spring-cloud-and-lattice/"&gt;Spring Cloud + Lattice&lt;/a&gt;: this guide walks you through setting up Lattice and then deploying a Spring Boot application to it. Applications you package following the Docker guide should run on Lattice with ease.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The second guide highlights our first direct integration between Spring Cloud and Lattice, &lt;a href="https://github.com/spring-cloud/spring-cloud-lattice"&gt;spring-cloud-lattice&lt;/a&gt;, which is an implementation of Spring Cloud&amp;rsquo;s &lt;code&gt;DiscoveryClient&lt;/code&gt; backed by Lattice&amp;rsquo;s &lt;a href="http://lattice.cf/docs/lattice-api"&gt;API&lt;/a&gt;. This implementation allows us to perform &lt;a href="http://microservices.io/patterns/client-side-discovery.html"&gt;service discovery&lt;/a&gt; directly from Lattice without any additional dependencies. If you&amp;rsquo;ve already started leveraging Netflix Ribbon or Zuul via Spring Cloud, you&amp;rsquo;ll now be able to use both without deploying a Eureka server! Spring Cloud Lattice is currently an alpha-quality preview release.&lt;/p&gt;&lt;p&gt;This integration is only the first of many you&amp;rsquo;ll be seeing from the ever deepening collaboration between the Cloud Foundry and Spring teams. For example, the Spring XD team has been hard at work building a service-provider interface that allows XD to treat Lattice as a runtime layer, deploying stream modules as containers. &lt;/p&gt;&lt;p&gt;Our goal is to provide you, the enterprise Java developer, with the ideal local development and cloud operation environments that you need to harness the power of cloud-native applications. We look forward to showing you even more great things at &lt;a href="http://springone2gx.com"&gt;SpringOne 2GX&lt;/a&gt; in September, 2015. Stay tuned!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring for Apache Hadoop 2.1.2 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/03/spring-for-apache-hadoop-2-1-2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Thomas Risberg</name>
+    </author>
+    <id>tag:spring.io,2015-04-03:2065</id>
+    <updated>2015-04-03T18:50:00Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that Spring for Apache Hadoop 2.1.2 has just been released and is now available from Maven Central and the Spring Repository. This release includes version upgrades of some Spring projects as well as the most recent versions for all supported distros. &lt;/p&gt;&lt;p&gt;We have added support for the newly released Pivotal HD 3.0. In addition to that new release, we have updated Cloudera CDH to version 5.3.2 and Hortonworks HDP 2.2 to use version 2.2.4.0. More details can be found in the &lt;a href="http://docs.spring.io/spring-hadoop/docs/2.1.2.RELEASE/changelog.txt"&gt;changelog&lt;/a&gt; or in the &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10801&amp;version=14952"&gt;JIRA release notes&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Here is a complete list of the latest version designation to use for the various distro &amp;ldquo;flavors&amp;rdquo; published. The Apache Hadoop releases are available in Maven Central and all other releases are available in the &lt;a href="http://repo.spring.io/libs-release/"&gt;Spring Repository&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apache Hadoop 2.4.1 (2.1.2.RELEASE-hadoop24)&lt;/li&gt;
+  &lt;li&gt;Apache Hadoop 2.5.2 (2.1.2.RELEASE-hadoop25)&lt;/li&gt;
+  &lt;li&gt;Apache Hadoop 2.6.0 (2.1.2.RELEASE)&lt;/li&gt;
+  &lt;li&gt;Pivotal HD 2.1 (2.1.2.RELEASE-phd21)&lt;/li&gt;
+  &lt;li&gt;Pivotal HD 3.0 (2.1.2.RELEASE-phd30)&lt;/li&gt;
+  &lt;li&gt;Cloudera CDH5 5.3.0 (2.1.2.RELEASE-cdh5)&lt;/li&gt;
+  &lt;li&gt;Hortonworks HDP 2.2 (2.1.2.RELEASE-hdp22)&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The project page is at - &lt;a href="http://projects.spring.io/spring-hadoop/"&gt;http://projects.spring.io/spring-hadoop/&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>How Spring achieves compatibility with Java 6, 7 and 8</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/03/how-spring-achieves-compatibility-with-java-6-7-and-8" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2015-04-03:2063</id>
+    <updated>2015-04-03T13:58:52Z</updated>
+    <content type="html">&lt;p&gt;As of Spring Framework 4.0, Java 8 is supported as a first-class citizen and we&amp;rsquo;ve seen some confusion in the Spring community since then. How do we manage to support Java 8 and remain compatible with Java 6 and Java 7 after all? This blog post provides some insight into how we&amp;rsquo;re handling this within the framework codebase.&lt;/p&gt;&lt;h2&gt;&lt;a href="#java-8-language-features-vs-java-8-apis" class="anchor" name="java-8-language-features-vs-java-8-apis"&gt;&lt;/a&gt;Java 8 language features vs. Java 8 APIs&lt;/h2&gt;&lt;p&gt;First, a distinction must be made between using new language features and new APIs in a given Java generation such as Java 8. If a class uses a Java 8 language feature such as a lambda expression, it has to be compiled with &lt;code&gt;-source 1.8 -target 1.8&lt;/code&gt; and therefore the whole compilation unit will only work on Java 8+. However, if a particular class in a library optionally uses a new Java 8 interface such as &lt;code&gt;java.util.stream.Stream&lt;/code&gt;, the library can still run on a previous Java generation as long as it is being compiled with e.g. &lt;code&gt;-source 1.6 -target 1.6&lt;/code&gt; - and as long as the use of that particular &lt;code&gt;Stream&lt;/code&gt;-based class is guarded to only kick in when actually running on Java 8+. As you may have guessed, we&amp;rsquo;re making extensive use of such arrangements within the Spring Framework codebase!&lt;/p&gt;&lt;p&gt;We&amp;rsquo;ve advertised how Spring Framework 4.0 naturally fits with Java 8 lambdas. For instance, retrieving the catalog of a given JDBC connection with a &lt;a href="https://github.com/spring-projects/spring-framework/blob/8472a2b2/spring-jdbc/src/main/java/org/springframework/jdbc/core/ConnectionCallback.java"&gt;&lt;code&gt;ConnectionCallback&lt;/code&gt;&lt;/a&gt; can be written as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;jdbcTemplate.execute(connection -&amp;gt; connection.getCatalog())
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In fact, Spring Framework had now-so-called functional interfaces for years and we did not have to change any of those APIs to be compliant with Java 8&amp;rsquo;s compiler rules for functional interfaces. Lambda-based code such as the above, calling into Spring APIs, can be used in any Spring application - which then requires a Java 8 runtime, obviously. However, if you choose to write such code with a traditional inner class approach, against the very same Spring APIs in the very same Spring version, you can do so as well with a Java 6+ runtime:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;jdbcTemplate.execute(new ConnectionCallback&amp;lt;String&amp;gt;() {&#xD;
+    @Override&#xD;
+    public String doInConnection(Connection con) throws SQLException {&#xD;
+        return con.getCatalog();&#xD;
+    }&#xD;
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The bottom line is that the choice is yours: We carefully designed Spring Framework 4.x to be naturally compatible with Java 6, 7 and 8, with the same Spring jars and no special setup steps. We don&amp;rsquo;t use any Java 8 language features in our own code, so we can compile our framework codebase with &lt;code&gt;-source 1.6 -target 1.6&lt;/code&gt;, and we autodetect and automatically activate many Java 8 API features (if available at runtime) within that codebase arrangement. Your application code may then choose to use Java 6, 7 or 8 language level itself, interacting with our framework arrangement and naturally getting the most out of the JDK that you happen to be using - without any extra setup, just through combining Spring with your JDK at runtime.&lt;/p&gt;&lt;h2&gt;&lt;a href="#which-java-8-api-features-do-we-support" class="anchor" name="which-java-8-api-features-do-we-support"&gt;&lt;/a&gt;Which Java 8 API features do we support?&lt;/h2&gt;&lt;p&gt;We have dedicated support for a number of Java 8 specific API features such as &lt;code&gt;java.util.Optional&lt;/code&gt;, &lt;code&gt;java.util.stream.Stream&lt;/code&gt;, &lt;code&gt;java.time&lt;/code&gt; (JSR-310), repeatable annotations, method/constructor parameter names, and even the &lt;code&gt;java.util.Base64&lt;/code&gt; utility class. Those features get reflectively detected when you choose to use them in your own application classes, with the Spring Framework conditionally activating its support for those Java 8 features, e.g. registering default converters for &lt;code&gt;Optional&lt;/code&gt; and &lt;code&gt;Stream&lt;/code&gt; when Java 8 is present at runtime.&lt;/p&gt;&lt;p&gt;Let&amp;rsquo;s have a look at an example. In the upcoming Spring Framework 4.2, if you define a value of type &lt;code&gt;Collection&lt;/code&gt; or array, you can inject it as a &lt;code&gt;Stream&lt;/code&gt; and we will convert that for you. You can find the full code of &lt;a href="https://github.com/spring-projects/spring-framework/blob/228d9db4/spring-core/src/main/java/org/springframework/core/convert/support/StreamConverter.java"&gt;&lt;code&gt;StreamConverter&lt;/code&gt; on github&lt;/a&gt; but here&amp;rsquo;s an excerpt:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;import java.util.*;&#xD;
+import java.util.stream.Collectors;&#xD;
+import java.util.stream.Stream;&#xD;
+&#xD;
+import org.springframework.core.convert.*;&#xD;
+import org.springframework.lang.UsesJava8;&#xD;
+&#xD;
+@UsesJava8&#xD;
+public class StreamConverter implements ConditionalGenericConverter {&#xD;
+    ....&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;StreamConverter&lt;/code&gt; is an isolated class using Java 8 specific APIs, so what we need to do now is to conditionally add &lt;code&gt;StreamConverter&lt;/code&gt; to &lt;a href="https://github.com/spring-projects/spring-framework/blob/018adb04/spring-core/src/main/java/org/springframework/core/convert/support/DefaultConversionService.java"&gt;&lt;code&gt;DefaultConverterService&lt;/code&gt;&lt;/a&gt; if Java 8 is present at runtime.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;public class DefaultConversionService extends GenericConversionService {&#xD;
+&#xD;
+    /** Java 8&amp;#39;s java.util.stream.Stream class available? */&#xD;
+    private static final boolean streamAvailable = ClassUtils.isPresent(&#xD;
+            &amp;quot;java.util.stream.Stream&amp;quot;, &#xD;
+            DefaultConversionService.class.getClassLoader());&#xD;
+&#xD;
+    private static void addCollectionConverters(&#xD;
+            ConverterRegistry converterRegistry) {&#xD;
+        ...&#xD;
+&#xD;
+        if (streamAvailable) {&#xD;
+            converterRegistry.addConverter(&#xD;
+                    new StreamConverter(conversionService));&#xD;
+        }&#xD;
+    }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We conditionally check if the API is present at runtime and make a decision based on that, with you as a user simply experiencing fully Java 8 adapted setup by default. This is somewhat similar to the &lt;a href="https://github.com/spring-projects/spring-boot/tree/master/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/condition"&gt;conditions infrastructure&lt;/a&gt; in Spring Boot except it is more low-level and internal. &lt;/p&gt;&lt;h2&gt;&lt;a href="#checking-java-6-compatibility" class="anchor" name="checking-java-6-compatibility"&gt;&lt;/a&gt;Checking Java 6 compatibility&lt;/h2&gt;&lt;p&gt;Since we are using Java 8 specific APIs in several isolated places, we need JDK 8 to compile the framework codebase overall. As a result, there is a risk that we accidentally introduce Java 8 specific API calls in places where we need to remain Java 6 compatible.&lt;/p&gt;&lt;p&gt;Fortunately, our CI build plan is configured to execute &lt;a href="http://mojo.codehaus.org/animal-sniffer/"&gt;Animal Sniffer&lt;/a&gt; with each build. This checks our code against a given Java API &lt;em&gt;signature&lt;/em&gt; (in our case Java 6 update 18) and fails the build if some incorrect usage happens to be found. So what about legitimate use cases then where we do need to call Java 7 or 8 APIs? You can configure the sniffer to exclude a list of classes or, better yet, provide a set of annotations that &lt;em&gt;flag&lt;/em&gt; such exceptional cases. &lt;/p&gt;&lt;p&gt;That&amp;rsquo;s exactly what the &lt;a href="https://github.com/spring-projects/spring-framework/blob/f7b46539/spring-core/src/main/java/org/springframework/lang/UsesJava8.java"&gt;&lt;code&gt;@UsesJava8&lt;/code&gt;&lt;/a&gt; annotation on &lt;code&gt;StreamConverter&lt;/code&gt; (see above) indicates: It demarcates the whole class as an exception to the Java 6 API compatibility rule. You can flag an inner class or even a method in a similar manner. By looking at our usage of that annotation, we know all the places where Java 7/8 specific APIs are used in our codebase.&lt;/p&gt;&lt;p&gt;The Animal Sniffer configuration is pretty straightforward: check out &lt;a href="https://github.com/spring-projects/spring-framework/blob/f926f6cb3e95affdd87ed5c06ac0450d0ada2aec/build.gradle#L143"&gt;our build&lt;/a&gt; or &lt;a href="http://mojo.codehaus.org/animal-sniffer/"&gt;the official documentation&lt;/a&gt; for more details. &lt;/p&gt;&lt;h2&gt;&lt;a href="#wrapping-up" class="anchor" name="wrapping-up"&gt;&lt;/a&gt;Wrapping Up&lt;/h2&gt;&lt;p&gt;We chose not to use any Java 7 or Java 8 language features in our own codebase in order to give you the flexibility to write your Spring 4 applications for Java 6, 7 or 8. At the same time, we allow you to experience a very natural approach if you decide to use Java 8, with the Spring Framework essentially appearing as Java 8 based to you in such a scenario. &lt;/p&gt;&lt;p&gt;Fortunately, Java 8&amp;rsquo;s functional interface convention isn&amp;rsquo;t new for us. Many existing Spring APIs can be seamlessly used with Java 8 lambdas since they are naturally following the same convention. New Java 8 APIs such as &lt;code&gt;java.time&lt;/code&gt; (JSR-310), &lt;code&gt;Optional&lt;/code&gt; and &lt;code&gt;Stream&lt;/code&gt; are automatically supported by the framework if you choose to use them in your own code. &lt;/p&gt;&lt;p&gt;On a forward-looking note, as of 4.2, our codebase is even being checked with early JDK 9 builds already! This will lead to a unique situation in the framework once JDK 9 becomes generally available next year: supporting &lt;em&gt;four&lt;/em&gt; Java generations in the same release line - your choice of JDK 6, 7, 8 or 9 in combination with the same Spring Framework generation!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Check out Dave Syer's "Spring Security and AngularJS" blog series converted to tutorial</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/02/check-out-dave-syer-s-spring-security-and-angularjs-blog-series-converted-to-tutorial" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Greg Turnquist</name>
+    </author>
+    <id>tag:spring.io,2015-04-02:2060</id>
+    <updated>2015-04-02T20:43:00Z</updated>
+    <content type="html">&lt;p&gt;Greetings Spring community,&lt;/p&gt;&lt;p&gt;&lt;a href="https://spring.io/team/dsyer"&gt;Dave Syer&amp;rsquo;s&lt;/a&gt; six-part blog series on &lt;strong&gt;Spring Security and AngularJS&lt;/strong&gt; has been a smash hit! It has echoed across the twittersphere, torn up DZone, and drawn people far and wide.&lt;/p&gt;&lt;p&gt;Did you miss any of it? Perhaps you&amp;rsquo;ve heard of it and found it too difficult to track down the first post. No more.&lt;/p&gt;&lt;p&gt;Please navigate to our newly minted &lt;a href="https://spring.io/guides/tutorials/spring-security-and-angular-js"&gt;Spring Security and AngularJS tutorial&lt;/a&gt; and enjoy all that solid gold. We migrated 100% of it into that tutorial, made slight edits to the links, and polished it up just for you.&lt;/p&gt;&lt;p&gt;Share and enjoy!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Security Kerberos 1.0.0.RC2 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/02/spring-security-kerberos-1-0-0-rc2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2015-04-02:2059</id>
+    <updated>2015-04-02T17:01:37Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the Spring Security Kerberos team, I&amp;rsquo;m pleased to announce the release of Spring Security Kerberos 1.0.0.RC2. This release brings a number of changes. The highlights can be found below:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Added support LdapContextSource. Special thanks to &lt;a href="https://github.com/nrodrigues"&gt;Nelson Rodrigues&lt;/a&gt; for this contribution!&lt;/li&gt;
+  &lt;li&gt;Repackaging for better management of dependencies&lt;/li&gt;
+  &lt;li&gt;Specific implementations are moved to their own packages to signal additional optional dependencies&lt;/li&gt;
+  &lt;li&gt;spring-security-kerberos-web now contains all of the web related dependencies (i.e. servlet dependencies)&lt;/li&gt;
+  &lt;li&gt;Bug fixes&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;We’d love to hear back what people think by participating in a project or simply creating issues or feature requests at &lt;a href="https://github.com/spring-projects/spring-security-kerberos"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ongoing support for Java 7 (and even Java 6)</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/01/ongoing-support-for-java-7-and-even-java-6" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Juergen Hoeller</name>
+    </author>
+    <id>tag:spring.io,2015-04-01:2058</id>
+    <updated>2015-04-01T15:01:53Z</updated>
+    <content type="html">&lt;p&gt;You might have heard about the end of public updates for Java 7, coming up in just a few days with the release of Java 7 update 80. See the following Oracle pages for a reference:&lt;/p&gt;&lt;p&gt;&lt;a href="https://blogs.oracle.com/java-platform-group/entry/future_updates_of_java_7"&gt;https://blogs.oracle.com/java-platform-group/entry/future_updates_of_java_7&lt;/a&gt;&lt;br/&gt;&lt;a href="http://www.oracle.com/technetwork/java/eol-135779.html"&gt;http://www.oracle.com/technetwork/java/eol-135779.html&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Let&amp;rsquo;s clarify what it really is: &lt;b&gt;the end of public updates&lt;/b&gt;, and by no means an end of life (EOL). With the second link above, scroll down to the &amp;ldquo;Oracle Java SE Support Roadmap&amp;rdquo; section and you&amp;rsquo;ll find the actual &lt;b&gt;EOL dates: Dec 2018 for Java 6 and Jul 2022 for Java 7.&lt;/b&gt; Yes, that&amp;rsquo;s another 3.5 years for Java 6 from now, and even another 7 years (!) for Java 7.&lt;/p&gt;&lt;p&gt;IBM&amp;rsquo;s EOL timeframes are similar, although an even longer Java 6 support timeline is to be expected there. &lt;b&gt;It&amp;rsquo;s generally worth noting that any end-of-updates statements from Oracle are completely irrelevant for IBM users:&lt;/b&gt; The IBM JDK is an independent product that just happens to be based on the same open source project (OpenJDK) in recent years.&lt;/p&gt;&lt;p&gt;So please, if you see any statements about Java 7 getting EOL&amp;rsquo;ed these days, take them with a large grain of salt. &lt;b&gt;The end of public updates is just the point of time when Oracle starts to charge for maintenance releases, that&amp;rsquo;s all.&lt;/b&gt; Java 7 remains with us for another 7 years.&lt;/p&gt;&lt;p&gt;In case you&amp;rsquo;re wondering about the Spring perspective: We designed &lt;a href="http://projects.spring.io/spring-framework/"&gt;Spring Framework 4.x&lt;/a&gt; to support Java 6, 7 and 8 in the same framework generation. &lt;b&gt;That&amp;rsquo;s a unified programming model to cover three generations of Java, allowing you to upgrade at your own pace while at the same time getting the maximum out of the JDK that you&amp;rsquo;re currently using!&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The clue is that Spring Framework 4.x feels like a Java 8 based framework, out of the box, when using it on JDK 8. With the same framework version and framework jars, you&amp;rsquo;ll also get a fine experience on JDK 6 and 7: &lt;b&gt;You&amp;rsquo;ll just be restricted by the Java language and API level but will otherwise find the same 2015-era framework features at your fingertips.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Stay tuned for a follow-up blog post on how we go about supporting multiple JDK generations in our codebase&amp;hellip;&lt;/p&gt;&lt;p&gt;Juergen&lt;/p&gt;&lt;p&gt;P.S.: Note that the &lt;a href="http://platform.spring.io/platform/"&gt;Spring IO platform&lt;/a&gt;, including its wide arrangement of dependencies, is only supported on Java 7 and 8. At the same time, many of our Spring portfolio projects are still compatible with Java 6&amp;hellip; and JDK 6 based application servers such as WebSphere 7.0 / 8.0.&lt;/p&gt;</content>
+  </entry>
+</feed>
+

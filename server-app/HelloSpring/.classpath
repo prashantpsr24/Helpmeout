@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/commons-logging-1.2/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/commons-logging-1.2/commons-logging-1.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-aop-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-aop-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-aop-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-aspects-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-aspects-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-aspects-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-beans-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-beans-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-beans-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-context-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-context-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-context-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-context-support-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-context-support-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-context-support-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-core-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-core-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-core-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-expression-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-expression-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-expression-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-instrument-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-instrument-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-instrument-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-instrument-tomcat-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-instrument-tomcat-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-instrument-tomcat-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-jdbc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-jdbc-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-jdbc-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-jms-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-jms-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-jms-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-messaging-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-messaging-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-messaging-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-orm-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-orm-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-orm-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-oxm-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-oxm-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-oxm-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-test-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-test-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-test-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-tx-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-tx-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-tx-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-web-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-web-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-web-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-webmvc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-webmvc-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-webmvc-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-webmvc-portlet-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-webmvc-portlet-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-webmvc-portlet-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-websocket-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-websocket-4.1.6.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/spring-framework-4.1.6.RELEASE (2)/libs/spring-websocket-4.1.6.RELEASE-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
