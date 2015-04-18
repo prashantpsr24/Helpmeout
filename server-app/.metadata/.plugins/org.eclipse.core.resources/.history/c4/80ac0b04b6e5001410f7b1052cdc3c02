@@ -5,11 +5,10 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id="beanAlarm" abstract="true">
-       <property name="uid" value="Null"/>
-       <property name="location" value="Null"/>
-       <property name="status" value="Null"/>
-       <property name="ack" value="Null"/>
+   <bean id="beanTeamplate" abstract="true">
+       <property name="message1" value="Hello World!"/>
+       <property name="message2" value="Hello Second World!"/>
+       <property name="message3" value="Namaste India!"/>
    </bean>
 
    <bean id="helloIndia" class="com.tutorialspoint.HelloIndia"

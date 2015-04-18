@@ -5,7 +5,34 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2015-04-17T12:42:00Z</updated>
+  <updated>2015-04-17T15:57:00Z</updated>
+  <entry>
+    <title>Spring at JAX Germany 2015</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/17/spring-at-jax-germany-2015" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-04-17:2087</id>
+    <updated>2015-04-17T15:57:00Z</updated>
+    <content type="html">&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/pieterhumphrey/springio_website_images/master/spring_jaxde.JPG" alt="Spring at JAX Germany 2015" /&gt;&lt;/p&gt;
+&lt;p&gt;The Spring Team is stacked for JAX Germany - and yes - even with some native German speakers from engineering! &lt;/p&gt;
+&lt;p&gt; JAX Germany has an excellent lineup of Spring, Microservice, Cloud Native App and Big Data speakers over three days. 12  speakers from Pivotal, Siemens, Inovex, Adesso, and Oose Innvoative  will deliver their expert perspectives on Spring, Microservices, REST, NetFlixOSS, Cloud Native Applications and Big Data. And here's the  best thing: &lt;strong&gt;Hands on Workshops&lt;/strong&gt;! Get hands on  with Microservices and uber  Java Blogger &lt;a href="http://jandiandme.blogspot.de/"&gt;Eberhard Wolff&lt;/a&gt;. Also, an end-to-end API to web example -  REST / Web App / Database from  &lt;a href="https://www.twitter.com/olivergierke"&gt;Oliver Geirke&lt;/a&gt;, our Spring Data Team lead. Also, you'll want to see former SpringSource CTO &lt;a href="https://jax.de/2015/speakers/adrian-colyer"&gt;Adrian Coyler&lt;/a&gt;, and featured Pivotal speaker/engineer  &lt;a href="https://jax.de/2015/speakers/dave-syer"&gt;Dr. Dave Syer&lt;/a&gt;. If you want learn about how applications are being designed for Cloud Native Platforms, and what real code is shipping today for Java developers to get working with microservice architecture - ignore the fast followers and come hear from the leaders.&lt;/p&gt;
+&lt;p&gt; Don't forget to visit the Pivotal booth for demos, interaction, and  your chance to meet and learn from the experts and professionals who drive the innovation!&lt;/p&gt;
+&lt;p&gt;Click here for the full &lt;a href="https://jax.de/2015/sessions"&gt;session list&lt;/a&gt;, or check out Pivotal's speaker lineup right here and now (note many abstracts are in german, so you may need google translate.)&lt;/p&gt;
+&lt;p&gt;Mon, Apr 20th,  9:00am | &lt;a href="https://jax.de/2015/sessions/von-der-datenbank-ins-web-end-end-rest-web-services-mit-spring"&gt;From  database to web - end-to-end REST web services with Spring&lt;/a&gt; - Oliver Gierke (workshop)&lt;/p&gt;
+&lt;p&gt;Mon, Apr 20th,  9:00am | &lt;a href="https://jax.de/2015/sessions/microservices-workshop-architektur-und-praxis"&gt;Microservices Workshop&lt;/a&gt; - Eberhard Wolff (workshop) &lt;/p&gt;
+&lt;p&gt;Tue, Apr 21st,  4:45pm | &lt;a href="https://jax.de/2015/sessions/building-microservices-spring-cloud-and-netflix-oss"&gt;Building Microservices with Spring Cloud and Netflix OSS&lt;/a&gt; | Dave Syer &lt;/p&gt;
+&lt;p&gt;Tue, Apr 21st, 9:45am | &lt;a href="https://jax.de/2015/sessions/project-flux-connecting-desktop-ide-cloud-based-era-developer-tooling"&gt;Project Flux: Connecting the Desktop IDE to the Cloud-based Era of Developer Tooling&lt;/a&gt; | Martin Lippert&lt;/p&gt;
+&lt;p&gt;Wed, Apr 22nd,  8:30am | &lt;a href="https://jax.de/2015/sessions/was-gibt-es-neues-spring-42"&gt;What's new in Spring 4.2?&lt;/a&gt; - Oliver Gierke &lt;/p&gt;
+&lt;p&gt;Wed, Apr 22nd, 10:30am | &lt;a href="https://jax.de/2015/sessions/spring-ecosystem"&gt;The Spring ecosystem&lt;/a&gt; - Felix Heppner, Hermann Woock &lt;/p&gt;
+&lt;p&gt;Wed, Apr 22nd,  2:15pm | &lt;a href="https://jax.de/2015/sessions/whats-new-spring-data"&gt;What's new in Spring Data&lt;/a&gt; - Christoph Strobl &lt;/p&gt;
+&lt;p&gt;Web, Apr 22nd,  4:00pm | &lt;a href="https://jax.de/2015/sessions/microservices-mit-spring-boot-und-spring-cloud"&gt;Microservices with Spring Boot and Spring Cloud&lt;/a&gt; - Eberhard Wolff &lt;/p&gt;
+&lt;p&gt;Web, Apr 22nd,  5:15pm | &lt;a href="https://jax.de/2015/sessions/spring-data-rest-repositories-meet-hypermedia"&gt;Spring Data REST - Repositories meet hypermedia&lt;/a&gt; - Oliver Gierke &lt;/p&gt;
+&lt;p&gt;Thu, Apr 23rd,  8:30am |  &lt;a href="https://jax.de/2015/sessions/hystrix-action-ein-weg-zu-robuster-software"&gt;Hystrix in Action - a way to robust software&lt;/a&gt; - Gerrit Brehmer&lt;/p&gt;
+&lt;p&gt; Thu, Apr 23rd,  2:15pm |  &lt;a href="https://jax.de/2015/sessions/restful-hypermedia-apis"&gt;RESTful Hypermedia-APIs&lt;/a&gt; - Kai Tödter &lt;/p&gt;
+&lt;p&gt;Thu, Apr 23rd,  3:45pm -  &lt;a href="https://jax.de/2015/sessions/entwicklung-von-big-data-applikationen-mit-spring-xd"&gt;Development of Big Data Applications with Spring XD&lt;/a&gt; - Thomas Darimont&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Pivotal at Spring I/O Conference April 29,30 in Barcelona</title>
     <link rel="alternate" href="https://spring.io/blog/2015/04/17/pivotal-at-spring-i-o-conference-april-29-30-in-barcelona" />
@@ -17,7 +44,7 @@
     <updated>2015-04-17T12:42:00Z</updated>
     <content type="html">&lt;p&gt;&lt;a href="http://springio.net"&gt;&lt;img src="https://raw.githubusercontent.com/pieterhumphrey/springio_website_images/master/springio_barcelona_2015.jpg" width="665" height="107"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;Spring I/O is back!  After a break for a few years, this conference is returning to the circuit. Let's help them get started again! Also, instead of Madrid, the conference is in beautiful Barcelona, Spain this year and has an excellent lineup of Spring, Groovy and Grails speakers over two solid days. 38 great speakers from Pivotal, Google, Vaadin, JetBrains, Neo Technology, MongoDB, Couchbase, ElasticSearch, ZeroTurnAround, AppDynamics, Magnolia and many others will deliver their expert perspectives on Spring, Groovy, Grails and Cloud Native Applications. And here's the  best thing: &lt;strong&gt;Hands on Workshops&lt;/strong&gt;! Get hands on  with Spring Cloud for microservices, Spring XD for Big Data Pipelines and Spring MVC and Static Resources - all from the Pivotal leaders and engineers who write the software.&lt;/p&gt;
+&lt;p&gt;Spring I/O is back!  After a break for a few years, this conference is returning to the circuit. Let's help them get started again! Also, instead of Madrid, the conference is in beautiful Barcelona, Spain this year and has an excellent lineup of Spring, Groovy and Grails speakers over two solid days. 38 great speakers from Pivotal, Google, Vaadin, JetBrains, Neo Technology, MongoDB, Couchbase, ElasticSearch, ZeroTurnAround, AppDynamics, Magnolia and many others will deliver their expert perspectives on Spring, Groovy, Grails and Cloud Native Applications. And here's the  best thing: &lt;strong&gt;Hands on Workshops&lt;/strong&gt;! Get hands on  with Spring Cloud for microservices, Spring XD for Big Data Pipelines and Spring MVC and Static Resources - all from the Pivotal leaders and engineers who write the software.  If you want learn about how applications are being designed for Cloud Native Platforms, and what real code is shipping today for Java developers to get working with microservice architecture - ignore the fast followers and come hear from the leaders.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.springio.net/#pricing"&gt;Be sure to register with discount code SPRING10&lt;/a&gt; to get 10% discount on this incredibly affordably priced conference! If you're in Europe and use Spring, this one has got to be very easy to justify to your manager.  Don't forget to visit the Pivotal booth for demos, interaction, and  your chance to meet and learn from the experts and professionals who drive the innovation!&lt;/p&gt;
 &lt;p&gt;Click here for the full &lt;a href="http://www.springio.net/agenda/"&gt;agenda&lt;/a&gt;, or check out Pivotal's speaker lineup right here and now:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Wed April 29th&lt;/strong&gt;&lt;/p&gt;
@@ -846,24 +873,6 @@ public class StreamConverter implements ConditionalGenericConverter {&#xD;
     <id>tag:spring.io,2015-04-02:2060</id>
     <updated>2015-04-02T20:43:00Z</updated>
     <content type="html">&lt;p&gt;Greetings Spring community,&lt;/p&gt;&lt;p&gt;&lt;a href="https://spring.io/team/dsyer"&gt;Dave Syer&amp;rsquo;s&lt;/a&gt; six-part blog series on &lt;strong&gt;Spring Security and AngularJS&lt;/strong&gt; has been a smash hit! It has echoed across the twittersphere, torn up DZone, and drawn people far and wide.&lt;/p&gt;&lt;p&gt;Did you miss any of it? Perhaps you&amp;rsquo;ve heard of it and found it too difficult to track down the first post. No more.&lt;/p&gt;&lt;p&gt;Please navigate to our newly minted &lt;a href="https://spring.io/guides/tutorials/spring-security-and-angular-js"&gt;Spring Security and AngularJS tutorial&lt;/a&gt; and enjoy all that solid gold. We migrated 100% of it into that tutorial, made slight edits to the links, and polished it up just for you.&lt;/p&gt;&lt;p&gt;Share and enjoy!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security Kerberos 1.0.0.RC2 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/04/02/spring-security-kerberos-1-0-0-rc2-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Rob Winch</name>
-    </author>
-    <id>tag:spring.io,2015-04-02:2059</id>
-    <updated>2015-04-02T17:01:37Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the Spring Security Kerberos team, I&amp;rsquo;m pleased to announce the release of Spring Security Kerberos 1.0.0.RC2. This release brings a number of changes. The highlights can be found below:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Added support LdapContextSource. Special thanks to &lt;a href="https://github.com/nrodrigues"&gt;Nelson Rodrigues&lt;/a&gt; for this contribution!&lt;/li&gt;
-  &lt;li&gt;Repackaging for better management of dependencies&lt;/li&gt;
-  &lt;li&gt;Specific implementations are moved to their own packages to signal additional optional dependencies&lt;/li&gt;
-  &lt;li&gt;spring-security-kerberos-web now contains all of the web related dependencies (i.e. servlet dependencies)&lt;/li&gt;
-  &lt;li&gt;Bug fixes&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;We’d love to hear back what people think by participating in a project or simply creating issues or feature requests at &lt;a href="https://github.com/spring-projects/spring-security-kerberos"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</content>
   </entry>
 </feed>
 
