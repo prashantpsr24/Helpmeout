@@ -1,0 +1,36 @@
+package soundserver;
+
+import sun.audio.*;
+import java.io.*;
+
+ 
+public class AlarmSpeaker
+{
+  public static void main(String[] args) 
+  throws Exception
+  {
+	  AlarmSpeaker a=new AlarmSpeaker();
+	  a.playSound();
+  }
+  
+  private void playSound() 
+  {
+    try
+    {
+      // get the sound file as a resource out of my jar file;
+      // the sound file must be in the same directory as this class file.
+      // the input stream portion of this recipe comes from a javaworld.com article.
+    	System.out.println("Trying");
+      InputStream inputStream = getClass().getResourceAsStream("sf.ogg");
+      AudioStream audioStream = new AudioStream(inputStream);
+      AudioPlayer.player.start(audioStream);
+      System.out.println("Tried");
+    }
+    catch (Exception e)
+    {
+    	 System.out.println("Tried2");
+      // a special way i'm handling logging in this application
+      e.printStackTrace();
+    }
+  }
+}
