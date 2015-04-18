@@ -12,7 +12,7 @@ package alarmsystem;
 	             new ClassPathXmlApplicationContext("Beans.xml");
 
 	      Alarm objA = (Alarm) context.getBean("beanAlarm");
-	      objA.GenerateAck();
+	      Date date =(Date) context.getBean("beanDate");
 
 	   }
 	

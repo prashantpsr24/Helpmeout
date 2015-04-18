@@ -7,7 +7,7 @@ public class Alarm
 	   private Location location;
 	   private int status;
 	   private long ack;
-	  
+	   
 	   
 	   public void setUid(int uid)
 	   {
@@ -30,8 +30,8 @@ public class Alarm
 	   public void GenerateAck()
 	   {
 		   
-		   setAck(System.currentTimeMillis());
-		   System.out.println(ack);
+		   setAck(date.getTime());
+		   
 	   }
 	   
 	   

@@ -2,7 +2,6 @@ package alarmsystem;
 
 	import org.springframework.context.ApplicationContext;
 	import org.springframework.context.support.ClassPathXmlApplicationContext;
-	import java.util.Date;
 
 	public class Main
 	{
@@ -12,7 +11,6 @@ package alarmsystem;
 	             new ClassPathXmlApplicationContext("Beans.xml");
 
 	      Alarm objA = (Alarm) context.getBean("beanAlarm");
-	      objA.GenerateAck();
 
 	   }
 	

@@ -7,7 +7,7 @@ public class Alarm
 	   private Location location;
 	   private int status;
 	   private long ack;
-	  
+	   private Date date;
 	   
 	   public void setUid(int uid)
 	   {
