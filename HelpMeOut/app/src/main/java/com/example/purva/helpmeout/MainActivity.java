@@ -44,9 +44,6 @@ public class MainActivity extends ActionBarActivity {
 
     private GPSTracker gps;
 
-    {
-        gps = new GPSTracker(this);
-    }
     //private LocationListener locListener = new MyLocationListener();
 
     private boolean gps_enabled = false;
@@ -57,17 +54,15 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        gps = new GPSTracker(this);
+
         b1 = (Button) findViewById(R.id.help_button);
-        b1.setOnLongClickListener(
-                new Button.OnLongClickListener() {
-                    public boolean onLongClick(View v) {
-                        Toast.makeText(getApplicationContext(), "Your toast message.",
-                                Toast.LENGTH_SHORT).show();
-//
-                        return true;
-                    }
-                }
-        );
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"tap for longer time");
+            }
+        });
         b1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -116,7 +111,7 @@ public class MainActivity extends ActionBarActivity {
                     // can't get location
                     // GPS or Network is not enabled
                     // Ask user to enable GPS/network in settings
-                    gps.showSettingsAlert();
+                   // gps.showSettingsAlert();
                 }
                 return true;
             }
