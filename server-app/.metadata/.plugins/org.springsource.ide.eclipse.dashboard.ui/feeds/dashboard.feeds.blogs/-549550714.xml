@@ -5,7 +5,111 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2015-04-17T15:57:00Z</updated>
+  <updated>2015-04-20T11:09:38Z</updated>
+  <entry>
+    <title>Spring Integration Hazelcast Support 1.0 Milestone 1 is available</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/20/spring-integration-hazelcast-support-1-0-milestone-1-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2015-04-17:2086</id>
+    <updated>2015-04-20T11:09:38Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring community,&lt;/p&gt;&lt;p&gt;We are pleased to announce the Milestone 1 for the Spring Integration Hazelcast Support project. Use the &lt;a href="https://repo.spring.io/milestone/"&gt;Milestone Repository&lt;/a&gt; with Maven or Gradle to try it in early access.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;compile &amp;quot;org.springframework.integration:spring-integration-hazelcast:1.0.0.M1&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;First of all, special thanks to &lt;a href="http://java.dzone.com/users/erenavsarogullari-0"&gt;Eren Avşaroğulları&lt;/a&gt;, who initiated the project and is a responsive and energetic contributor. Please, don&amp;rsquo;t miss his &lt;a href="https://2015.event.springone2gx.com/presenters/eren_avsarogullari.html"&gt;talk&lt;/a&gt; with us on SpringOne this year!&lt;/p&gt;&lt;h2&gt;&lt;a href="#overview" class="anchor" name="overview"&gt;&lt;/a&gt;Overview&lt;/h2&gt;&lt;p&gt;Spring Integration implements well-known &lt;a href="http://www.eaipatterns.com/"&gt;Enterprise Integration Patterns&lt;/a&gt; and provides lightweight messaging within Spring-based applications and supports integration with external systems via declarative adapters. Spring Integration&amp;rsquo;s primary goal is to provide a simple model for building enterprise integration solutions while maintaining the separation of concerns that is essential for producing maintainable, testable code.&lt;/p&gt;&lt;p&gt;From other side &lt;a href="http://hazelcast.com/products/hazelcast/"&gt;Hazelcast&lt;/a&gt; is the leading Open Source In-Memory Data Grid written in Java; it allows the distribution of data and computation across servers, clusters and geographies, and to manage very large data sets or high data ingest rates.&lt;/p&gt;&lt;p&gt;So, from my perspective it looks very cool to bring messaging to Hazelcast-based applications, as well as to have an easy way to distribute Spring Integration message flows via Hazelcast. &lt;/p&gt;&lt;p&gt;From here I&amp;rsquo;m sure this extension will have demand from the Community and will have active development and support according to the feedback received.&lt;/p&gt;&lt;p&gt;Let&amp;rsquo;s revise what we suggest to you with this Milestone!&lt;/p&gt;&lt;h2&gt;&lt;a href="#just-in-place-features" class="anchor" name="just-in-place-features"&gt;&lt;/a&gt;Just in place features&lt;/h2&gt;&lt;p&gt;For those who don&amp;rsquo;t want wait for the finished project, or are already using Spring Integration and Hazelcast in their application or want to consider doing that, I&amp;rsquo;m glad to represent features which work out-of-the-box even before this milestone release.&lt;/p&gt;&lt;h3&gt;&lt;a href="#iqueue" class="anchor" name="iqueue"&gt;&lt;/a&gt;IQueue&lt;/h3&gt;&lt;p&gt;Thanks to so generic implementation of &lt;code&gt;QueueChannel&lt;/code&gt; we already can have a distributed message channel with Hazelcast:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Configuration&#xD;
+@EnableIntegration&#xD;
+public static class ContextConfiguration {&#xD;
+&#xD;
+	@Bean&#xD;
+	public HazelcastInstance hazelcastInstance() {&#xD;
+		return Hazelcast.newHazelcastInstance(new Config());&#xD;
+	}&#xD;
+&#xD;
+	@Bean&#xD;
+	public PollableChannel hazelcastQueueChannel() {&#xD;
+		return new QueueChannel(hazelcastInstance()&#xD;
+                                          .Message&amp;lt;?&amp;gt;&amp;gt;getQueue(&amp;quot;siQueue&amp;quot;));&#xD;
+	}&#xD;
+&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Placing this config on several nodes in Hazelcast cluster of our application, we will have a &lt;em&gt;distributed&lt;/em&gt; &lt;code&gt;QueueChannel&lt;/code&gt; and only one node will be able to poll a single &lt;code&gt;Message&lt;/code&gt; from this &lt;code&gt;IQueue&lt;/code&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#itopic" class="anchor" name="itopic"&gt;&lt;/a&gt;ITopic&lt;/h3&gt;&lt;p&gt;An &lt;code&gt;ITopic&lt;/code&gt; abstraction in Hazelcast has similar semantics to a &lt;code&gt;Topic&lt;/code&gt; in JMS: all subscribers receive published messages. Using a bit of imagination we can utilize this mechanism as an out-of-the-box feature:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Configuration&#xD;
+@EnableIntegration&#xD;
+public static class ContextConfiguration {&#xD;
+&#xD;
+	@Bean&#xD;
+    public ITopic&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt; siTopic() {&#xD;
+    	return hazelcastInstance().getTopic(&amp;quot;siTopic&amp;quot;);&#xD;
+    }&#xD;
+    &#xD;
+    @Bean&#xD;
+    public MessageChannel publishToHazelcastTopicChannel(&#xD;
+                                    ITopic&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt; siTopic) {&#xD;
+    	return new FixedSubscriberChannel(siTopic::publish);&#xD;
+    }&#xD;
+&#xD;
+    @Bean&#xD;
+    public MessageChannel fromHazelcastTopicChannel() {&#xD;
+	return new DirectChannel();&#xD;
+    }&#xD;
+&#xD;
+    @PostConstruct&#xD;
+    public void init() {&#xD;
+	siTopic().addMessageListener(m -&amp;gt; &#xD;
+                     fromHazelcastTopicChannel().send(m.getMessageObject()));&#xD;
+    }&#xD;
+&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;FixedSubscriberChannel&lt;/code&gt; is an optimized variant of &lt;code&gt;DirectChannel&lt;/code&gt;, which requires a &lt;code&gt;MessageHandler&lt;/code&gt; on initialization. Since &lt;code&gt;MessageHandler&lt;/code&gt; is a &lt;em&gt;functional&lt;/em&gt; interface we can simply provide a Lambda for the &lt;code&gt;handleMessage&lt;/code&gt; method. When a message is sent to &lt;code&gt;publishToHazelcastTopicChannel&lt;/code&gt; it is just published to the Hazelcast &lt;code&gt;ITopic&lt;/code&gt;. The &lt;code&gt;com.hazelcast.core.MessageListener&lt;/code&gt; is a &lt;em&gt;functional&lt;/em&gt; interface, too, hence we can provide a Lambda to the &lt;code&gt;ITopic#addMessageListener&lt;/code&gt;. So, publishing the whole &lt;code&gt;Message&amp;lt;?&amp;gt;&lt;/code&gt; to the &lt;code&gt;ITopic&lt;/code&gt; allows us to receive it on the subscriber as is and send to the &lt;code&gt;MessageChannel&lt;/code&gt; for processing on all subscribed nodes in Hazelcast cluster.&lt;/p&gt;&lt;h3&gt;&lt;a href="#iexecutorservice" class="anchor" name="iexecutorservice"&gt;&lt;/a&gt;IExecutorService&lt;/h3&gt;&lt;p&gt;Using the Hazelcast &lt;code&gt;ExecutorService&lt;/code&gt; support we can configure an &lt;code&gt;ExecutorChannel&lt;/code&gt; to accept and perform only one message at a time throughout the whole cluster. I call this &lt;em&gt;cluster-wide singleton&lt;/em&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Configuration&#xD;
+@EnableIntegration&#xD;
+public static class ContextConfiguration {&#xD;
+&#xD;
+	@Bean&#xD;
+	public HazelcastInstance hazelcastInstance() {&#xD;
+		return Hazelcast.newHazelcastInstance(new Config()&#xD;
+				.addExecutorConfig(new ExecutorConfig()&#xD;
+						.setName(&amp;quot;singletonExecutor&amp;quot;)&#xD;
+						.setPoolSize(1)));&#xD;
+	}&#xD;
+	@Bean&#xD;
+	public MessageChannel hazelcastSingletonExecutorChannel() {&#xD;
+		return new ExecutorChannel(hazelcastInstance()&#xD;
+                                       .getExecutorService(&amp;quot;singletonExecutor&amp;quot;));&#xD;
+	}&#xD;
+	&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now let&amp;rsquo;s talk about the features that are already available in this first milestone of the Spring Integration Hazelcast extension. &lt;/p&gt;&lt;h2&gt;&lt;a href="#hazelcast-inbound-channel-adapters" class="anchor" name="hazelcast-inbound-channel-adapters"&gt;&lt;/a&gt;Hazelcast Inbound Channel Adapters&lt;/h2&gt;&lt;p&gt;With Spring Integration Hazelcast Support we provide these components for &lt;em&gt;inbound&lt;/em&gt; data from Hazelcast:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&amp;lt;int-hazelcast:inbound-channel-adapter channel=&amp;quot;multiMapChannel&amp;quot; &#xD;
+                cache=&amp;quot;multiMap&amp;quot; &#xD;
+                cache-events=&amp;quot;ADDED, REMOVED, CLEAR_ALL&amp;quot; /&amp;gt; &#xD;
+                              &#xD;
+&amp;lt;int-hazelcast:cq-inbound-channel-adapter &#xD;
+                channel=&amp;quot;cqMapChannel&amp;quot; &#xD;
+                cache=&amp;quot;cqMap&amp;quot; &#xD;
+                cache-events=&amp;quot;UPDATED, REMOVED&amp;quot; &#xD;
+                predicate=&amp;quot;name=TestName AND surname=TestSurname&amp;quot;&#xD;
+                include-value=&amp;quot;true&amp;quot;&#xD;
+                cache-listening-policy=&amp;quot;SINGLE&amp;quot; /&amp;gt; &#xD;
+                &#xD;
+&amp;lt;int-hazelcast:ds-inbound-channel-adapter  &#xD;
+                channel=&amp;quot;dsMapChannel&amp;quot; &#xD;
+                cache=&amp;quot;dsMap&amp;quot;&#xD;
+                iteration-type=&amp;quot;ENTRY&amp;quot; &#xD;
+                distributed-sql=&amp;quot;active=false OR age &amp;gt;= 25 OR name = &amp;#39;TestName&amp;#39;&amp;quot;&amp;gt;&#xD;
+    &amp;lt;int:poller fixed-delay=&amp;quot;100&amp;quot;/&amp;gt;&#xD;
+&amp;lt;/int-hazelcast:ds-inbound-channel-adapter&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Please, refer to the Spring Integration Hazelcast &lt;a href="https://github.com/spring-projects/spring-integration-extensions/tree/master/spring-integration-hazelcast"&gt;Project Page&lt;/a&gt; for more information about their purpose and configuration options.&lt;/p&gt;&lt;p&gt;The use of these should be obvious to those who are already familiar with &lt;a href="http://docs.spring.io/spring-integration/docs/latest-ga/reference/html/gemfire.html"&gt;Spring Integration Gemfire&lt;/a&gt; support. &lt;/p&gt;&lt;h2&gt;&lt;a href="#hazelcast-outbound-channel-adapter" class="anchor" name="hazelcast-outbound-channel-adapter"&gt;&lt;/a&gt;Hazelcast Outbound Channel Adapter&lt;/h2&gt;&lt;p&gt;Currently, we just provide only one generic &lt;em&gt;outbound&lt;/em&gt; channel adapter to place the data into Hazelcast:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&amp;lt;int-hazelcast:outbound-channel-adapter channel=&amp;quot;listChannel&amp;quot; &#xD;
+                     cache=&amp;quot;distributedList&amp;quot; /&amp;gt; &#xD;
+&#xD;
+&amp;lt;bean id=&amp;quot;distributedList&amp;quot; factory-bean=&amp;quot;instance&amp;quot; factory-method=&amp;quot;getList&amp;quot;&amp;gt; &#xD;
+    &amp;lt;constructor-arg value=&amp;quot;distributedList&amp;quot;/&amp;gt; &#xD;
+&amp;lt;/bean&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;See more information about this adapter on the project home page. We are going to make this component more flexible, before &lt;code&gt;RELEASE&lt;/code&gt;, e.g. utilize the &lt;em&gt;publish&lt;/em&gt; operation to the &lt;code&gt;ITopic&lt;/code&gt; mentioned above, add runtime &lt;code&gt;distributedObject&lt;/code&gt; resolution, for example via SpEL, allow to accept &lt;code&gt;MapEntry&lt;/code&gt; as a &lt;code&gt;payload&lt;/code&gt; of incoming message and others.&lt;/p&gt;&lt;h2&gt;&lt;a href="#wrap-up" class="anchor" name="wrap-up"&gt;&lt;/a&gt;Wrap up&lt;/h2&gt;&lt;p&gt;It&amp;rsquo;s just a beginning of the road to RELEASE. We, with Eren, have several features in mind like&lt;br/&gt;&lt;code&gt;Hazelcast Distributed Execution Service Activator&lt;/code&gt;, &lt;code&gt;Hazelcast Client Support&lt;/code&gt;, &lt;code&gt;Hazelcast backed Subscribable Channel&lt;/code&gt;, &lt;code&gt;HazelcastLockRegistry&lt;/code&gt;, &lt;code&gt;Annotation Support&lt;/code&gt; etc. and hope to have &lt;code&gt;1.0.0.RELEASE&lt;/code&gt; just before the SpringOne conference in this September. In the meantime, don&amp;rsquo;t hesitate to reach us via StackOverflow, JIRA and GitHub issues to share your thoughts and ideas!&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-extensions/tree/master/spring-integration-hazelcast"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INTEXT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-extensions/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.md"&gt;Contributions&lt;/a&gt; | &lt;a href="http://stackoverflow.com"&gt;StackOverflow&lt;/a&gt; (&lt;code&gt;spring-integration&lt;/code&gt; tag)&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring at JAX Germany 2015</title>
     <link rel="alternate" href="https://spring.io/blog/2015/04/17/spring-at-jax-germany-2015" />
@@ -862,17 +966,6 @@ public class StreamConverter implements ConditionalGenericConverter {&#xD;
     }&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We conditionally check if the API is present at runtime and make a decision based on that, with you as a user simply experiencing fully Java 8 adapted setup by default. This is somewhat similar to the &lt;a href="https://github.com/spring-projects/spring-boot/tree/master/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/condition"&gt;conditions infrastructure&lt;/a&gt; in Spring Boot except it is more low-level and internal. &lt;/p&gt;&lt;h2&gt;&lt;a href="#checking-java-6-compatibility" class="anchor" name="checking-java-6-compatibility"&gt;&lt;/a&gt;Checking Java 6 compatibility&lt;/h2&gt;&lt;p&gt;Since we are using Java 8 specific APIs in several isolated places, we need JDK 8 to compile the framework codebase overall. As a result, there is a risk that we accidentally introduce Java 8 specific API calls in places where we need to remain Java 6 compatible.&lt;/p&gt;&lt;p&gt;Fortunately, our CI build plan is configured to execute &lt;a href="http://mojo.codehaus.org/animal-sniffer/"&gt;Animal Sniffer&lt;/a&gt; with each build. This checks our code against a given Java API &lt;em&gt;signature&lt;/em&gt; (in our case Java 6 update 18) and fails the build if some incorrect usage happens to be found. So what about legitimate use cases then where we do need to call Java 7 or 8 APIs? You can configure the sniffer to exclude a list of classes or, better yet, provide a set of annotations that &lt;em&gt;flag&lt;/em&gt; such exceptional cases. &lt;/p&gt;&lt;p&gt;That&amp;rsquo;s exactly what the &lt;a href="https://github.com/spring-projects/spring-framework/blob/f7b46539/spring-core/src/main/java/org/springframework/lang/UsesJava8.java"&gt;&lt;code&gt;@UsesJava8&lt;/code&gt;&lt;/a&gt; annotation on &lt;code&gt;StreamConverter&lt;/code&gt; (see above) indicates: It demarcates the whole class as an exception to the Java 6 API compatibility rule. You can flag an inner class or even a method in a similar manner. By looking at our usage of that annotation, we know all the places where Java 7/8 specific APIs are used in our codebase.&lt;/p&gt;&lt;p&gt;The Animal Sniffer configuration is pretty straightforward: check out &lt;a href="https://github.com/spring-projects/spring-framework/blob/f926f6cb3e95affdd87ed5c06ac0450d0ada2aec/build.gradle#L143"&gt;our build&lt;/a&gt; or &lt;a href="http://mojo.codehaus.org/animal-sniffer/"&gt;the official documentation&lt;/a&gt; for more details. &lt;/p&gt;&lt;h2&gt;&lt;a href="#wrapping-up" class="anchor" name="wrapping-up"&gt;&lt;/a&gt;Wrapping Up&lt;/h2&gt;&lt;p&gt;We chose not to use any Java 7 or Java 8 language features in our own codebase in order to give you the flexibility to write your Spring 4 applications for Java 6, 7 or 8. At the same time, we allow you to experience a very natural approach if you decide to use Java 8, with the Spring Framework essentially appearing as Java 8 based to you in such a scenario. &lt;/p&gt;&lt;p&gt;Fortunately, Java 8&amp;rsquo;s functional interface convention isn&amp;rsquo;t new for us. Many existing Spring APIs can be seamlessly used with Java 8 lambdas since they are naturally following the same convention. New Java 8 APIs such as &lt;code&gt;java.time&lt;/code&gt; (JSR-310), &lt;code&gt;Optional&lt;/code&gt; and &lt;code&gt;Stream&lt;/code&gt; are automatically supported by the framework if you choose to use them in your own code. &lt;/p&gt;&lt;p&gt;On a forward-looking note, as of 4.2, our codebase is even being checked with early JDK 9 builds already! This will lead to a unique situation in the framework once JDK 9 becomes generally available next year: supporting &lt;em&gt;four&lt;/em&gt; Java generations in the same release line - your choice of JDK 6, 7, 8 or 9 in combination with the same Spring Framework generation!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Check out Dave Syer's "Spring Security and AngularJS" blog series converted to tutorial</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/04/02/check-out-dave-syer-s-spring-security-and-angularjs-blog-series-converted-to-tutorial" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Greg Turnquist</name>
-    </author>
-    <id>tag:spring.io,2015-04-02:2060</id>
-    <updated>2015-04-02T20:43:00Z</updated>
-    <content type="html">&lt;p&gt;Greetings Spring community,&lt;/p&gt;&lt;p&gt;&lt;a href="https://spring.io/team/dsyer"&gt;Dave Syer&amp;rsquo;s&lt;/a&gt; six-part blog series on &lt;strong&gt;Spring Security and AngularJS&lt;/strong&gt; has been a smash hit! It has echoed across the twittersphere, torn up DZone, and drawn people far and wide.&lt;/p&gt;&lt;p&gt;Did you miss any of it? Perhaps you&amp;rsquo;ve heard of it and found it too difficult to track down the first post. No more.&lt;/p&gt;&lt;p&gt;Please navigate to our newly minted &lt;a href="https://spring.io/guides/tutorials/spring-security-and-angular-js"&gt;Spring Security and AngularJS tutorial&lt;/a&gt; and enjoy all that solid gold. We migrated 100% of it into that tutorial, made slight edits to the links, and polished it up just for you.&lt;/p&gt;&lt;p&gt;Share and enjoy!&lt;/p&gt;</content>
   </entry>
 </feed>
 
