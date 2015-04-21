@@ -37,6 +37,13 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.text.ParseException;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.*;
+import java.io.*;
 public class MainActivity extends ActionBarActivity {
 
     private Button b1;
@@ -60,7 +67,7 @@ public class MainActivity extends ActionBarActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"tap for longer time");
+                Toast.makeText(getApplicationContext(),"tap for longer time", Toast.LENGTH_LONG).show();
             }
         });
         b1.setOnLongClickListener(new View.OnLongClickListener() {
@@ -82,10 +89,15 @@ public class MainActivity extends ActionBarActivity {
                         locationHelp.put("latitude",latitude);
                         locationHelp.put("longitude",longitude);
 
-                        HttpClient client = new DefaultHttpClient();
+                     /*   HttpClient client = new DefaultHttpClient();
                         HttpPost post = new HttpPost("https://www.google.com");
                         post.setHeader("Content-type", "application/json");
+                    */
 
+                            Thread t = new NetworkModule();
+                            t.start();
+
+                        /*
                         StringEntity se = new StringEntity(locationHelp.toString());
                         se.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
                         post.setEntity(se);
@@ -95,24 +107,14 @@ public class MainActivity extends ActionBarActivity {
                         JSONObject json = new JSONObject(responseText);
 //                        Log.i("tag", temp);
                         // can receive output of this here......
+                        */
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
-                    }
-                    catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    catch (ClientProtocolException e){
-                        e.printStackTrace();
-                    }
-                    catch (IOException e) {
-                        e.printStackTrace();
-                    }
                 }
-                else {
-                    // can't get location
-                    // GPS or Network is not enabled
-                    // Ask user to enable GPS/network in settings
-                   // gps.showSettingsAlert();
-                }
+
                 return true;
             }
         });

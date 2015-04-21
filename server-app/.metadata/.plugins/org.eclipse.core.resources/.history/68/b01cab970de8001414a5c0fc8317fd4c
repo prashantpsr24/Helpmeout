@@ -36,7 +36,7 @@ public class NetworkModule extends Thread
             System.out.println("Just connected to "+ server.getRemoteSocketAddress());
             DataInputStream in =new DataInputStream(server.getInputStream());
             
-            System.out.println("\n*******PSR******\n"+in.readUTF());
+            System.out.println(in.readUTF());
             
             DataOutputStream out =new DataOutputStream(server.getOutputStream());
             out.writeUTF("Thank you for connecting to "+ server.getLocalSocketAddress() + "\nGoodbye!");
