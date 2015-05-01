@@ -5,7 +5,6 @@ import java.io.*;
 import java.util.*;
 public class NetworkModule extends Thread
 {
-   AlarmSpeaker a;
    private ServerSocket serverSocket;
    public NetworkModule(int port) throws IOException
    {
@@ -28,14 +27,11 @@ public class NetworkModule extends Thread
             {
             	System.out.println("MATCHED\n");
 
-          	  a=new AlarmSpeaker();
+          	  AlarmSpeaker a=new AlarmSpeaker();
           	  a.playSound();
             }
             else
-            {
             	System.out.println("Oops\n");
-            	a.stopSound();
-            }
          }
          catch(Exception e)
          {

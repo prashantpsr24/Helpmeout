@@ -8,8 +8,6 @@ import java.io.*;
  
 public class AlarmSpeaker
 {
-	AudioStream audioStream;
-	private boolean status=true;
   public static void main(String[] args) 
   {
 	  try
@@ -25,7 +23,7 @@ public class AlarmSpeaker
       }
   }
   
-  public void playSound() 
+  private void playSound() 
   {
     try
     {
@@ -33,13 +31,11 @@ public class AlarmSpeaker
       // the sound file must be in the same directory as this class file.
       // the input stream portion of this recipe comes from a javaworld.com article.
     	System.out.println("Trying");
-    	InputStream inputStream = getClass().getResourceAsStream("husten.wav");
-    	System.out.println(inputStream);
-    	audioStream = new AudioStream(inputStream);
-    	while(status)
-    	{
-    		AudioPlayer.player.start(audioStream);
-    	}
+      InputStream inputStream = getClass().getResourceAsStream("husten.wav");
+      System.out.println(inputStream);
+      AudioStream audioStream = new AudioStream(inputStream);
+      AudioPlayer.player.start(audioStream);
+      
     }
     catch (Exception e)
     {
@@ -49,12 +45,15 @@ public class AlarmSpeaker
     }
   }
   
-  public void stopSound() 
+  private void stopSound() 
   {
     try
     {
-      status = false;
-      AudioPlayer.player.stop(audioStream);
+      
+      InputStream inputStream = getClass().getResourceAsStream("husten.wav");
+      System.out.println(inputStream);
+      AudioStream audioStream = new AudioStream(inputStream);
+      AudioPlayer.player.stop();
       
     }
     catch (Exception e)

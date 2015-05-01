@@ -32,10 +32,7 @@ public class NetworkModule extends Thread
           	  a.playSound();
             }
             else
-            {
             	System.out.println("Oops\n");
-            	a.stopSound();
-            }
          }
          catch(Exception e)
          {
