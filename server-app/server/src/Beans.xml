@@ -7,14 +7,9 @@
 
    <bean id="beanAlarm" class="alarmsystem.Alarm">
        <property name="uid" value="0"/>
-              
-       <property name="location">
-         <bean id="location" class="alarmsystem.Location"/>
-       </property>
-       
-       <property name="status" value="0"/>
-       <property name="ack" value="0"/>
-       
-       
+        <property name="latitude" value="0.0"/>
+        <property name="longitude" value="0.0"/>      
+        <property name="status" value="0"/>
+        <property name="ack" value="0"/>
    </bean>
 </beans>

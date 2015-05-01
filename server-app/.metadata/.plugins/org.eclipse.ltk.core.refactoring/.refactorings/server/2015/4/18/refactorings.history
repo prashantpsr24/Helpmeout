@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;hibernate.cfg.xml&apos; to &apos;src&apos;" description="Move &apos;hibernate.cfg.xml&apos; to &apos;src&apos;" destination="src" element1="hibernate.cfg.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1430416089219" updateReferences="true"/>
+</session>

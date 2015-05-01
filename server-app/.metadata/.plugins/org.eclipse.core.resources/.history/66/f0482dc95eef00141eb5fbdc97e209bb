@@ -1,0 +1,25 @@
+package alarmsystem;
+
+public class Location
+{
+
+	private double latitude;
+	private double longitude;
+	
+	public void setLatitude(double latitude)
+	{
+		this.latitude=latitude;
+	}
+	public void setLongitude(double longitude)
+	{
+		this.longitude=latitude;
+	}
+	public double getLatitude()
+	{
+		return latitude;
+	}
+	public double getLongitude()
+	{
+		return longitude;
+	}
+}

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.core.SimpleAliasRegistry"/>
+<fullyQualifiedTypeName name="alarmsystem.Alarm"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

@@ -13,17 +13,18 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="com.springsource.sts.wizard.template" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
+			<item value="org.eclipse.wst.XMLCategory"/>
 		</list>
 	</section>
 	<section name="ShowViewDialog">
 		<item value="374" key="DIALOG_WIDTH"/>
 		<item value="org.eclipse.ui.browser.view" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="96" key="DIALOG_Y_ORIGIN"/>
-		<item value="469" key="DIALOG_X_ORIGIN"/>
 		<item value="443" key="DIALOG_HEIGHT"/>
+		<item value="469" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.ui"/>

@@ -3,29 +3,84 @@ import java.util.Date;
 
 public class Alarm
 {
+	   private int id;
 	   private int uid;
-	   private Location location;
+	   private float latitude;
+	   private float longitude;
 	   private int status;
 	   private long ack;
-	  
+	   private Date date;
 	   
+	   public Alarm()
+	   {
+		   Float temp=(float) 0.0;
+		   this.setUid(187);
+		   System.out.println("UID DONE\n");
+		   this.setLatitude(temp);
+		   this.setLongitude(temp);
+		   this.setStatus(1);
+		   System.out.println("ALL DONE\n");
+	   }
+	   public void setLatitude(float latitude)
+	   {
+		   this.latitude=latitude;
+	   }
+	   public void setLongitude(float longitude)
+	   {
+		   this.longitude=longitude;
+	   }
+	   public float getLatitude()
+	   {
+		   return this.latitude;
+	   }
+	   public float getLongitude()
+	   {
+		   return this.longitude;
+	   }
+	   public void setId(int id)
+	   {
+	      this.id  = id;
+	   }
+	   public int getId()
+	   {
+		   return id;
+	   }
 	   public void setUid(int uid)
 	   {
 	      this.uid  = uid;
 	   }
+	   public int getUid()
+	   {
+		   return uid;
+	   }
+	   
 	   public void setAck(long ack)
 	   {
 	      this.ack  = ack;
 	   }
-
-	   public void setLocation(Location location)
+	   public long getAck()
 	   {
-	      this.location  =location;
+	      return ack;
 	   }
+	   
 	   public void setStatus(int status)
 	   {
 	      this.status  =status;
 	   }
+	   public int getStatus()
+	   {
+	       return status;
+	   }
+	  
+	   public void setDate(Date date)
+	   {
+	      this.date  =date;
+	   }
+	   public Date getDate()
+	   {
+	      return date;
+	   }
+	   
 	   
 	   public void GenerateAck()
 	   {
