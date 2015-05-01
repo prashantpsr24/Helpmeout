@@ -11,7 +11,16 @@ public class Alarm
 	   private long ack;
 	   private Date date;
 	   
-	   
+	   public Alarm()
+	   {
+		   Float temp=(float) 0.0;
+		   this.setUid(187);
+		   System.out.println("UID DONE\n");
+		   this.setLatitude(temp);
+		   this.setLongitude(temp);
+		   this.setStatus(1);
+		   System.out.println("ALL DONE\n");
+	   }
 	   public void setLatitude(float latitude)
 	   {
 		   this.latitude=latitude;

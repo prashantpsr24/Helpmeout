@@ -4,8 +4,6 @@ import java.net.*;
 import java.io.*;
 
 import org.json.simple.*;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class NetworkModule extends Thread
 {
    private ServerSocket serverSocket;
@@ -48,10 +46,7 @@ public class NetworkModule extends Thread
             
             if(IsAlarm(in))
             {
-            	System.out.println("network thread here");
-            	ApplicationContext context =new ClassPathXmlApplicationContext("Beans.xml");
-            	Alarm alarm = (Alarm) context.getBean("beanAlarm");
-            	//Alarm alarm = new Alarm();
+            	Alarm alarm = new Alarm();
             	alarm.GenerateAck();
             	DataOutputStream out =new DataOutputStream(server.getOutputStream());
                 out.writeUTF("Thank you for connecting to "+ server.getLocalSocketAddress() + "\nGoodbye!");

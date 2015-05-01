@@ -1,6 +1,6 @@
 package alarmsystem;
 
-import org.springframework.context.ApplicationContext;
+	import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.hibernate.*; 
 import org.hibernate.cfg.*;
@@ -14,7 +14,7 @@ import org.hibernate.*;
 		
 	   public static void main(String[] args) 
 	   {
-		   /*Alarm alarm = new Alarm();
+		   */Alarm alarm = new Alarm();
        	alarm.GenerateAck();
 		   Alarm_m alarm_m=new Alarm_m();
        	alarm_m.addAlarm(alarm);*/
@@ -29,7 +29,8 @@ import org.hibernate.*;
 		      {
 		         e.printStackTrace();
 		      }
-	      
+	      ApplicationContext context = 
+	             new ClassPathXmlApplicationContext("Beans.xml");
 
 	      
 

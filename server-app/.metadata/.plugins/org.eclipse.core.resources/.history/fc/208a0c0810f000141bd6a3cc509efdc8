@@ -16,7 +16,30 @@ public class Alarm_m
 {
    private static SessionFactory factory; 
    
-     public void addAlarm(Alarm alarm)
+   /*public static void main(String[] args) 
+   {
+      
+      ManageEmployee ME = new ManageEmployee();
+
+      
+      Integer empID1 = ME.addEmployee("Zara", "Ali", 1000);
+      Integer empID2 = ME.addEmployee("Daisy", "Das", 5000);
+      Integer empID3 = ME.addEmployee("John", "Paul", 10000);
+
+      
+      ME.listEmployees();
+
+     
+      ME.updateEmployee(empID1, 5000);
+
+      
+      ME.deleteEmployee(empID2);
+
+      
+      ME.listEmployees();
+   }*/
+   /* Method to CREATE an employee in the database */
+   public void addAlarm(Alarm alarm)
    {
 	   try
 	   {

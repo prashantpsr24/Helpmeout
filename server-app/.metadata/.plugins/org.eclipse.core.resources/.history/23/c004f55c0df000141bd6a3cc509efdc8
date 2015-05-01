@@ -1,6 +1,6 @@
 package alarmsystem;
 
-import org.springframework.context.ApplicationContext;
+	import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.hibernate.*; 
 import org.hibernate.cfg.*;
@@ -29,7 +29,7 @@ import org.hibernate.*;
 		      {
 		         e.printStackTrace();
 		      }
-	      
+	      ApplicationContext context =new ClassPathXmlApplicationContext("Beans.xml");
 
 	      
 
