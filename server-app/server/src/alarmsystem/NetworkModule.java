@@ -14,18 +14,7 @@ public class NetworkModule extends Thread
    {
 	   return true;
    }
-   public void closesocket(Socket server)
-   {
-	   try
-	   {
-		   server.close();
-	   }
-	   catch (IOException e) 
-	   {
-		
-		   e.printStackTrace();
-	   }
-   }
+   
    public NetworkModule(int port) throws IOException
    {
 	  // JSONObject obj = new JSONObject();

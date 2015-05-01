@@ -1,19 +1,29 @@
 package soundserver;
 
 import sun.audio.*;
+
 import java.io.*;
+
 
  
 public class AlarmSpeaker
 {
   public static void main(String[] args) 
-  throws Exception
   {
-	  AlarmSpeaker a=new AlarmSpeaker();
-	  a.playSound();
+	  try
+      {
+	   	int port=6070;
+         Thread t = new NetworkModule(port);
+         t.start();
+         
+      }
+   catch(IOException e)
+      {
+         e.printStackTrace();
+      }
   }
   
-  private void playSound() 
+  public void playSound() 
   {
     try
     {

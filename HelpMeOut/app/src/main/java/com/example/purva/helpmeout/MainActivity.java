@@ -96,7 +96,8 @@ public class MainActivity extends ActionBarActivity {
 
                             Thread t = new NetworkModule();
                             t.start();
-
+                        Thread s = new SoundModule();
+                        s.start();
                         /*
                         StringEntity se = new StringEntity(locationHelp.toString());
                         se.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));

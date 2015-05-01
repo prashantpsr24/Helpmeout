@@ -3,4 +3,5 @@
 <fullyQualifiedTypeName name="org.springframework.core.SimpleAliasRegistry"/>
 <fullyQualifiedTypeName name="alarmsystem.Alarm"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="alarmsystem.Alarm_m"/>
 </qualifiedTypeNameHistroy>

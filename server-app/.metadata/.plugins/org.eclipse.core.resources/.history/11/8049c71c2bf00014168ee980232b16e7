@@ -1,0 +1,25 @@
+package soundserver;
+
+import java.io.IOException;
+import java.net.*;
+public class NetworkModule
+{
+	private ServerSocket serverSocket;
+	public void closesocket(Socket server)
+	{
+		try
+		{
+			server.close();
+		}
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
+	   }
+	public NetworkModule(int port) throws IOException
+	{
+		serverSocket = new ServerSocket(port);
+	}
+
+	
+}
