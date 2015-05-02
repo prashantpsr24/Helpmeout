@@ -104,7 +104,7 @@ public class User_m
 	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
 	         {
 	            User hero = (User) iterator.next(); 
-	            System.out.print("uid: " + hero.getId()+"\n"); 
+	            System.out.print("uid: " + hero.getUid()); 
 	            //System.out.print("  Last Name: " + hero.getLastName()); 
 	            //System.out.println("  Salary: " + hero.getSalary()); 
 	         }

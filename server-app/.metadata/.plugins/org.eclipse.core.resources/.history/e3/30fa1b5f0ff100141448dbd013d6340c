@@ -81,7 +81,10 @@ public class NetworkModule extends Thread
             	
             	
             	
-            	
+            	double minlat=latitude-0.05;
+            	double minlong=longitude-0.05;
+            	double maxlat=latitude+0.05;
+            	double maxlong=longitude+0.05;
             }
             else if(type.equals("location"))
             {

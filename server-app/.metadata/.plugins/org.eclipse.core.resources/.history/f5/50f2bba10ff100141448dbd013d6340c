@@ -99,12 +99,12 @@ public class User_m
          	 double maxlat=latitude+0.05;
          	 double maxlong=longitude+0.05;
          	 
-	         String hql = "FROM User E WHERE E.latitude between "+minlat+" AND "+maxlat;
+	         String hql = "FROM User E WHERE E.latitude between "+minLat+" AND "+maxLat;
 	         List Heroes = session.createQuery(hql).list(); 
 	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
 	         {
 	            User hero = (User) iterator.next(); 
-	            System.out.print("uid: " + hero.getId()+"\n"); 
+	            System.out.print("uid: " + hero.getUid()); 
 	            //System.out.print("  Last Name: " + hero.getLastName()); 
 	            //System.out.println("  Salary: " + hero.getSalary()); 
 	         }

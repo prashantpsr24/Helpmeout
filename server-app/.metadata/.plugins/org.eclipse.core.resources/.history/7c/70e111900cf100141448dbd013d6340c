@@ -45,7 +45,7 @@ public class NetworkModule extends Thread
             long uid=Long.parseLong(MsgObj.get("uid").toString());
         	double latitude=Double.parseDouble(MsgObj.get("latitude").toString());
         	double longitude=Double.parseDouble(MsgObj.get("longitude").toString());
-        	int accStatus=0;
+        	int accStatus;
             if(IsAlarm(type))
             {
             	System.out.println("network thread here");
@@ -77,17 +77,11 @@ public class NetworkModule extends Thread
                 //{"uid":123456,"type":"help","latitude":26.9339845,"longitude":75.9237571}
                 Alarm_m alarm_m=new Alarm_m();
             	alarm_m.addAlarm(alarm);
-            	
-            	
-            	
-            	
-            	
             }
             else if(type.equals("location"))
             {
-            	
-            	
-            		accStatus=0;
+            	int accStatus;
+            	if(accSta)
             	User_m user_m=new User_m();
             	user_m.updateUser(3, latitude, longitude, accStatus, uid);
             }

@@ -78,33 +78,23 @@ public class User_m
 		         session.close(); 
 		      }
 		   }
-	public void listusers(double latitude,double longitude)
+	/*public void listHeroes(double latitude,double longitude)
 	   {
-			try
-		   {
-		      factory = new Configuration().configure().buildSessionFactory();
-		   }
-		   catch (Throwable ex) 
-		   { 
-			   System.err.println("Failed to create sessionFactory object." + ex);
-		       throw new ExceptionInInitializerError(ex); 
-		   }
 	      Session session = factory.openSession();
 	      Transaction tx = null;
 	      try
 	      {
 	         tx = session.beginTransaction();
-	         double minlat=latitude-0.05;
-         	 double minlong=longitude-0.05;
-         	 double maxlat=latitude+0.05;
-         	 double maxlong=longitude+0.05;
-         	 
-	         String hql = "FROM User E WHERE E.latitude between "+minlat+" AND "+maxlat;
+	         double minLat=latitude-0.05;
+	         double maxLat=latitude+0.05;
+	         double minLong;
+	         double maxLong;
+	         String hql = "FROM User E WHERE E.latitude between "+minLat+" AND "+maxLat;
 	         List Heroes = session.createQuery(hql).list(); 
 	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
 	         {
 	            User hero = (User) iterator.next(); 
-	            System.out.print("uid: " + hero.getId()+"\n"); 
+	            System.out.print("uid: " + hero.getUid()); 
 	            //System.out.print("  Last Name: " + hero.getLastName()); 
 	            //System.out.println("  Salary: " + hero.getSalary()); 
 	         }
@@ -119,6 +109,6 @@ public class User_m
 	      {
 	         session.close(); 
 	      }
-	   }	
+	   }*/	
 	
 }

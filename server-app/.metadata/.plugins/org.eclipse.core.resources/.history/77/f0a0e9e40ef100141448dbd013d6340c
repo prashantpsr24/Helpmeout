@@ -77,11 +77,6 @@ public class NetworkModule extends Thread
                 //{"uid":123456,"type":"help","latitude":26.9339845,"longitude":75.9237571}
                 Alarm_m alarm_m=new Alarm_m();
             	alarm_m.addAlarm(alarm);
-            	
-            	
-            	
-            	
-            	
             }
             else if(type.equals("location"))
             {
