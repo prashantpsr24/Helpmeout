@@ -117,12 +117,12 @@ public class NetworkModule extends Thread
             		}
             		else
             		{
-            			user_m.updateUser(id, latitude, longitude, hero.getAccStatus(), uid);
+            			
             		}
    	            
    	         	}
             	
-            	
+            	user_m.updateUser(id, latitude, longitude, accStatus, uid);
             }
             	
             server.close();

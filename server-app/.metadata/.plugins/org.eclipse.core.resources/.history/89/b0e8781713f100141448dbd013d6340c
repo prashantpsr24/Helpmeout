@@ -38,8 +38,10 @@ public class User {
 	}
 
 	public void setAccStatus(int accStatus) {
-	
-			this.accStatus = accStatus;
+		if (this.accStatus == 1)
+			return;
+		else
+			this.accStatus = 0;
 	}
 
 	public int getScore() {

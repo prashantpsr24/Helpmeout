@@ -124,7 +124,8 @@ public class User_m
 		return Heroes;
 	   }
 	
-	public List<User> listusers(int id)
+	
+	public User listuser(int id)
 	   {
 			try
 		   {
@@ -141,7 +142,12 @@ public class User_m
 	      try
 	      {
 	         tx = session.beginTransaction();
-	         String hql = "FROM User E WHERE E.id = "+id;
+	         double minlat=latitude-0.05;
+      	 double minlong=longitude-0.05;
+      	 double maxlat=latitude+0.05;
+      	 double maxlong=longitude+0.05;
+      	 
+	         String hql = "FROM User E WHERE E.latitude between "+minlat+" AND "+maxlat;
 	         Heroes = session.createQuery(hql).list(); 
 	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
 	         {
@@ -164,46 +170,5 @@ public class User_m
 	      }
 		return Heroes;
 	   }
-	/*public User listuser(int id)
-	   {
-			try
-		   {
-		      factory = new Configuration().configure().buildSessionFactory();
-		   }
-		   catch (Throwable ex) 
-		   { 
-			   System.err.println("Failed to create sessionFactory object." + ex);
-		       throw new ExceptionInInitializerError(ex); 
-		   }
-	      Session session = factory.openSession();
-	      Transaction tx = null;
-	      User Heroes=null;
-	      try
-	      {
-	         tx = session.beginTransaction();
-	         
-	         String hql = "FROM User E WHERE E.latitude between "+minlat+" AND "+maxlat;
-	         Heroes = session.createQuery(hql).User(); 
-	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
-	         {
-	            User hero = (User) iterator.next(); 
-	            System.out.print("uid: " + hero.getId()+"\n"); 
-	            //System.out.print("  Last Name: " + hero.getLastName()); 
-	            //System.out.println("  Salary: " + hero.getSalary()); 
-	         }
-	         tx.commit();
-	        
-	      }
-	      catch (HibernateException e) 
-	      {
-	         if (tx!=null) tx.rollback();
-	         e.printStackTrace(); 
-	      }
-	      finally 
-	      {
-	         session.close(); 
-	      }
-		return Heroes;
-	   }*/
 	
 }

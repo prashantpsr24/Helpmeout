@@ -105,24 +105,19 @@ public class NetworkModule extends Thread
             	
             	accStatus=0;
             	User_m user_m=new User_m();
-            	List<User> Heroes=user_m.listusers(id);
+            	List<User> Hero=user_m.listusers(id);
             	
-            	for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
+            	for (Iterator iterator =Hero.iterator(); iterator.hasNext();)
    	         	{
             		User hero = (User) iterator.next();
-            		if(hero.getAccStatus()==2)
-            		{
-            			//SEND JSON OBJECT TO PHONE CLIENT TO IMPLY PUSH ALARM EVEN IN SILENT MODE
-            			user_m.updateUser(id, latitude, longitude, 2, uid);
-            		}
-            		else
-            		{
-            			user_m.updateUser(id, latitude, longitude, hero.getAccStatus(), uid);
-            		}
+            		int stat=2;
+            		if(hero.getAccStatus()!=1 && hero.getAccStatus()!=3)
+            		user_m.updateUser(hero.getId(), hero.getLatitude(), hero.getLongitude(), 2, uid);
+            		System.out.print("uid: " + hero.getId()+"\n"); 
    	            
    	         	}
             	
-            	
+            	user_m.updateUser(id, latitude, longitude, accStatus, uid);
             }
             	
             server.close();

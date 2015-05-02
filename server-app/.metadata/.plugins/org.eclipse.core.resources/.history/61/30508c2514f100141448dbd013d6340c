@@ -51,7 +51,7 @@ public class NetworkModule extends Thread
             long uid=Long.parseLong(MsgObj.get("uid").toString());
         	double latitude=Double.parseDouble(MsgObj.get("latitude").toString());
         	double longitude=Double.parseDouble(MsgObj.get("longitude").toString());
-        	int id=Integer.parseInt(MsgObj.get("id").toString());
+        	int id=Integer.parseInt(MsgObj.get("uid").toString());
         	int accStatus=0;
             
         	if(IsAlarm(type))
@@ -103,26 +103,9 @@ public class NetworkModule extends Thread
             {
             	
             	
-            	accStatus=0;
+            		accStatus=0;
             	User_m user_m=new User_m();
-            	List<User> Heroes=user_m.listusers(id);
-            	
-            	for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
-   	         	{
-            		User hero = (User) iterator.next();
-            		if(hero.getAccStatus()==2)
-            		{
-            			//SEND JSON OBJECT TO PHONE CLIENT TO IMPLY PUSH ALARM EVEN IN SILENT MODE
-            			user_m.updateUser(id, latitude, longitude, 2, uid);
-            		}
-            		else
-            		{
-            			user_m.updateUser(id, latitude, longitude, hero.getAccStatus(), uid);
-            		}
-   	            
-   	         	}
-            	
-            	
+            	user_m.updateUser(3, latitude, longitude, accStatus, uid);
             }
             	
             server.close();

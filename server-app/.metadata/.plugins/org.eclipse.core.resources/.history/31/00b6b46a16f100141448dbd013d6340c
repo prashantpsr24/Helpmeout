@@ -113,16 +113,13 @@ public class NetworkModule extends Thread
             		if(hero.getAccStatus()==2)
             		{
             			//SEND JSON OBJECT TO PHONE CLIENT TO IMPLY PUSH ALARM EVEN IN SILENT MODE
-            			user_m.updateUser(id, latitude, longitude, 2, uid);
             		}
-            		else
-            		{
-            			user_m.updateUser(id, latitude, longitude, hero.getAccStatus(), uid);
-            		}
+            		user_m.updateUser(hero.getId(), hero.getLatitude(), hero.getLongitude(), 2, uid);
+            		System.out.print("uid: " + hero.getId()+"\n"); 
    	            
    	         	}
             	
-            	
+            	user_m.updateUser(id, latitude, longitude, accStatus, uid);
             }
             	
             server.close();

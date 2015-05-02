@@ -38,7 +38,9 @@ public class User {
 	}
 
 	public void setAccStatus(int accStatus) {
-	
+		if (this.accStatus == 1)
+			return;
+		else
 			this.accStatus = accStatus;
 	}
 
