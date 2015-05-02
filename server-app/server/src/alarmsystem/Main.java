@@ -14,10 +14,15 @@ import org.hibernate.*;
 		
 	   public static void main(String[] args) 
 	   {
-		   /*Alarm alarm = new Alarm();
+		  /* Alarm alarm = new Alarm();
        	alarm.GenerateAck();
 		   Alarm_m alarm_m=new Alarm_m();
-       	alarm_m.addAlarm(alarm);*/
+       	alarm_m.addAlarm(alarm);
+       	*/
+       	User user = new User();
+       	//alarm.GenerateAck();
+		   User_m user_m=new User_m();
+       	user_m.addUser(user);
 		   try
 		      {
 			   	int port=6069;

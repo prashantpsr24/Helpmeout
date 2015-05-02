@@ -48,7 +48,7 @@ public class NetworkModule extends Thread
             	System.out.println("network thread here");
             	ApplicationContext context =new ClassPathXmlApplicationContext("Beans.xml");
             	Alarm alarm = (Alarm) context.getBean("beanAlarm");
-            	//Alarm alarm = new Alarm();
+            	
             	alarm.GenerateAck();
             	alarm.setUid(Integer.parseInt(MsgObj.get("uid").toString()));
             	alarm.setLatitude(Float.parseFloat(MsgObj.get("latitude").toString()));

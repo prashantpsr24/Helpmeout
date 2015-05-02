@@ -4,7 +4,7 @@
  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name="alarmsystem.Alarm" table="Alarm">
+   <class name="alarmsystem.User" table="User">
       <meta attribute="class-description">
          This class contains the alarms detail. 
       </meta>
@@ -12,10 +12,10 @@
          <generator class="native"/>
       </id>
       <property name="uid" column="uid" type="long"/>
-      <property name="latitude" column="latitude" type="float"/>
-      <property name="longitude" column="longitude" type="float"/>
-      <property name="accstatus" column="status" type="int"/>
-      <property name="victimUid" column="ack" type="long"/>
+      <property name="latitude" column="latitude" type="double"/>
+      <property name="longitude" column="longitude" type="double"/>
+      <property name="accStatus" column="accstatus" type="int"/>
+      <property name="victimUid" column="victimuid" type="long"/>
       <property name="score" column="score" type="int"/>
    </class>
 </hibernate-mapping>

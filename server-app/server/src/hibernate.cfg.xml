@@ -23,7 +23,9 @@
    </property>
 
    <!-- List of XML mapping files -->
+    <mapping resource="User.hbm.xml"/>
    <mapping resource="Alarm.hbm.xml"/>
+  
 
 </session-factory>
 </hibernate-configuration>
