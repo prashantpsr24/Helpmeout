@@ -1,0 +1,12 @@
+package alarmsystem;
+
+public class User 
+{
+	private int id;
+	private long uid;
+	private double latitude;
+	private double longitude;
+	private int accstatus;
+	private int score;
+	private long victimUid;
+}

@@ -4,4 +4,7 @@
 <fullyQualifiedTypeName name="alarmsystem.Alarm"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="alarmsystem.Alarm_m"/>
+<fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="alarmsystem.User"/>
 </qualifiedTypeNameHistroy>

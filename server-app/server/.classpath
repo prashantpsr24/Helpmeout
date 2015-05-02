@@ -65,7 +65,6 @@
 	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/commons-logging-1.2/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/commons-logging-1.2/commons-logging-1.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/java-json.jar.zip"/>
-	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/json-simple-1.1.1.jar"/>
 	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/plugins/org.hibernate.eclipse.mapper_3.7.1.Final-v20140303-0022-B124/org.hibernate.eclipse.mapper.jar"/>
 	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/plugins/org.jboss.tools.common.model.ui_3.5.2.Final-v20140302-2358-B158/org.jboss.tools.common.model.ui.jar"/>
 	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/plugins/org.jboss.tools.hibernate.ui_3.7.1.Final-v20140303-0022-B124/org.jboss.tools.hibernate.ui.jar"/>
@@ -93,5 +92,7 @@
 	<classpathentry kind="lib" path="/home/panther/Downloads/hibernate-release-4.3.9.Final/lib/required/javassist-3.18.1-GA.jar"/>
 	<classpathentry kind="lib" path="/home/panther/Downloads/hibernate-release-4.3.9.Final/lib/required/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/mysql-connector.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/jackson-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="/home/panther/Documents/eclipse/json-simple.jar/json-simple.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

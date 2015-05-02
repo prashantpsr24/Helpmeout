@@ -4,6 +4,7 @@ import java.net.*;
 import java.io.*;
 
 import org.json.simple.*;
+import org.json.simple.parser.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class NetworkModule extends Thread
@@ -17,7 +18,7 @@ public class NetworkModule extends Thread
    
    public NetworkModule(int port) throws IOException
    {
-	  // JSONObject obj = new JSONObject();
+	  
       serverSocket = new ServerSocket(port);
      // serverSocket.setSoTimeout(10000);
    }
@@ -33,7 +34,11 @@ public class NetworkModule extends Thread
             System.out.println("Just connected to "+ server.getRemoteSocketAddress());
             
             DataInputStream in =new DataInputStream(server.getInputStream());
-            System.out.println("\n*******PSR******\n"+in.readUTF());
+            //System.out.println("\n*******PSR******\n"+in.readUTF());
+            
+      	  	JSONParser parser = new JSONParser();
+      	  	String Msg=in.readUTF();
+      	  	//JSONObject obj = (JSONObject)parser.parse(Msg);
             
             if(IsAlarm(in))
             {
@@ -44,7 +49,14 @@ public class NetworkModule extends Thread
             	alarm.GenerateAck();
             	DataOutputStream out =new DataOutputStream(server.getOutputStream());
                 out.writeUTF("Thank you for connecting to "+ server.getLocalSocketAddress() + "\nGoodbye!");
-                out.writeUTF("Your Ack is"+ alarm.getAck());
+                
+                
+                JSONObject toClient=new JSONObject();
+                toClient.put("ack", alarm.getAck());
+                JSONObject obj2 = (JSONObject)parser.parse(toClient.toString());
+                System.out.println(obj2.toString());
+                out.writeUTF(toClient.toString());
+                
                 Alarm_m alarm_m=new Alarm_m();
             	alarm_m.addAlarm(alarm);
             }
@@ -52,17 +64,13 @@ public class NetworkModule extends Thread
             server.close();
          }
          
-         catch(SocketTimeoutException s)
+         catch(Exception s)
          {
-            System.out.println("Socket timed out!");
+            s.printStackTrace();
             break;
          }
          
-         catch(IOException e)
-         {
-            e.printStackTrace();
-            break;
-         }
+         
       }
    }
    
