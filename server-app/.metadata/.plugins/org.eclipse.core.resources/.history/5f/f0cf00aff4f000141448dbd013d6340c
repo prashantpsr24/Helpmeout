@@ -56,7 +56,7 @@ public class NetworkModule extends Thread
                 JSONObject obj2 = (JSONObject)parser.parse(toClient.toString());
                 System.out.println(obj2.toString());
                 out.writeUTF(toClient.toString());
-                //{"uid":123456,"type":"help","latitude":26.9339845,"longitude":75.9237571}
+                
                 Alarm_m alarm_m=new Alarm_m();
             	alarm_m.addAlarm(alarm);
             }
