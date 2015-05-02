@@ -11,7 +11,7 @@
       <id name="id" type="int" column="id">
          <generator class="native"/>
       </id>
-      <property name="uid" column="uid" type="int"/>
+      <property name="uid" column="uid" type="long"/>
       <property name="latitude" column="latitude" type="double"/>
       <property name="longitude" column="longitude" type="double"/>
       <property name="status" column="status" type="int"/>

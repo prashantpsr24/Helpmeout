@@ -48,7 +48,36 @@ public class User_m
 		   
 	   }	
 	
-	
+	   public void updateUser(int UserId, double latitude,double longitude,int accStatus,long victimuid ){
+		   try
+		   {
+		      factory = new Configuration().configure().buildSessionFactory();
+		   }
+		   catch (Throwable ex) 
+		   { 
+			   System.err.println("Failed to create sessionFactory object." + ex);
+		       throw new ExceptionInInitializerError(ex); 
+		   }
+		      Session session = factory.openSession();
+		      Transaction tx = null;
+		      try{
+		         tx = session.beginTransaction();
+		         User user = 
+		                    (User)session.get(User.class, UserId);
+		         
+		         user.setLatitude(latitude);
+		         user.setLongitude(longitude);
+				 user.setAccStatus(accStatus);
+				 user.setVictimUid(victimuid);
+		         
+				 tx.commit();
+		      }catch (HibernateException e) {
+		         if (tx!=null) tx.rollback();
+		         e.printStackTrace(); 
+		      }finally {
+		         session.close(); 
+		      }
+		   }
 	/*public void listHeroes(double latitude,double longitude)
 	   {
 	      Session session = factory.openSession();

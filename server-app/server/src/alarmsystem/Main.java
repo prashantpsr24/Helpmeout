@@ -19,10 +19,10 @@ import org.hibernate.*;
 		   Alarm_m alarm_m=new Alarm_m();
        	alarm_m.addAlarm(alarm);
        	*/
-       	User user = new User();
+       /*	User user = new User();
        	//alarm.GenerateAck();
 		   User_m user_m=new User_m();
-       	user_m.addUser(user);
+       	user_m.addUser(user);*/
 		   try
 		      {
 			   	int port=6069;

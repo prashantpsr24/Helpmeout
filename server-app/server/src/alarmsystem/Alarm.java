@@ -4,27 +4,27 @@ import java.util.Date;
 public class Alarm
 {
 	   private int id;
-	   private int uid;
-	   private float latitude;
-	   private float longitude;
+	   private long uid;
+	   private double latitude;
+	   private double longitude;
 	   private int status;
 	   private long ack;
 	   private Date date;
 	   
 	   
-	   public void setLatitude(float latitude)
+	   public void setLatitude(double latitude)
 	   {
 		   this.latitude=latitude;
 	   }
-	   public void setLongitude(float longitude)
+	   public void setLongitude(double longitude)
 	   {
 		   this.longitude=longitude;
 	   }
-	   public float getLatitude()
+	   public double getLatitude()
 	   {
 		   return this.latitude;
 	   }
-	   public float getLongitude()
+	   public double getLongitude()
 	   {
 		   return this.longitude;
 	   }
@@ -36,11 +36,11 @@ public class Alarm
 	   {
 		   return id;
 	   }
-	   public void setUid(int uid)
+	   public void setUid(long uid)
 	   {
 	      this.uid  = uid;
 	   }
-	   public int getUid()
+	   public long getUid()
 	   {
 		   return uid;
 	   }

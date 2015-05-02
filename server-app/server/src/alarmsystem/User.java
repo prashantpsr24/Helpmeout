@@ -54,7 +54,7 @@ public class User
 	   }
 	   
 	   
-	   public void setUid(int uid)
+	   public void setUid(long uid)
 	   {
 	      this.uid  = uid;
 	   }
@@ -63,9 +63,9 @@ public class User
 		   return uid;
 	   }
 
-	   public void setVictimUid(int victimuid)
+	   public void setVictimUid(long victimuid)
 	   {
-	      this.victimUid  = victimUid;
+	      this.victimUid  = victimuid;
 	   }
 	   public long getVictimUid()
 	   {

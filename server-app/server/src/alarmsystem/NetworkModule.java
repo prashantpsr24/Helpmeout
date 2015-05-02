@@ -41,24 +41,33 @@ public class NetworkModule extends Thread
       	  	JSONParser parser = new JSONParser();
       	  	String Msg=in.readUTF();
       	  	JSONObject MsgObj = (JSONObject)parser.parse(Msg);
-            
+            String type=MsgObj.get("type").toString();
       	  	
-            if(IsAlarm(MsgObj.get("type").toString()))
+            if(IsAlarm(type))
             {
             	System.out.println("network thread here");
             	ApplicationContext context =new ClassPathXmlApplicationContext("Beans.xml");
             	Alarm alarm = (Alarm) context.getBean("beanAlarm");
             	
+            	long uid=Long.parseLong(MsgObj.get("uid").toString());
+            	double latitude=Double.parseDouble(MsgObj.get("latitude").toString());
+            	double longitude=Double.parseDouble(MsgObj.get("longitude").toString());
+            	int accStatus=1;
+            	
             	alarm.GenerateAck();
-            	alarm.setUid(Integer.parseInt(MsgObj.get("uid").toString()));
-            	alarm.setLatitude(Float.parseFloat(MsgObj.get("latitude").toString()));
-            	alarm.setLongitude(Float.parseFloat(MsgObj.get("longitude").toString()));
+            	alarm.setUid(uid);
+            	alarm.setLatitude(latitude);
+            	alarm.setLongitude(longitude);
             	alarm.setStatus(1);
+            	
+            	
             	//alarm.setDate(date);
             	DataOutputStream out =new DataOutputStream(server.getOutputStream());
                 //out.writeUTF("Thank you for connecting to "+ server.getLocalSocketAddress() + "\nGoodbye!");
                 
-                
+            	User_m user_m=new User_m();
+            	user_m.updateUser(3, latitude, longitude, accStatus, uid);
+            	
                 JSONObject toClient=new JSONObject();
                 toClient.put("ack", alarm.getAck());
                 JSONObject obj2 = (JSONObject)parser.parse(toClient.toString());
