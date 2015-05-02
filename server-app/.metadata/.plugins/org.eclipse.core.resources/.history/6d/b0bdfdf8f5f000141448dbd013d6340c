@@ -13,9 +13,7 @@ public class NetworkModule extends Thread
    
    public boolean IsAlarm(String type)
    {
-	   if(type.equals("help"))
-		   return true;
-	   		return false;
+	   return true;
    }
    
    public NetworkModule(int port) throws IOException
@@ -50,11 +48,6 @@ public class NetworkModule extends Thread
             	Alarm alarm = (Alarm) context.getBean("beanAlarm");
             	//Alarm alarm = new Alarm();
             	alarm.GenerateAck();
-            	alarm.setUid(Integer.parseInt(MsgObj.get("uid").toString()));
-            	alarm.setLatitude(Float.parseFloat(MsgObj.get("latitude").toString()));
-            	alarm.setLongitude(Float.parseFloat(MsgObj.get("longitude").toString()));
-            	alarm.setStatus(1);
-            	//alarm.setDate(date);
             	DataOutputStream out =new DataOutputStream(server.getOutputStream());
                 //out.writeUTF("Thank you for connecting to "+ server.getLocalSocketAddress() + "\nGoodbye!");
                 
@@ -68,11 +61,7 @@ public class NetworkModule extends Thread
                 Alarm_m alarm_m=new Alarm_m();
             	alarm_m.addAlarm(alarm);
             }
-            else
-            {
-            	System.out.println("\n\n******"+Msg+"********\n\n\n");
-            }
-            	
+           
             server.close();
          }
          

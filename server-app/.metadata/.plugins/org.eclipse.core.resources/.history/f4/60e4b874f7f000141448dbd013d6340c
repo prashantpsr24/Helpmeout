@@ -51,10 +51,6 @@ public class NetworkModule extends Thread
             	//Alarm alarm = new Alarm();
             	alarm.GenerateAck();
             	alarm.setUid(Integer.parseInt(MsgObj.get("uid").toString()));
-            	alarm.setLatitude(Float.parseFloat(MsgObj.get("latitude").toString()));
-            	alarm.setLongitude(Float.parseFloat(MsgObj.get("longitude").toString()));
-            	alarm.setStatus(1);
-            	//alarm.setDate(date);
             	DataOutputStream out =new DataOutputStream(server.getOutputStream());
                 //out.writeUTF("Thank you for connecting to "+ server.getLocalSocketAddress() + "\nGoodbye!");
                 
