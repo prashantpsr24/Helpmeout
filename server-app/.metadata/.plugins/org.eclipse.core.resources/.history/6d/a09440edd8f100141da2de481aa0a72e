@@ -153,27 +153,7 @@ public class NetworkModule extends Thread {
 					JSONObject toclient = new JSONObject();
 					toclient.put("type", "fine");
 					out.writeUTF(toclient.toString());
-				}else if (type.equals("signup")) {
-
-					User_m user_m = new User_m();
-					user_m.updateUser(id, latitude, longitude, 0, -1);
-					// list of users with victimuid as uid sent by victim
-					List<User> Heroes = user_m.listusers(uid);
-					for (Iterator iterator = Heroes.iterator(); iterator
-							.hasNext();) {
-						User hero = (User) iterator.next();
-						if (hero.getAccStatus() == 2) {
-							user_m.updateUser(hero.getId(), hero.getLatitude(),
-									hero.getLongitude(), 0, -1);
-						}
-
-					}
-
-					JSONObject toclient = new JSONObject();
-					toclient.put("type", "fine");
-					out.writeUTF(toclient.toString());
-				} 
-				else if (type.equals("login")) {
+				} else if (type.equals("login")) {
 
 					User_m user_m = new User_m();
 

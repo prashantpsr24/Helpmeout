@@ -46,7 +46,7 @@ public class User_m
 		   {
 	         session.close(); 
 		   }
-		   return ret;
+		   
 	   }	
 	   //This UIserId is not uid it is object's id
 	   public void updateUser(int UserId, double latitude,double longitude,int accStatus,long victimuid ){

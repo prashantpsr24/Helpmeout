@@ -21,12 +21,11 @@ import java.util.*;
 		   Alarm_m alarm_m=new Alarm_m();
        	alarm_m.addAlarm(alarm);
        	*/
-       	User user = new User();
+       	/*User user = new User();
        	//alarm.GenerateAck();
-       	user.setUid(187);
-       	user.setVictimUid(-1);
-		 User_m user_m=new User_m();
-		 user_m.addUser(user);
+       	user.setUid(123);
+       	user.setVictimUid(501);*/
+		  // User_m user_m=new User_m();
 		   		   /*List <User> checker=user_m.listusers(1);
 		   System.out.println(checker.size());
 		   for(User user:checker)

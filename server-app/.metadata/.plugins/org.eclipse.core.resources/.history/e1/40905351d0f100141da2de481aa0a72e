@@ -115,13 +115,13 @@ public class NetworkModule extends Thread {
 						JSONObject toclient = new JSONObject();
 						toclient.put("type", "alarm");
 						if (hero.getAccStatus() == 2) {
-							List<User> myvictims = user_m.listusers(
-									hero.getVictimUid(), "stop");
+							List<User> myvictims = user_m.listusers(hero
+									.getVictimUid());
 							for (Iterator it = myvictims.iterator(); iterator
 									.hasNext();) {
 								User victim = (User) it.next();
-								toclient.put("latitude", victim.getLatitude());
-								toclient.put("longitude", victim.getLongitude());
+								toclient.put("latitude",victim.getLatitude());
+								toclient.put("longitude",victim.getLongitude());
 							}
 							out.writeUTF(toclient.toString());
 							// SEND JSON OBJECT TO PHONE CLIENT TO IMPLY PUSH
@@ -129,7 +129,7 @@ public class NetworkModule extends Thread {
 							user_m.updateUser(id, latitude, longitude, 2, uid);
 						} else {
 							user_m.updateUser(id, latitude, longitude,
-									hero.getAccStatus(), -1);
+									hero.getAccStatus(), uid);
 						}
 
 					}
@@ -144,36 +144,20 @@ public class NetworkModule extends Thread {
 							.hasNext();) {
 						User hero = (User) iterator.next();
 						if (hero.getAccStatus() == 2) {
+							// SEND JSON OBJECT TO PHONE CLIENT TO IMPLY PUSH
+							// STOP ALARM
+							JSONObject toclient = new JSONObject();
+							toclient.put("type", "stop");
+							toclient.put("victimuid", uid);
+							System.out.println("sending stop msg to helpers"
+									+ toclient.toString() + "\n");
+							out.writeUTF(toclient.toString());
 							user_m.updateUser(hero.getId(), hero.getLatitude(),
 									hero.getLongitude(), 0, -1);
 						}
 
 					}
-
-					JSONObject toclient = new JSONObject();
-					toclient.put("type", "fine");
-					out.writeUTF(toclient.toString());
-				}else if (type.equals("signup")) {
-
-					User_m user_m = new User_m();
-					user_m.updateUser(id, latitude, longitude, 0, -1);
-					// list of users with victimuid as uid sent by victim
-					List<User> Heroes = user_m.listusers(uid);
-					for (Iterator iterator = Heroes.iterator(); iterator
-							.hasNext();) {
-						User hero = (User) iterator.next();
-						if (hero.getAccStatus() == 2) {
-							user_m.updateUser(hero.getId(), hero.getLatitude(),
-									hero.getLongitude(), 0, -1);
-						}
-
-					}
-
-					JSONObject toclient = new JSONObject();
-					toclient.put("type", "fine");
-					out.writeUTF(toclient.toString());
-				} 
-				else if (type.equals("login")) {
+				} else if (type.equals("login")) {
 
 					User_m user_m = new User_m();
 

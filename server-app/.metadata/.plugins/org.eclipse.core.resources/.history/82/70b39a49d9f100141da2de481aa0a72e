@@ -17,9 +17,8 @@ public class User_m
 {
 	private static SessionFactory factory; 
 	
-	   public Integer addUser(User user)
+	   public void addUser(User user)
 	   {
-		   Integer ret=new Integer(0);
 		   try
 		   {
 		      factory = new Configuration().configure().buildSessionFactory();
@@ -34,7 +33,7 @@ public class User_m
 		   try
 		   {
 	         tx = session.beginTransaction();
-	        ret=(Integer) session.save(user); 
+	         session.save(user); 
 	         tx.commit();
 		   }
 		   catch (HibernateException e) 
@@ -46,7 +45,7 @@ public class User_m
 		   {
 	         session.close(); 
 		   }
-		   return ret;
+		   
 	   }	
 	   //This UIserId is not uid it is object's id
 	   public void updateUser(int UserId, double latitude,double longitude,int accStatus,long victimuid ){
