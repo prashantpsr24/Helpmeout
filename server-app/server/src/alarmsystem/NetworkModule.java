@@ -123,6 +123,7 @@ public class NetworkModule extends Thread {
 								toclient.put("latitude",victim.getLatitude());
 								toclient.put("longitude",victim.getLongitude());
 							}
+							out.writeUTF(toclient.toString());
 							// SEND JSON OBJECT TO PHONE CLIENT TO IMPLY PUSH
 							// ALARM EVEN IN SILENT MODE
 							user_m.updateUser(id, latitude, longitude, 2, uid);
