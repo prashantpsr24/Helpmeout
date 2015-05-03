@@ -161,13 +161,23 @@ public class NetworkModule extends Thread {
 					user.setLatitude(latitude);
 					user.setLongitude(longitude);
 					user.setScore(0);
-					user.setVictimUid(-1);					
+					user.setVictimUid(-1);
+					
 					user.setId(user_m.addUser(user));
 					// list of users with victimuid as uid sent by victim
-					
+					List<User> Heroes = user_m.listusers(uid);
+					for (Iterator iterator = Heroes.iterator(); iterator
+							.hasNext();) {
+						User hero = (User) iterator.next();
+						if (hero.getAccStatus() == 2) {
+							user_m.updateUser(hero.getId(), hero.getLatitude(),
+									hero.getLongitude(), 0, -1);
+						}
+
+					}
+
 					JSONObject toclient = new JSONObject();
-					toclient.put("type", "signup");
-					toclient.put("id",user.getId() );
+					toclient.put("type", "fine");
 					out.writeUTF(toclient.toString());
 				} 
 				else if (type.equals("login")) {

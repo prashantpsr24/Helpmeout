@@ -23,7 +23,7 @@ import java.util.*;
        	*/
        	User user = new User();
        	//alarm.GenerateAck();
-       	user.setUid(192);
+       	user.setUid(187);
        	user.setVictimUid(-1);
 		 User_m user_m=new User_m();
 		 user_m.addUser(user);
