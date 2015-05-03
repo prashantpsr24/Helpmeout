@@ -126,8 +126,6 @@ public class NetworkModule extends Thread {
 							out.writeUTF(toclient.toString());
 							user_m.updateUser(id, latitude, longitude, 2, uid);
 						} else {
-							toclient.put("type", "ok");
-							out.writeUTF(toclient.toString());
 							user_m.updateUser(id, latitude, longitude,
 									hero.getAccStatus(), -1);
 						}

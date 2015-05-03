@@ -33,7 +33,7 @@ public class NetworkModule extends Thread
             }
             else
             {
-            	System.out.println("\n\n\n\n\n***********Oops*******\n\n\n\n");
+            	System.out.println("Oops\n");
             	a.stopSound();
             }
          }
