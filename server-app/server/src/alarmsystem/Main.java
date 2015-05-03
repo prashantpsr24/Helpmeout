@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.Date;
 
 import org.hibernate.*;
+
+import java.util.*;
 	public class Main
 	{
 		
@@ -19,10 +21,20 @@ import org.hibernate.*;
 		   Alarm_m alarm_m=new Alarm_m();
        	alarm_m.addAlarm(alarm);
        	*/
-       //	User user = new User();
+       	/*User user = new User();
        	//alarm.GenerateAck();
-		   User_m user_m=new User_m();
-       	user_m.listusers(26.933996, 75.923698);
+       	user.setUid(123);
+       	user.setVictimUid(501);*/
+		  // User_m user_m=new User_m();
+		   		   /*List <User> checker=user_m.listusers(1);
+		   System.out.println(checker.size());
+		   for(User user:checker)
+		   {
+			   System.out.println(user.getVictimUid());
+		   }*/
+		   
+		  //  long p=501;
+       	//user_m.listusers(p);
 		   try
 		      {
 			   	int port=6069;

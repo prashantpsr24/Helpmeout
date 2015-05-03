@@ -142,11 +142,12 @@ public class User_m
 	      {
 	         tx = session.beginTransaction();
 	         String hql = "FROM User E WHERE E.id = "+id;
-	         Heroes = session.createQuery(hql).list(); 
+	         Heroes = session.createQuery(hql).list();
+	         System.out.println("IN FUNCTION LIST "+Heroes.size());
 	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
 	         {
 	            User hero = (User) iterator.next(); 
-	            System.out.print("id: " + hero.getId()+"\n"); 
+	            //System.out.print("id: " + hero.getId()+"\n"); 
 	            //System.out.print("  Last Name: " + hero.getLastName()); 
 	            //System.out.println("  Salary: " + hero.getSalary()); 
 	         }
@@ -167,6 +168,7 @@ public class User_m
 	
 	public List<User> listusers(long victimUid)
 	   {
+		System.out.println("SEARCHING FOR "+victimUid);
 			try
 		   {
 		      factory = new Configuration().configure().buildSessionFactory();
@@ -182,12 +184,13 @@ public class User_m
 	      try
 	      {
 	         tx = session.beginTransaction();
-	         String hql = "FROM User E WHERE E.victimuid = "+victimUid;
-	         Heroes = session.createQuery(hql).list(); 
+	         String hql = "FROM User E WHERE victimuid = 501";
+	         Heroes = session.createQuery(hql).list();
+	         System.out.println("looking at LIST\n\n\n"+Heroes);
 	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
 	         {
 	            User hero = (User) iterator.next(); 
-	            //System.out.print("id: " + hero.getId()+"\n"); 
+	            System.out.print("id: " + hero.getId()+"\n"); 
 	            //System.out.print("  Last Name: " + hero.getLastName()); 
 	            //System.out.println("  Salary: " + hero.getSalary()); 
 	         }
