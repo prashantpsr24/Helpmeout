@@ -47,7 +47,7 @@ public class User_m
 		   }
 		   
 	   }	
-	
+	   //This UIserId is not uid it is object's id
 	   public void updateUser(int UserId, double latitude,double longitude,int accStatus,long victimuid ){
 		   try
 		   {
@@ -146,7 +146,90 @@ public class User_m
 	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
 	         {
 	            User hero = (User) iterator.next(); 
-	            System.out.print("uid: " + hero.getId()+"\n"); 
+	            System.out.print("id: " + hero.getId()+"\n"); 
+	            //System.out.print("  Last Name: " + hero.getLastName()); 
+	            //System.out.println("  Salary: " + hero.getSalary()); 
+	         }
+	         tx.commit();
+	        
+	      }
+	      catch (HibernateException e) 
+	      {
+	         if (tx!=null) tx.rollback();
+	         e.printStackTrace(); 
+	      }
+	      finally 
+	      {
+	         session.close(); 
+	      }
+		return Heroes;
+	   }
+	
+	public List<User> listusers(long victimUid)
+	   {
+			try
+		   {
+		      factory = new Configuration().configure().buildSessionFactory();
+		   }
+		   catch (Throwable ex) 
+		   { 
+			   System.err.println("Failed to create sessionFactory object." + ex);
+		       throw new ExceptionInInitializerError(ex); 
+		   }
+	      Session session = factory.openSession();
+	      Transaction tx = null;
+	      List<User> Heroes=null;
+	      try
+	      {
+	         tx = session.beginTransaction();
+	         String hql = "FROM User E WHERE E.victimuid = "+victimUid;
+	         Heroes = session.createQuery(hql).list(); 
+	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
+	         {
+	            User hero = (User) iterator.next(); 
+	            //System.out.print("id: " + hero.getId()+"\n"); 
+	            //System.out.print("  Last Name: " + hero.getLastName()); 
+	            //System.out.println("  Salary: " + hero.getSalary()); 
+	         }
+	         tx.commit();
+	        
+	      }
+	      catch (HibernateException e) 
+	      {
+	         if (tx!=null) tx.rollback();
+	         e.printStackTrace(); 
+	      }
+	      finally 
+	      {
+	         session.close(); 
+	      }
+		return Heroes;
+	   }
+	
+	
+	public List<User> listusers(long Uid,String type)
+	   {
+			try
+		   {
+		      factory = new Configuration().configure().buildSessionFactory();
+		   }
+		   catch (Throwable ex) 
+		   { 
+			   System.err.println("Failed to create sessionFactory object." + ex);
+		       throw new ExceptionInInitializerError(ex); 
+		   }
+	      Session session = factory.openSession();
+	      Transaction tx = null;
+	      List<User> Heroes=null;
+	      try
+	      {
+	         tx = session.beginTransaction();
+	         String hql = "FROM User E WHERE E.uid = "+Uid;
+	         Heroes = session.createQuery(hql).list(); 
+	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)
+	         {
+	            User hero = (User) iterator.next(); 
+	            //System.out.print("id: " + hero.getId()+"\n"); 
 	            //System.out.print("  Last Name: " + hero.getLastName()); 
 	            //System.out.println("  Salary: " + hero.getSalary()); 
 	         }

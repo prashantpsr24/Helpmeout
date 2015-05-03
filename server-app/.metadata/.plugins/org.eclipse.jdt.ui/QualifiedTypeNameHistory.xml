@@ -6,5 +6,8 @@
 <fullyQualifiedTypeName name="alarmsystem.Alarm_m"/>
 <fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
 <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="alarmsystem.User_m"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="alarmsystem.User"/>
 </qualifiedTypeNameHistroy>
