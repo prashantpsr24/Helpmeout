@@ -1,0 +1,17 @@
+package soundserver;
+
+import java.net.*;
+import java.io.*;
+import java.util.*;
+public class NetworkModule 
+{
+   AlarmSpeaker a;
+   private ServerSocket serverSocket;
+   public NetworkModule(int port) throws IOException
+   {
+      serverSocket = new ServerSocket(port);
+   }
+
+  
+}
+   

@@ -3,6 +3,7 @@ package soundserver;
 import sun.audio.*;
 
 import java.io.*;
+import java.net.Socket;
 
 
  
@@ -36,10 +37,11 @@ public class AlarmSpeaker
     	InputStream inputStream = getClass().getResourceAsStream("husten.wav");
     	System.out.println(inputStream);
     	audioStream = new AudioStream(inputStream);
-    	while(status)
-    	{
+    	
+    	
     		AudioPlayer.player.start(audioStream);
-    	}
+        	System.out.println("Done");
+
     }
     catch (Exception e)
     {
