@@ -42,6 +42,7 @@ public class User_m
 	         if (tx!=null) tx.rollback();
 	         e.printStackTrace(); 
 		   }
+		   
 		   finally
 		   {
 	         session.close(); 
@@ -185,7 +186,7 @@ public class User_m
 	      try
 	      {
 	         tx = session.beginTransaction();
-	         String hql = "FROM User E WHERE victimuid = 501";
+	         String hql = "FROM User E WHERE victimuid ="+victimUid;
 	         Heroes = session.createQuery(hql).list();
 	         System.out.println("looking at LIST\n\n\n"+Heroes);
 	         for (Iterator iterator =Heroes.iterator(); iterator.hasNext();)

@@ -23,8 +23,8 @@
 		<item value="394" key="DIALOG_WIDTH"/>
 		<item value="org.eclipse.wst.server.ui.ServersView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="96" key="DIALOG_Y_ORIGIN"/>
-		<item value="491" key="DIALOG_HEIGHT"/>
 		<item value="469" key="DIALOG_X_ORIGIN"/>
+		<item value="491" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.wst.server.ui"/>

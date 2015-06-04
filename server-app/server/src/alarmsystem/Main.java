@@ -5,43 +5,48 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.hibernate.*; 
 import org.hibernate.cfg.*;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.Date;
 
 import org.hibernate.*;
 
 import java.util.*;
-	public class Main
+	
+public class Main
 	{
 		
 	   public static void main(String[] args) 
 	   {
-		  /* Alarm alarm = new Alarm();
-       	alarm.GenerateAck();
-		   Alarm_m alarm_m=new Alarm_m();
-       	alarm_m.addAlarm(alarm);
-       	*/
-       	User user = new User();
-       	//alarm.GenerateAck();
-       	user.setUid(192);
-       	user.setVictimUid(-1);
-		 User_m user_m=new User_m();
-		 user_m.addUser(user);
-		   		   /*List <User> checker=user_m.listusers(1);
-		   System.out.println(checker.size());
-		   for(User user:checker)
-		   {
-			   System.out.println(user.getVictimUid());
-		   }*/
-		   
-		  //  long p=501;
-       	//user_m.listusers(p);
+		 
 		   try
 		      {
-			   	int port=6069;
-		         Thread t = new NetworkModule(port);
+			   
+			   int port=6069;
+			   final ServerSocket serverSocket= new ServerSocket(port);
+				
+			   System.out.println("Waiting for client on port "
+						+ serverSocket.getLocalPort() + "...");
+			   
+			   while(true)
+			   {
+				   
+				Socket server = serverSocket.accept();
+				System.out.println("Just connected to "
+						+ server.getRemoteSocketAddress());
+
+				DataInputStream in = new DataInputStream(
+						server.getInputStream());
+				DataOutputStream out = new DataOutputStream(
+						server.getOutputStream());
+			   
+		         Thread t = new NetworkModule(in,out);
 		         t.start();
-		         
+			   } //ini.start();
+			   	
 		      }
 		   catch(IOException e)
 		      {

@@ -1,0 +1,56 @@
+package alarmsystem;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.hibernate.*; 
+import org.hibernate.cfg.*;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Date;
+
+import org.hibernate.*;
+
+import java.util.*;
+	
+public class Main
+	{
+		
+	   public static void main(String[] args) 
+	   {
+		 
+		   try
+		      {
+			   int port=6069;
+			   final ServerSocket serverSocket= new ServerSocket(port);
+				System.out.println("Waiting for client on port "
+						+ serverSocket.getLocalPort() + "...");
+				Socket server = serverSocket.accept();
+				System.out.println("Just connected to "
+						+ server.getRemoteSocketAddress());
+
+				DataInputStream in = new DataInputStream(
+						server.getInputStream());
+				DataOutputStream out = new DataOutputStream(
+						server.getOutputStream());
+			   
+			   
+			   	
+			   	int i=0;
+		         Thread t = new NetworkModule(port);
+		         
+		         t.start();
+		         //ini.start();
+			   	
+		      }
+		   catch(IOException e)
+		      {
+		         e.printStackTrace();
+		      }
+	      
+	   }
+	
+	}
